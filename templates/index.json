@@ -422,6 +422,20 @@
         "padding": 64
       }
     },
+    "modern_parallax_banner_Xyj4wt": {
+      "type": "modern-parallax-banner",
+      "name": "Modern parallax banner",
+      "settings": {
+        "image": "shopify://shop_images/seller-man-mobile-phone-professional-consultant-tech-store-shop_627829-4983.jpg",
+        "height": 400,
+        "overlay": 35,
+        "color": "#ffffff",
+        "title": "",
+        "text": "",
+        "label": "",
+        "link": ""
+      }
+    },
     "banners_mNJcyj": {
       "type": "banners",
       "blocks": {
@@ -1806,6 +1820,7 @@
     "slideshow_EVrUzi",
     "modern_collections_ky4EFq",
     "modern_product_showcase_xgBMfY",
+    "modern_parallax_banner_Xyj4wt",
     "banners_mNJcyj",
     "collections_list_manual_hfXBGN",
     "featured_collection_BijVR9",
