@@ -428,6 +428,8 @@
       "settings": {
         "image": "shopify://shop_images/seller-man-mobile-phone-professional-consultant-tech-store-shop_627829-4983.jpg",
         "height": 500,
+        "height_tablet": 400,
+        "height_mobile": 360,
         "overlay": 35,
         "color": "#ffffff",
         "title": "",
@@ -459,7 +461,7 @@
             "content_position_mb": "auto",
             "alignment": "left",
             "alignment_mb": "left",
-            "background_color": "#FFFFFF",
+            "background_color": "#ffffff",
             "rounded": "none"
           },
           "blocks": {
