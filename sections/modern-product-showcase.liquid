@@ -1,12 +1,13 @@
 {{ 'modern-sections.css' | asset_url | stylesheet_tag }}
 {{ 'modern-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'modern-overflow-fix.css' | asset_url | stylesheet_tag }}
 {{ 'product-card.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'modern-carousel.js' | asset_url }}" defer></script>
 <section class="modern-section modern-products" style="--modern-py:{{ section.settings.padding }}px;--modern-gap:{{ section.settings.gap }}px">
   <div class="modern-section__inner">
     <div class="modern-section__head"><div><h2 class="modern-section__title">{{ section.settings.title }}</h2><div class="modern-section__text">{{ section.settings.text }}</div></div>{% if section.settings.collection != blank %}<a class="modern-section__link" href="{{ section.settings.collection.url }}">{{ section.settings.link_label }}</a>{% endif %}</div>
     {% if section.settings.layout == 'carousel' %}<div class="modern-carousel" data-modern-carousel>{% endif %}
-    <div class="hdt-collection-products hdt-ratio--{{ section.settings.image_ratio }} hdt-ratio--contain {% if section.settings.layout == 'carousel' %}modern-scroll{% else %}modern-grid{% endif %}"{% if section.settings.layout == 'carousel' %} data-modern-track{% endif %} style="--cols:{{ section.settings.columns }}">
+    <div class="hdt-ratio--{{ section.settings.image_ratio }} hdt-ratio--contain {% if section.settings.layout == 'carousel' %}modern-scroll{% else %}modern-grid{% endif %}"{% if section.settings.layout == 'carousel' %} data-modern-track{% endif %} style="--cols:{{ section.settings.columns }}">
       {% for product in section.settings.collection.products limit: section.settings.limit %}
         {% render 'card-product1', card_product: product, class: 'hdt-pr-style1', section_id: section.id, sizes: '(min-width: 990px) 25vw, 50vw', image_ratio: section.settings.image_ratio, show_vendor: section.settings.show_vendor %}
       {% else %}{% for i in (1..4) %}{% render 'card-product-placeholder', section_id: section.id, placeholder_image: 'product-apparel-1' %}{% endfor %}{% endfor %}
