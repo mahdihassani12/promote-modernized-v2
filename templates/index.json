@@ -388,14 +388,12 @@
         "title": "Shop by category",
         "text": "<p>Explore our latest smartphones, mobile devices, and accessories.</p>",
         "collections": [
-          "backpacks",
-          "earphones",
-          "headphones",
-          "power-banks",
-          "smart-watches",
-          "speakers",
-          "usb-cables",
-          "all-products"
+          "all-products",
+          "honor",
+          "iphone",
+          "realme",
+          "samsung",
+          "xiaomi"
         ],
         "layout": "carousel",
         "columns": 4,
@@ -428,35 +426,51 @@
         "tab_9Nq4wD": {
           "type": "tab",
           "settings": {
-            "label": "New arrivals",
-            "collection": "backpacks"
+            "label": "{{ block.settings.collection.title }}",
+            "collection": "iphone"
           }
         },
-        "tab_aDqCh8": {
+        "tab_pfqj8b": {
           "type": "tab",
           "settings": {
-            "label": "Best sellers",
-            "collection": "earphones"
+            "label": "{{ block.settings.collection.title }}",
+            "collection": "samsung"
           }
         },
-        "tab_wrVAmP": {
+        "tab_naYTVT": {
           "type": "tab",
           "settings": {
-            "label": "On sale",
-            "collection": "headphones"
+            "label": "{{ block.settings.collection.title }}",
+            "collection": "xiaomi"
+          }
+        },
+        "tab_f9g949": {
+          "type": "tab",
+          "settings": {
+            "label": "{{ block.settings.collection.title }}",
+            "collection": "realme"
+          }
+        },
+        "tab_cFG7gr": {
+          "type": "tab",
+          "settings": {
+            "label": "{{ block.settings.collection.title }}",
+            "collection": "honor"
           }
         }
       },
       "block_order": [
         "tab_9Nq4wD",
-        "tab_aDqCh8",
-        "tab_wrVAmP"
+        "tab_pfqj8b",
+        "tab_naYTVT",
+        "tab_f9g949",
+        "tab_cFG7gr"
       ],
       "name": "Modern product tabs",
       "settings": {
         "title": "Shop by our collections",
         "text": "",
-        "layout": "carousel",
+        "layout": "grid",
         "limit": 8,
         "columns": 4,
         "gap": 24,
