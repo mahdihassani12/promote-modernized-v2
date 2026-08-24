@@ -582,57 +582,116 @@
         "pd_mb": ""
       }
     },
-    "modern_brand_logos_BhWBHK": {
-      "type": "modern-brand-logos",
+    "logo_list_KyMtAP": {
+      "type": "logo-list",
       "blocks": {
-        "logo_WNLwRq": {
-          "type": "logo",
+        "logo_item_jpNX7K": {
+          "type": "_logo-item",
           "settings": {
             "image": "shopify://shop_images/Iphone-logo.png",
-            "link": ""
-          }
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "hdt_max_width_image": 150
+          },
+          "blocks": {}
         },
-        "logo_NjBYPR": {
-          "type": "logo",
+        "logo_item_Gk7mj7": {
+          "type": "_logo-item",
           "settings": {
             "image": "shopify://shop_images/Honor-logo.png",
-            "link": ""
-          }
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "hdt_max_width_image": 150
+          },
+          "blocks": {}
         },
-        "logo_h8GTC9": {
-          "type": "logo",
+        "logo_item_dCxyVV": {
+          "type": "_logo-item",
           "settings": {
             "image": "shopify://shop_images/Xiaomi-logo.png",
-            "link": ""
-          }
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "hdt_max_width_image": 150
+          },
+          "blocks": {}
         },
-        "logo_mNFFCA": {
-          "type": "logo",
+        "logo_item_3W6exy": {
+          "type": "_logo-item",
           "settings": {
             "image": "shopify://shop_images/Samsung-logo.png",
-            "link": ""
-          }
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "hdt_max_width_image": 150
+          },
+          "blocks": {}
         },
-        "logo_xczFJj": {
-          "type": "logo",
+        "logo_item_z3rkKJ": {
+          "type": "_logo-item",
           "settings": {
             "image": "shopify://shop_images/Realme-logo.png",
-            "link": ""
-          }
+            "url": "",
+            "img_effect": "none",
+            "b_effect": "none",
+            "hdt_max_width_image": 150
+          },
+          "blocks": {}
+        },
+        "section-heading-logo-list": {
+          "type": "section-heading",
+          "static": true,
+          "settings": {
+            "design_heading": "1",
+            "horizontal": false,
+            "alignment": "left",
+            "heading_gap": 15,
+            "margin_bottom": 30
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "logo_WNLwRq",
-        "logo_NjBYPR",
-        "logo_h8GTC9",
-        "logo_mNFFCA",
-        "logo_xczFJj"
+        "logo_item_jpNX7K",
+        "logo_item_Gk7mj7",
+        "logo_item_dCxyVV",
+        "logo_item_3W6exy",
+        "logo_item_z3rkKJ"
       ],
-      "name": "Modern brand logos",
+      "name": "t:sections.logo_list.name",
       "settings": {
-        "title": "Brands we love",
-        "columns": 5,
-        "padding": 52
+        "image_ratio": "square",
+        "col_dk": "5",
+        "col_tb": "4",
+        "col_mb": "2",
+        "space_items": "x",
+        "loop": true,
+        "autoplay": 2,
+        "pauseOnHover": true,
+        "navUI": true,
+        "nav_position": "default",
+        "nav_visible": "always",
+        "nav_style": "default",
+        "nav_shape": "default",
+        "nav_size": "small",
+        "nav_hide_mobile": false,
+        "dotUI": false,
+        "pag_style": "default",
+        "pag_rounded": false,
+        "pag_space": 10,
+        "pag_mgt": 10,
+        "pag_hide_mobile": false,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": ",,30px,",
+        "pd": "",
+        "pd_mb": ""
       }
     },
     "banners_mNJcyj": {
@@ -2021,7 +2080,7 @@
     "modern_product_showcase_xgBMfY",
     "modern_parallax_banner_Xyj4wt",
     "custom_section_qTGJeH",
-    "modern_brand_logos_BhWBHK",
+    "logo_list_KyMtAP",
     "banners_mNJcyj",
     "collections_list_manual_hfXBGN",
     "featured_collection_BijVR9",
