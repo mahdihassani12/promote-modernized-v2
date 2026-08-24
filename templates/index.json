@@ -397,7 +397,7 @@
           "usb-cables",
           "all-products"
         ],
-        "layout": "grid",
+        "layout": "carousel",
         "columns": 4,
         "show_count": true,
         "gap": 16,
