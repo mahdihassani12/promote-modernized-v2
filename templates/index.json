@@ -576,7 +576,7 @@
         "background_opacity": 0,
         "section_layout": "container",
         "hdt_background_parallax": false,
-        "mg": "50px,,50px,",
+        "mg": "50px,,,",
         "mg_mb": "",
         "pd": "",
         "pd_mb": ""
