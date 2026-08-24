@@ -436,6 +436,152 @@
         "link": ""
       }
     },
+    "custom_section_qTGJeH": {
+      "type": "custom-section",
+      "blocks": {
+        "multi_column_Uci3Ma": {
+          "type": "_multi_column",
+          "settings": {
+            "column_dk": "6",
+            "column_tb": "6",
+            "column_mb": "12",
+            "column_dk_10": "10",
+            "column_tb_10": "10",
+            "column_mb_10": "10",
+            "spacing_h_dk": 15,
+            "spacing_v_dk": 15,
+            "spacing_h_tb": 15,
+            "spacing_v_tb": 15,
+            "spacing_h_mb": 15,
+            "spacing_v_mb": 15,
+            "content_position": "auto",
+            "align_content": false,
+            "content_position_mb": "auto",
+            "alignment": "left",
+            "alignment_mb": "left",
+            "background_color": "#FFFFFF",
+            "rounded": "none"
+          },
+          "blocks": {
+            "heading_xadRtp": {
+              "type": "heading",
+              "settings": {
+                "heading": "<h2>Barberry for general trading</h2>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "line_height": "",
+                "font_weight": "normal",
+                "heading_size": "h2",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            },
+            "spacer_hXU6MQ": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 10,
+                "space_md": 10,
+                "space": 10
+              },
+              "blocks": {}
+            },
+            "text_mmc8WW": {
+              "type": "text",
+              "settings": {
+                "text": "<p>At BarBerry, we are dedicated to providing our customers with the latest and most innovative mobile and smart phone technology. With a passion for connectivity and communication, we strive to offer a wide range of top-quality products that cater to every individual’s needs and preferences. Our team is committed to staying ahead of the curve when it comes to technological advancements, ensuring that our customers have access to the most cutting-edge devices on the market. From sleek and stylish designs to powerful performance capabilities, we have carefully curated our selection to offer something for everyone.</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
+            "spacer_4x34r9": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 20,
+                "space_md": 20,
+                "space": 20
+              },
+              "blocks": {}
+            },
+            "button_TDdCef": {
+              "type": "button",
+              "settings": {
+                "label": "Read More",
+                "link": "",
+                "open_in_new_tab": false,
+                "full_width": false,
+                "btn_style": "",
+                "color_btn": "#fff",
+                "color_hover_btn": "#fff",
+                "background_btn": "#222",
+                "background_hover_btn": "#333",
+                "border_w_btn": "",
+                "border_btn": "#222",
+                "border_hover_btn": "#333",
+                "size": "m",
+                "text_size": "hdt-text-base",
+                "font_weight": "normal",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40,
+                "rounded": "hdt-btn-radius-sm",
+                "icon": "none",
+                "icon_position": "after",
+                "icon_height": 14,
+                "icon_spacing": 5
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_xadRtp",
+            "spacer_hXU6MQ",
+            "text_mmc8WW",
+            "spacer_4x34r9",
+            "button_TDdCef"
+          ]
+        }
+      },
+      "block_order": [
+        "multi_column_Uci3Ma"
+      ],
+      "custom_css": [
+        "p {text-align: justify;}"
+      ],
+      "name": "t:sections.custom_section.name",
+      "settings": {
+        "layout": "10",
+        "item_spacing": 0,
+        "item_spacing_tb": 0,
+        "item_spacing_mb": 0,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "section_layout": "container",
+        "hdt_background_parallax": false,
+        "mg": ",,50px,",
+        "mg_mb": "",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
     "banners_mNJcyj": {
       "type": "banners",
       "blocks": {
@@ -1821,6 +1967,7 @@
     "modern_collections_ky4EFq",
     "modern_product_showcase_xgBMfY",
     "modern_parallax_banner_Xyj4wt",
+    "custom_section_qTGJeH",
     "banners_mNJcyj",
     "collections_list_manual_hfXBGN",
     "featured_collection_BijVR9",
