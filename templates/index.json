@@ -405,6 +405,23 @@
         "padding": 20
       }
     },
+    "modern_product_showcase_xgBMfY": {
+      "type": "modern-product-showcase",
+      "name": "Modern products",
+      "settings": {
+        "title": "Featured products",
+        "text": "",
+        "collection": "all-products",
+        "layout": "carousel",
+        "limit": 12,
+        "columns": 4,
+        "gap": 24,
+        "image_ratio": "square",
+        "show_vendor": false,
+        "link_label": "View all",
+        "padding": 64
+      }
+    },
     "banners_mNJcyj": {
       "type": "banners",
       "blocks": {
@@ -1788,6 +1805,7 @@
   "order": [
     "slideshow_EVrUzi",
     "modern_collections_ky4EFq",
+    "modern_product_showcase_xgBMfY",
     "banners_mNJcyj",
     "collections_list_manual_hfXBGN",
     "featured_collection_BijVR9",
