@@ -633,7 +633,11 @@
       "name": "Modern brand logos",
       "settings": {
         "title": "Brands we love",
-        "columns": 5,
+        "logo_width": 200,
+        "logo_height": 180,
+        "columns": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
         "gap": 24,
         "padding": 64
       }
