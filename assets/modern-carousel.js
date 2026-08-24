@@ -1,4 +1,11 @@
 (() => {
+  const resetDocumentX = () => {
+    if (window.matchMedia('(max-width: 749px)').matches) {
+      document.documentElement.scrollLeft = 0;
+      document.body.scrollLeft = 0;
+    }
+  };
+
   const init = (root = document) => {
     root.querySelectorAll('[data-modern-carousel]').forEach((carousel) => {
       if (carousel.dataset.modernReady === 'true') return;
@@ -34,6 +41,12 @@
       render();
     });
   };
-  document.addEventListener('DOMContentLoaded', () => init());
+  document.addEventListener('DOMContentLoaded', () => {
+    resetDocumentX();
+    init();
+    requestAnimationFrame(resetDocumentX);
+  });
+  window.addEventListener('pageshow', resetDocumentX);
+  window.addEventListener('orientationchange', () => setTimeout(resetDocumentX, 100));
   document.addEventListener('shopify:section:load', (event) => init(event.target));
 })();

@@ -55,6 +55,7 @@
     -%}
 
     {{ content_for_header }}
+    {{ 'modern-overflow-fix.css' | asset_url | stylesheet_tag }}
     {%- endunless -%}
   </head>
 
