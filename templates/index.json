@@ -453,7 +453,7 @@
             "spacing_h_tb": 0,
             "spacing_v_tb": 0,
             "spacing_h_mb": 0,
-            "spacing_v_mb": 15,
+            "spacing_v_mb": 0,
             "content_position": "auto",
             "align_content": false,
             "content_position_mb": "auto",
@@ -580,6 +580,59 @@
         "mg_mb": "",
         "pd": "",
         "pd_mb": ""
+      }
+    },
+    "modern_brand_logos_BhWBHK": {
+      "type": "modern-brand-logos",
+      "blocks": {
+        "logo_WNLwRq": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Iphone-logo.png",
+            "link": ""
+          }
+        },
+        "logo_NjBYPR": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Honor-logo.png",
+            "link": ""
+          }
+        },
+        "logo_h8GTC9": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Xiaomi-logo.png",
+            "link": ""
+          }
+        },
+        "logo_mNFFCA": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Samsung-logo.png",
+            "link": ""
+          }
+        },
+        "logo_xczFJj": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Realme-logo.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_WNLwRq",
+        "logo_NjBYPR",
+        "logo_h8GTC9",
+        "logo_mNFFCA",
+        "logo_xczFJj"
+      ],
+      "name": "Modern brand logos",
+      "settings": {
+        "title": "Brands we love",
+        "columns": 5,
+        "padding": 52
       }
     },
     "banners_mNJcyj": {
@@ -1968,6 +2021,7 @@
     "modern_product_showcase_xgBMfY",
     "modern_parallax_banner_Xyj4wt",
     "custom_section_qTGJeH",
+    "modern_brand_logos_BhWBHK",
     "banners_mNJcyj",
     "collections_list_manual_hfXBGN",
     "featured_collection_BijVR9",
