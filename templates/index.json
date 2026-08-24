@@ -627,6 +627,75 @@
         "pd_mb": ""
       }
     },
+    "modern_image_boxes_wREnFd": {
+      "type": "modern-image-boxes",
+      "blocks": {
+        "image_box_rCJd9W": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/blank-smartphone-screen-with-design-space_53876-119806.jpg",
+            "title": "Latest Mobile Technology",
+            "description": "<p>Explore innovative devices designed to keep you connected every day.</p>",
+            "link": ""
+          }
+        },
+        "image_box_jDCy8a": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/young-delivery-man-red-uniform-cap-showing-smartphone-showing-ok-sign-standing-white-wall_141793-26556.jpg",
+            "title": "Trusted Product Quality",
+            "description": "<p>We carefully select reliable products for lasting performance and satisfaction.</p>",
+            "link": ""
+          }
+        },
+        "image_box_EFJV9q": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/girl-delivering-box-young-man_23-2147767721.jpg",
+            "title": "Fast Secure Delivery",
+            "description": "<p>Receive your orders quickly through our safe and reliable service.</p>",
+            "link": ""
+          }
+        },
+        "image_box_wrAfgW": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/call-center-operator-coworkers-dealing-with-upset-customers_482257-117868.jpg",
+            "title": "Dedicated Customer Support",
+            "description": "<p>Our friendly team provides helpful support before and after purchase.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_box_rCJd9W",
+        "image_box_jDCy8a",
+        "image_box_EFJV9q",
+        "image_box_wrAfgW"
+      ],
+      "name": "Modern image boxes",
+      "settings": {
+        "title": "Why choose us",
+        "subtitle": "<p>Discover the features that make our products a better choice.</p>",
+        "columns": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
+        "image_height": 240,
+        "image_height_tablet": 220,
+        "image_height_mobile": 200,
+        "image_fit": "cover",
+        "alignment": "center",
+        "title_size": 22,
+        "content_padding": 24,
+        "radius": 16,
+        "gap": 24,
+        "shadow": true,
+        "card_color": "#ffffff",
+        "border_color": "#eeeeee",
+        "text_color": "#222222",
+        "padding": 64
+      }
+    },
     "modern_brand_logos_9NQYme": {
       "type": "modern-brand-logos",
       "blocks": {
@@ -997,6 +1066,7 @@
     "modern_product_tabs_tTdFhi",
     "modern_parallax_banner_Xyj4wt",
     "custom_section_qTGJeH",
+    "modern_image_boxes_wREnFd",
     "modern_brand_logos_9NQYme",
     "custom_line_WWiQAz",
     "shipping_xHJpJ3"
