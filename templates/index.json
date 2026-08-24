@@ -427,7 +427,7 @@
       "name": "Modern parallax banner",
       "settings": {
         "image": "shopify://shop_images/seller-man-mobile-phone-professional-consultant-tech-store-shop_627829-4983.jpg",
-        "height": 400,
+        "height": 500,
         "overlay": 35,
         "color": "#ffffff",
         "title": "",
