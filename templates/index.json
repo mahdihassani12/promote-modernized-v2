@@ -648,6 +648,15 @@
             "link": ""
           }
         },
+        "image_box_EFJV9q": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/girl-delivering-box-young-man_23-2147767721.jpg",
+            "title": "Fast Secure Delivery",
+            "description": "<p>Receive your orders quickly through our safe and reliable service.</p>",
+            "link": ""
+          }
+        },
         "image_box_wrAfgW": {
           "type": "image_box",
           "settings": {
@@ -661,15 +670,16 @@
       "block_order": [
         "image_box_rCJd9W",
         "image_box_jDCy8a",
+        "image_box_EFJV9q",
         "image_box_wrAfgW"
       ],
       "name": "Modern image boxes",
       "settings": {
         "title": "Why choose us",
         "subtitle": "<p>Discover the features that make our products a better choice.</p>",
-        "columns": 3,
-        "columns_tablet": 2,
-        "columns_mobile": 1,
+        "columns": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
         "image_height": 240,
         "image_height_tablet": 220,
         "image_height_mobile": 200,
