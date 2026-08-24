@@ -1,0 +1,17 @@
+{{ 'modern-sections.css' | asset_url | stylesheet_tag }}
+{{ 'modern-carousel.css' | asset_url | stylesheet_tag }}
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'modern-carousel.js' | asset_url }}" defer></script>
+<section class="modern-section modern-products" style="--modern-py:{{ section.settings.padding }}px;--modern-gap:{{ section.settings.gap }}px">
+  <div class="modern-section__inner">
+    <div class="modern-section__head"><div><h2 class="modern-section__title">{{ section.settings.title }}</h2><div class="modern-section__text">{{ section.settings.text }}</div></div>{% if section.settings.collection != blank %}<a class="modern-section__link" href="{{ section.settings.collection.url }}">{{ section.settings.link_label }}</a>{% endif %}</div>
+    {% if section.settings.layout == 'carousel' %}<div class="modern-carousel" data-modern-carousel>{% endif %}
+    <div class="{% if section.settings.layout == 'carousel' %}modern-scroll{% else %}modern-grid{% endif %}"{% if section.settings.layout == 'carousel' %} data-modern-track{% endif %} style="--cols:{{ section.settings.columns }}">
+      {% for product in section.settings.collection.products limit: section.settings.limit %}
+        {% render 'card-product1', card_product: product, class: 'hdt-pr-style1', section_id: section.id, sizes: '(min-width: 990px) 25vw, 50vw', image_ratio: section.settings.image_ratio, show_vendor: section.settings.show_vendor %}
+      {% else %}{% for i in (1..4) %}{% render 'card-product-placeholder', section_id: section.id, placeholder_image: 'product-apparel-1' %}{% endfor %}{% endfor %}
+    </div>
+    {% if section.settings.layout == 'carousel' %}<div class="modern-carousel__nav"><button class="modern-carousel__button" type="button" data-modern-prev aria-label="Previous products">&#8592;</button><div class="modern-carousel__dots" data-modern-dots></div><button class="modern-carousel__button" type="button" data-modern-next aria-label="Next products">&#8594;</button></div></div>{% endif %}
+  </div>
+</section>
+{% schema %}{"name":"Modern products","settings":[{"type":"text","id":"title","label":"Heading","default":"Featured products"},{"type":"richtext","id":"text","label":"Description"},{"type":"collection","id":"collection","label":"Collection"},{"type":"select","id":"layout","label":"Layout","default":"grid","options":[{"value":"grid","label":"Grid"},{"value":"carousel","label":"Carousel"}]},{"type":"range","id":"limit","label":"Products","min":2,"max":16,"step":1,"default":8},{"type":"range","id":"columns","label":"Desktop columns","min":2,"max":6,"step":1,"default":4},{"type":"range","id":"gap","label":"Gap","min":8,"max":40,"step":2,"default":24},{"type":"select","id":"image_ratio","label":"Image ratio","default":"adapt_image","options":[{"value":"adapt_image","label":"Adapt"},{"value":"square","label":"Square"}]},{"type":"checkbox","id":"show_vendor","label":"Show vendor","default":false},{"type":"text","id":"link_label","label":"View-all label","default":"View all"},{"type":"range","id":"padding","label":"Vertical spacing","min":20,"max":120,"step":4,"default":64}],"presets":[{"name":"Modern products"}]}{% endschema %}

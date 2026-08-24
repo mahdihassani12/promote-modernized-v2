@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.name_group.header",
+  "type": "header",
+  "sections": {
+    "announcement_bar_GjUpEn": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_RwKxcC": {
+          "type": "announcement",
+          "settings": {
+            "link": "",
+            "text": "Discover the Latest Smartphones and Mobile Technology at BarBerry",
+            "hdt_font_size": 16,
+            "adding_border": false,
+            "countdown": "",
+            "txt_day": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_RwKxcC"
+      ],
+      "name": "t:sections.announcement-bar.name",
+      "settings": {
+        "show_line_separator": true,
+        "close_btn": "1",
+        "height": 41,
+        "fontsize": 12,
+        "design": "slider",
+        "hdt_using_image_icon": false,
+        "space_item": 30,
+        "speed": 0.3,
+        "direction": "rtl",
+        "pausable": false,
+        "effect": "fade",
+        "au_time": 3,
+        "pause_when_hover": false,
+        "colors_by_section": false,
+        "color_scheme": "",
+        "background_opacity": 0,
+        "full_width": false
+      }
+    },
+    "header_inline_blocks_xePFbC": {
+      "type": "header-inline-blocks",
+      "blocks": {
+        "menu_mobile": {
+          "type": "_menu_mobile",
+          "static": true,
+          "settings": {
+            "main_menu_mobile": "",
+            "menu_categories": "",
+            "only_click_icon": false,
+            "header_mobile_colors": "",
+            "note_mobile": "<span class=\"hdt-inline-flex hdt-text-base\" style=\"margin-bottom: 10px\">Need help ? </span><span class=\"hdt-flex hdt-flex-col hdt-text-base\" style=\"line-height: 24px;\"><span>Email: <b>info@yourdomain.com</b></span><span>Phone: <b>(212) 555-1234</b></span></span>"
+          },
+          "blocks": {}
+        }
+      },
+      "settings": {
+        "header_layout": "logo_left",
+        "header_fullwidth": false,
+        "header_height": 70,
+        "logo": "shopify://shop_images/image_2024-03-21_16-19-50.png",
+        "logo_width": 200,
+        "header_colors": "scheme-1",
+        "main_menu": "main-menu-1",
+        "lazy_mn": false,
+        "menu_position": "center",
+        "menu_size": "lg",
+        "menu_weight": "medium",
+        "text_transform": false,
+        "dropdown_arrow": false,
+        "spacing_nav": 30,
+        "open_event": "hover",
+        "menu_type": "default",
+        "header_menu_colors": "",
+        "h_icon": "kalles",
+        "hover_icon": "2",
+        "search_type": "icon",
+        "enabled_user": true,
+        "enabled_wishlist": true,
+        "enabled_cart": true,
+        "cart_des": "1",
+        "header_socials": false,
+        "header_height_mb": 60,
+        "logo_mobile": "shopify://shop_images/image_2024-03-21_16-19-50.png",
+        "logo_width_mb": 95,
+        "header_transparent": false,
+        "header_transparent_colors": "",
+        "background_opacity_transparent": 0,
+        "header_space_top": 0,
+        "header_space_top_mobile": 0,
+        "sticky_type": "on_scroll_up",
+        "header_sticky_colors": "",
+        "background_opacity_sticky": 1,
+        "sticky_glass": false
+      }
+    }
+  },
+  "order": [
+    "announcement_bar_GjUpEn",
+    "header_inline_blocks_xePFbC"
+  ]
+}
