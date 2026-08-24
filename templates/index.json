@@ -584,6 +584,60 @@
         "pd_mb": ""
       }
     },
+    "modern_brand_logos_9NQYme": {
+      "type": "modern-brand-logos",
+      "blocks": {
+        "logo_mwCQKh": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Iphone-logo.png",
+            "link": ""
+          }
+        },
+        "logo_wF9Rfi": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Honor-logo.png",
+            "link": ""
+          }
+        },
+        "logo_3MyBQY": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Xiaomi-logo.png",
+            "link": ""
+          }
+        },
+        "logo_TAexcQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Samsung-logo.png",
+            "link": ""
+          }
+        },
+        "logo_mdiERM": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/Realme-logo.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_mwCQKh",
+        "logo_wF9Rfi",
+        "logo_3MyBQY",
+        "logo_TAexcQ",
+        "logo_mdiERM"
+      ],
+      "name": "Modern brand logos",
+      "settings": {
+        "title": "Brands we love",
+        "columns": 5,
+        "gap": 24,
+        "padding": 64
+      }
+    },
     "custom_line_WWiQAz": {
       "type": "custom-line",
       "name": "t:sections.custom_line.name",
@@ -895,6 +949,7 @@
     "modern_product_showcase_xgBMfY",
     "modern_parallax_banner_Xyj4wt",
     "custom_section_qTGJeH",
+    "modern_brand_logos_9NQYme",
     "custom_line_WWiQAz",
     "shipping_xHJpJ3"
   ]
