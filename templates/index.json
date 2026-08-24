@@ -633,6 +633,7 @@
         "image_box_rCJd9W": {
           "type": "image_box",
           "settings": {
+            "image": "shopify://shop_images/blank-smartphone-screen-with-design-space_53876-119806.jpg",
             "title": "Latest Mobile Technology",
             "description": "<p>Explore innovative devices designed to keep you connected every day.</p>",
             "link": ""
@@ -641,6 +642,7 @@
         "image_box_jDCy8a": {
           "type": "image_box",
           "settings": {
+            "image": "shopify://shop_images/young-delivery-man-red-uniform-cap-showing-smartphone-showing-ok-sign-standing-white-wall_141793-26556.jpg",
             "title": "Trusted Product Quality",
             "description": "<p>We carefully select reliable products for lasting performance and satisfaction.</p>",
             "link": ""
@@ -649,6 +651,7 @@
         "image_box_wrAfgW": {
           "type": "image_box",
           "settings": {
+            "image": "shopify://shop_images/call-center-operator-coworkers-dealing-with-upset-customers_482257-117868.jpg",
             "title": "Dedicated Customer Support",
             "description": "<p>Our friendly team provides helpful support before and after purchase.</p>",
             "link": ""
