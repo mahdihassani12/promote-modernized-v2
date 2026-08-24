@@ -410,7 +410,7 @@
       "name": "Modern products",
       "settings": {
         "title": "Featured products",
-        "text": "",
+        "text": "<p>Discover our featured smartphones, accessories, and latest mobile technology.</p>",
         "collection": "all-products",
         "layout": "carousel",
         "limit": 12,
@@ -419,6 +419,49 @@
         "image_ratio": "square",
         "show_vendor": false,
         "link_label": "View all",
+        "padding": 64
+      }
+    },
+    "modern_product_tabs_tTdFhi": {
+      "type": "modern-product-tabs",
+      "blocks": {
+        "tab_9Nq4wD": {
+          "type": "tab",
+          "settings": {
+            "label": "New arrivals",
+            "collection": "backpacks"
+          }
+        },
+        "tab_aDqCh8": {
+          "type": "tab",
+          "settings": {
+            "label": "Best sellers",
+            "collection": "earphones"
+          }
+        },
+        "tab_wrVAmP": {
+          "type": "tab",
+          "settings": {
+            "label": "On sale",
+            "collection": "headphones"
+          }
+        }
+      },
+      "block_order": [
+        "tab_9Nq4wD",
+        "tab_aDqCh8",
+        "tab_wrVAmP"
+      ],
+      "name": "Modern product tabs",
+      "settings": {
+        "title": "Shop our favorites",
+        "text": "",
+        "layout": "carousel",
+        "limit": 8,
+        "columns": 4,
+        "gap": 24,
+        "image_ratio": "square",
+        "show_vendor": false,
         "padding": 64
       }
     },
@@ -578,7 +621,7 @@
         "background_opacity": 0,
         "section_layout": "container",
         "hdt_background_parallax": false,
-        "mg": "50px,,50px,",
+        "mg": "50px,,,",
         "mg_mb": "",
         "pd": "",
         "pd_mb": ""
@@ -633,7 +676,11 @@
       "name": "Modern brand logos",
       "settings": {
         "title": "Brands we love",
-        "columns": 5,
+        "logo_width": 200,
+        "logo_height": 180,
+        "columns": 4,
+        "columns_tablet": 3,
+        "columns_mobile": 2,
         "gap": 24,
         "padding": 64
       }
@@ -947,6 +994,7 @@
     "slideshow_EVrUzi",
     "modern_collections_ky4EFq",
     "modern_product_showcase_xgBMfY",
+    "modern_product_tabs_tTdFhi",
     "modern_parallax_banner_Xyj4wt",
     "custom_section_qTGJeH",
     "modern_brand_logos_9NQYme",
