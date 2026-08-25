@@ -1468,7 +1468,17 @@
         "duties_and_taxes_title": "الرسوم والضرائب",
         "shipping_information_required_notice": "معلومات الشحن مطلوبة. {{link}}.",
         "shipping_information_redirect_link": "أدخل معلوماتك هنا",
-        "loading_progressive_rates": "البحث عن المزيد من الأسعار..."
+        "loading_progressive_rates": "البحث عن المزيد من الأسعار...",
+        "title": "الشحن",
+        "delivery_title": "توصيل",
+        "shipping_method_title": "طريقة الشحن",
+        "shipping_method_rollup_accessibility_label": "خيارات طريقة الشحن",
+        "shipping_method_one_time_purchase_group_title": "شراء لمرة واحدة",
+        "shipping_method_first_shipment_group_title": {
+          "one": "الشحنة الأولى",
+          "other": "الشحنات الأولى"
+        },
+        "shipping_method_subscription_group_title": "اشتراك"
       },
       "vaulted": {
         "change_button": "تغيير",
@@ -1955,7 +1965,127 @@
           "number_items_shown": "%{shownNumber} من %{totalNumber} عنصرًا"
         },
         "order_name_label": "اطلب %{name}",
-        "shopping_cart_label": "عربة التسوق"
+        "shopping_cart_label": "عربة التسوق",
+        "gift_card_savings_notice": "بعد بطاقات هدايا بقيمة %{gift_card_amount}",
+        "cost_table_title": "ملخص التكلفة",
+        "cost_table_item_column_header": "بند",
+        "cost_table_value_column_header": "قيمة",
+        "description_label": "الوصف",
+        "price_label": "السعر",
+        "price_per_item": {
+          "accessibility_label": "%{price} لكل قطعة",
+          "label": "%{price}/الوحدة"
+        },
+        "quantity_label": "الكمية",
+        "product_change_label": "تغيير",
+        "product_image_label": "صورة المنتج",
+        "product_image_quantity_label": "الكمية",
+        "scroll_order_summary": "مرر للمزيد من العناصر",
+        "expand_order_summary_short": "عرض",
+        "collapse_order_summary_short": "إخفاء",
+        "original_price": "السعر الأصلي",
+        "sale_price": "سعر البيع",
+        "compare_at_sale": "المبيعات (%{sale_amount})",
+        "total_updated_label": "إجمالي السعر المحدّث:",
+        "order_total_updated_label": "المجموع الكلي المحدّث",
+        "total_already_paid_label": "مدفوع",
+        "unit_price": {
+          "accessible_separator": "لكل",
+          "content_html": "%{price}%{accessible_separator}٪ لكل %{per_unit}",
+          "per_item": {
+            "single": "%{price} للقطعة",
+            "one": "%{price} لكل %{count} قطعة",
+            "other": "%{price} لكل %{count} قطعة"
+          },
+          "per_unit": {
+            "single": "%{price}/%{unit}",
+            "plural": "%{price}/%{count}%{unit}"
+          }
+        },
+        "gift_card_ending": "بطاقة هدية تنتهي بـ %{last_characters}",
+        "estimated_tax_label": "ضريبة تقديرية",
+        "multiple_shipping_lines_label": "إجمالي الشحن",
+        "recurring_subtotal_label": "المجموع الفرعي المتكرر",
+        "recurring_total_label": "الإجمالي المتكرر",
+        "recurring_total_tooltip": "لا يشمل الشحن أو الضرائب أو الرسوم الجمركية أو أي خصومات مطبقة.",
+        "confirmation_number_label": "رقم التأكيد #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> لا يمكن استخدامه مع خصوماتك الحالية.",
+        "percent_off_shipping": "خصم %{percent} على الشحن",
+        "amount_off_shipping": "خصم ‏%{amount} على الشحن",
+        "deferred_payment_info": {
+          "title": "الدفع المستحق بقيمة %{amount_due} في موعد أقصاه %{due_at}",
+          "description_html": "للأسئلة المتعلقة بطلبك، %{contact_us}.",
+          "paid_today": "إجمالي المدفوعات اليوم",
+          "paid_today_next": "تم الدفع اليوم",
+          "due_on_fulfillment_title": "يجب دفع %{amount_due} عند الاستيفاء",
+          "due_on_receipt_title": "دفعة قدرها %{amount_due} مستحقة عند الاستلام"
+        },
+        "deferred_balance_info": {
+          "title": "مبلغ {{amount_due}} مستحق في {{due_at}}",
+          "due_on_fulfillment_title": "رصيد {{amount_due}} مستحق عند التنفيذ"
+        },
+        "payment_terms_totals": {
+          "due_today": "الإجمالي المستحق اليوم",
+          "due_today_next": "مستحق اليوم",
+          "due_later": "إجمالي المستحق %{due_at}",
+          "due_on_fulfillment": "المبلغ الإجمالي المستحق عند الوفاء بالطلب",
+          "due_on_fulfillment_next": "مستحق عند الاستيفاء",
+          "due_on_receipt": "إجمالي المستحق عند الاستلام",
+          "due_later_checkout_to_draft": "الإجمالي المستحق لاحقًا",
+          "total_paid": "إجمالي المدفوع"
+        },
+        "maximum_discount_code_limit_reached": "لقد بلغت الحد الأقصى لعدد رموز الخصم. قم بإزالة رمز حالي لاستخدام <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> لا يعمل حاليًا. اتصل بنا للمساعدة.",
+        "due_on_fulfillment": "مستحق عند الاستيفاء",
+        "gift_card_masked": "•••• %{last_characters}",
+        "subscriptions": "الاشتراكات",
+        "duties_label": "الواجبات",
+        "duties_and_taxes_label": "الرسوم والضرائب",
+        "error_duties_tooltip": "يتم شحن هذا الطلب من بلد آخر، لذا قد تُفرض رسوم وضرائب عند التسليم.",
+        "may_be_charged_on_delivery": "قد تُفرض رسوم عند التسليم",
+        "total_updated_label_with_price": "إجمالي السعر المحدّث: %{totalPrice}",
+        "updated_shipping_method": "طريقة الشحن المحدّثة: %{shipping_method}",
+        "recurring_payments": "المدفوعات المتكررة",
+        "recurring_total_multiple_label": "لهذا الطلب رسوم متكررة لعدة عناصر.",
+        "deferred_total_due_date_label": "إجمالي المبلغ المستحق {{date}}",
+        "deferred_total_due_date_label_next": "تستحق في %{date}",
+        "full_price": "السعر كاملاً: %{price}",
+        "custom_discount": "خصم خاص",
+        "expand_component_information": {
+          "one": "إظهار %{count} عنصر",
+          "other": "عرض %{count} من العناصر"
+        },
+        "collapse_component_information": {
+          "one": "إخفاء %{count} عنصر",
+          "other": "إخفاء %{count} عنصر"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "إضافة خصم",
+          "back_to_finalize_order": "العودة لإنهاء الطلب",
+          "merchandise_quantity_label": {
+            "one": "%{count} بند",
+            "other": "%{count} بند"
+          }
+        },
+        "alternative_payment_currency_total": "المبلغ المستحق %{amount_due}",
+        "alternative_payment_currency_chinese_yuan": "تأكد من المبلغ الإجمالي باليوان الصيني في تطبيق %{wallet}.",
+        "lpm": {
+          "wechat_pay": {
+            "checkout_disclosure": "تأكيد المبلغ الإجمالي باليوان الصيني في تطبيق وي تشات",
+            "checkout_disclosure_with_alternative_payment_currency": "سيُعالِج %{shop_name} هذه الدفعة بقيمة %{amount_due} %{processing_currency}، والتي سيحولها WeChat إلى اليوان الصيني",
+            "checkout_disclosure_charged_in_cny": "سيعالج %{shop_name} هذه الدفعة كـ %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "عرض إجمالي اليوان الصيني في وي تشات"
+          },
+          "alipay": {
+            "checkout_disclosure": "الرجاء تأكيد المبلغ الإجمالي باليوان الصيني في تطبيق Alipay",
+            "checkout_disclosure_with_alternative_payment_currency": "سيقوم %{shop_name} بمعالجة هذه الدفعة كـ %{amount_due} %{processing_currency}، وسيقوم Alipay بتحويلها إلى يوان صيني",
+            "checkout_disclosure_charged_in_cny": "سيعالج %{shop_name} هذه الدفعة كـ %{amount_due} %{processing_currency}",
+            "post_purchase_disclosure": "عرض إجمالي الرنمينبي في Alipay"
+          }
+        },
+        "pay_merchant_label": "دفع إلى %{merchant_name}",
+        "discount_applies_to_subscription_items_only": "هذا الخصم ينطبق فقط على عناصر الاشتراك"
       },
       "embed": {
         "header": {
