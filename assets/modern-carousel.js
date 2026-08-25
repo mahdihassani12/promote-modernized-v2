@@ -28,11 +28,15 @@
     let dragScrollLeft = 0;
     let dragged = false;
 
+    carousel.dir = isRtl ? 'rtl' : 'ltr';
     track.dir = isRtl ? 'rtl' : 'ltr';
 
     const visibleCount = () => {
       if (!items[0]) return 1;
       const itemWidth = items[0].getBoundingClientRect().width;
+      // Carousels inside an inactive tab are initially display:none. Avoid NaN
+      // pagination until ResizeObserver sees the panel become visible.
+      if (!itemWidth || !track.clientWidth) return 1;
       const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;
       return Math.max(1, Math.floor((track.clientWidth + gap) / (itemWidth + gap)));
     };
@@ -89,6 +93,13 @@
       }
       window.setTimeout(render, behavior === 'smooth' ? 350 : 0);
     };
+
+    // Start from the reading edge after the browser has completed layout. This
+    // is important in RTL where scrollLeft has different values across engines.
+    window.requestAnimationFrame(() => {
+      goTo(0, 'auto');
+      render();
+    });
 
     const move = (forward) => {
       const step = visibleCount();
