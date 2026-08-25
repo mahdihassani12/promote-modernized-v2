@@ -581,7 +581,7 @@
               "type": "button",
               "settings": {
                 "label": "Read More",
-                "link": "",
+                "link": "shopify://pages/about-us",
                 "open_in_new_tab": false,
                 "full_width": false,
                 "btn_style": "",
