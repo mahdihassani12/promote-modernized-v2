@@ -2837,5 +2837,131 @@
       "price": "السعر",
       "quantity": "الكمية"
     }
+  },
+  "blogs": {
+    "article": {
+      "moderated": "يرجى ملاحظة أنه يجب الموافقة على التعليقات قبل نشرها.",
+      "comment_form_title": "اترك تعليقًا",
+      "name": "الاسم",
+      "email": "بريد إلكتروني",
+      "message": "تعليق",
+      "post": "انشر تعليقًا",
+      "back_to_blog": "العودة إلى المدونة",
+      "share": "مشاركة هذا المقال",
+      "success": "تم نشر تعليقك بنجاح! شكرًا لك!",
+      "success_moderated": "تم نشر تعليقك بنجاح. سنقوم بنشره بعد قليل، حيث أن مدونتنا تخضع للإشراف.",
+      "by": "بواسطة",
+      "on": "على",
+      "in": "في",
+      "read_more": "واصل القراءة",
+      "back_to": "العودة إلى {{ title }}",
+      "view_all": "عرض المزيد",
+      "by_author": "بواسطة {{ author }}"
+    },
+    "comments": {
+      "title": "اترك تعليقًا",
+      "comments_note_html": "لن يتم نشر عنوان بريدك الإلكتروني. الحقول المطلوبة محددة بـ <span class=\"hdt-required\">*</span>",
+      "name": "الاسم",
+      "email": "بريد إلكتروني",
+      "message": "تعليق",
+      "post": "نشر تعليق",
+      "moderated": "الرجاء ملاحظة أنه يجب الموافقة على التعليقات قبل نشرها.",
+      "success_moderated": "تم نشر تعليقك بنجاح. سنقوم بنشره بعد قليل، حيث أن مدونتنا تخضع للإشراف.",
+      "success": "تم نشر تعليقك بنجاح! شكرًا لك!",
+      "unapproved": "عنوان البريد الإلكتروني المُقدم غير معتمد لنشر التعليقات.",
+      "error_heading": "الرجاء تعديل ما يلي:",
+      "with_count": {
+        "one": "تعليق واحد",
+        "other": "{{ count }} تعليقات"
+      },
+      "comments_title_html": {
+        "one": "1 thought on “<span>{{ title }}</span>”",
+        "other": "{{ count }} أفكار حول \"<span>{{ title }}</span>"
+      }
+    },
+    "portfolio": {
+      "category": "الفئة:",
+      "author": "المؤلف:",
+      "tags": "الوسوم:"
+    }
+  },
+  "onboarding": {
+    "product_title": "عنوان المنتج على سبيل المثال",
+    "product_excerpt": "تُستخدم هذه المساحة لوصف تفاصيل منتجك. أخبر العملاء عن مظهر منتجك وملمسه وتصميمه. أضف تفاصيل عن اللون والمواد المستخدمة والمقاسات ومكان الصنع.",
+    "collection_title": "اسم مجموعتك",
+    "blog_title": "عنوان منشورك",
+    "blog_excerpt": "لم تنشر مدونتك أي منشورات حتى الآن. يمكن استخدام المدونة للحديث عن إطلاق منتجات جديدة، أو تقديم نصائح، أو غيرها من الأخبار التي تريد مشاركتها مع عملائك. يمكنك الاطّلاع على مدونة التجارة الإلكترونية الخاصة بـ Shopify للحصول على الإلهام والمشورة لمتجرك ومدونتك.",
+    "blog_author": "اسم المؤلف",
+    "no_content": "هذا القسم لا يتضمن أي محتوى حاليًا. أضف محتوى إلى هذا القسم باستخدام الشريط الجانبي.",
+    "open_sidebar": "فتح الشريط الجانبي",
+    "header_sidebar": "الشريط الجانبي"
+  },
+  "collections": {
+    "pagination": {
+      "bar_with_count_html": "لقد شاهدت <span data-current-bar>{{ current_count }}</span> من أصل {{ total_count }} منتج"
+    }
+  },
+  "products": {
+    "theme_settings": {
+      "color": "لون، ألوان",
+      "size": "الحجم، أحجام، المقاس",
+      "and": "و",
+      "color_white": "أبيض"
+    },
+    "sidebar": {
+      "label": "الشريط الجانبي"
+    },
+    "product": {
+      "label": "المنتج",
+      "lightbox_icon_label": "انقر للتكبير",
+      "quick_add": "إضافة سريعة",
+      "quick_view": "نظرة سريعة",
+      "pre_order": "طلب مسبق",
+      "add_to_cart": "أضف إلى عربة التسوق",
+      "add_selected_to_cart": "أضف المحدد إلى سلة التسوق",
+      "choose_options": "اختر الخيارات",
+      "choose_product_options": "اختر خيارات لـ {{ product_name }}",
+      "choose_an_option": "اختر خيارًا",
+      "view_product": "عرض المنتج",
+      "description": "الوصف",
+      "inventory_in_stock": "متوفر بالمخزون",
+      "inventory_in_stock_show_count_html": "<span data-quantity>{{ quantity }}</span> متوفر في المخزون",
+      "inventory_low_stock": "مخزون قليل",
+      "inventory_low_stock_show_count_html": "الكمية منخفضة: <span data-quantity>{{ quantity }}</span> متبقية",
+      "inventory_out_of_stock": "نفد المخزون",
+      "inventory_out_of_stock_continue_selling": "طلب مسبق",
+      "will_not_ship_until_html": "لن يتم الشحن حتى <span data-incoming-date>{{ date }}</span>",
+      "will_be_in_stock_after_html": "سيكون متوفرًا في المخزون بعد <span data-incoming-date>{{ date }}</span>",
+      "sku": "رمز المنتج:",
+      "barcode": "الباركود:",
+      "on_sale": "مبيع",
+      "save_percent": "-{{ percent }}%",
+      "on_sale_single": "تخفيضات",
+      "save_percent_single": "{{ percent }}% خصم",
+      "badge_new": "جديد",
+      "badge_pre_order": "الطلب المسبق",
+      "product_variants": "متغيرات المنتج",
+      "show_more_colors": "إظهار المزيد من الألوان",
+      "show_more_sizes": "عرض المزيد من الأحجام",
+      "show_more": "عرض المزيد",
+      "sold_out": "نفد المخزون",
+      "sold_out_message": "نفد المخزون",
+      "badge_sold_out": "نفد المخزون",
+      "unavailable": "غير متاح",
+      "available": "التوفر:",
+      "vendor": "البائع:",
+      "type": "النوع:",
+      "category": "الفئات:",
+      "tag": "العلامات:",
+      "variant_sold_out": "النسخة غير متوفرة",
+      "video_exit_message": "{{ title }} يفتح الفيديو بملء الشاشة في نفس النافذة.",
+      "view_full_details": "عرض التفاصيل كاملة",
+      "xr_button": "عرض في مساحتك",
+      "xr_button_label": "اعرضها في مساحتك، حمّل العنصر في نافذة الواقع المعزز",
+      "include_taxes": "شامل للضريبة.",
+      "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">الشحن</a> يُحسب عند إتمام الشراء.",
+      "size_chart_button": "دليل المقاسات",
+      "ask_question": "اطرح سؤالاً"
+    }
   }
 }
