@@ -134,7 +134,7 @@
               "settings": {
                 "option_type": "liquid",
                 "page": "",
-                "text": "<ul style=\"margin: 0; padding: 0; list-style: none; line-height: 24px;\">\n  <li style=\"display: block; white-space: nowrap;\">Email: <b>info@yourdomain.com</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Phone: <b>07734343439</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Address: <b>Iraq, Baghdad, Zayoona, Zayoona Mall, F1</b></li>\n</ul>",
+                "text": "{% if request.locale.iso_code == 'ar' %}\n<ul class=\"hdt-footer-contact\" lang=\"ar\" dir=\"rtl\" style=\"margin: 0; padding: 0; list-style: none; line-height: 24px;\">\n  <li style=\"display: block;\">البريد الإلكتروني: <b dir=\"ltr\">info@yourdomain.com</b></li>\n  <li style=\"display: block;\">الهاتف: <b dir=\"ltr\">07734343439</b></li>\n  <li style=\"display: block;\">العنوان: <b>العراق، بغداد، زيونة، مول زيونة، الطابق الأول</b></li>\n</ul>\n{% else %}\n<ul class=\"hdt-footer-contact\" style=\"margin: 0; padding: 0; list-style: none; line-height: 24px;\">\n  <li style=\"display: block; white-space: nowrap;\">Email: <b>info@yourdomain.com</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Phone: <b>07734343439</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Address: <b>Iraq, Baghdad, Zayoona, Zayoona Mall, F1</b></li>\n</ul>\n{% endif %}",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
@@ -285,7 +285,7 @@
               "settings": {
                 "option_type": "liquid",
                 "page": "",
-                "text": "<span class=\"hdt-text-secondary\">All Rights Reserved © 2026 </span>",
+                "text": "<span class=\"hdt-footer-copyright hdt-text-secondary\">{% if request.locale.iso_code == 'ar' %}جميع الحقوق محفوظة © [year]{% else %}All Rights Reserved © [year]{% endif %}</span>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
