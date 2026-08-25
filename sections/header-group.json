@@ -18,11 +18,11 @@
           "type": "_menu_mobile",
           "static": true,
           "settings": {
-            "main_menu_mobile": "",
+            "main_menu_mobile": "main-menu-1",
             "menu_categories": "",
             "only_click_icon": false,
             "header_mobile_colors": "",
-            "note_mobile": "<span class=\"hdt-inline-flex hdt-text-base\" style=\"margin-bottom: 10px\">Need help ? </span><span class=\"hdt-flex hdt-flex-col hdt-text-base\" style=\"line-height: 24px;\"><span>Email: <b>info@yourdomain.com</b></span><span>Phone: <b>(212) 555-1234</b></span></span>"
+            "note_mobile": "<span class=\"hdt-inline-flex hdt-text-base\" style=\"margin-bottom: 10px;\">\n  Need help?\n</span>\n\n<span class=\"hdt-flex hdt-flex-col hdt-text-base\" style=\"line-height: 24px;\">\n  <span>Email: <b>info@yourdomain.com</b></span>\n  <span>Phone: <b>07734343439</b></span>\n  <span>Address: <b>Iraq, Baghdad, Zayoona, Zayoona Mall, F1</b></span>\n</span>"
           },
           "blocks": {}
         }
