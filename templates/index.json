@@ -778,8 +778,8 @@
         "line_cl": "#ebebeb",
         "line_pos": "start",
         "full_width": false,
-        "mg": ",,70px,",
-        "mg_mb": ",,30px,",
+        "mg": "",
+        "mg_mb": "",
         "pd": "",
         "pd_mb": ""
       }
@@ -1066,10 +1066,10 @@
         "background_opacity": 0,
         "section_layout": "container",
         "hdt_background_parallax": false,
-        "mg": "0px,,80px,",
-        "mg_mb": ",,30px,",
-        "pd": "",
-        "pd_mb": "20px,,20px,"
+        "mg": "",
+        "mg_mb": "",
+        "pd": "48px,,48px,",
+        "pd_mb": "32px,,32px,"
       }
     }
   },

@@ -191,15 +191,17 @@
         "footer_column_U4EkTn"
       ],
       "custom_css": [
-        "p {text-align: justify;}"
+        "p {text-align: justify;}",
+        ".hdt-col-content li {margin-block: 0 !important; line-height: 24px;}",
+        ".hdt-col-content li + li {margin-block-start: 12px !important;}"
       ],
       "settings": {
         "collapse": true,
         "full_width": false,
         "mg": "",
         "mg_mb": "",
-        "pd": "75px,,75px,",
-        "pd_mb": "56px,,56px,",
+        "pd": "48px,,48px,",
+        "pd_mb": "40px,,40px,",
         "colors_by_section": true,
         "color_scheme": "scheme-9803e85e-c526-431d-b0f2-d8d4f2a177d1",
         "background_opacity": 1
