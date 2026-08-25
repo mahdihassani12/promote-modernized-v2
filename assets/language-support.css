@@ -71,6 +71,12 @@ html[lang^='ar'] body, html[dir='rtl'] body { font-family: 'Cairo', sans-serif; 
 html[lang^='ar'] body :is(h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, label),
 html[dir='rtl'] body :is(h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, label) { font-family: 'Cairo', sans-serif; }
 
+/* Keep page headings comfortably separated from adjacent content in Arabic. */
+html[lang^='ar'] section.hdt-main-heading > .hdt-section-spacing {
+  --pd-block-start: 50px;
+  --pd-block-end: 50px;
+}
+
 /* Arabic navigation order and alignment. */
 html[lang^='ar'][dir='rtl'] :is(#hdt-nav-ul, #hdt-nav-ul-mb, .hdt-menu-list) { direction: rtl; text-align: right; }
 html[lang^='ar'][dir='rtl'] header :is(.hdt-menu-link, summary),
