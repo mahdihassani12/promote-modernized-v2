@@ -21,7 +21,10 @@
             "text_size": "2xl",
             "text_color": "hdt-s-text",
             "italic": false,
-            "uppercase": false
+            "uppercase": false,
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
           },
           "blocks": {}
         },
@@ -34,7 +37,10 @@
             "text_size": "base",
             "text_color": "hdt-s-text",
             "italic": false,
-            "uppercase": false
+            "uppercase": false,
+            "font_size_text_lg": 16,
+            "font_size_text": 14,
+            "letter_spacing_text": 0
           },
           "blocks": {}
         }
@@ -45,14 +51,13 @@
       ],
       "settings": {
         "use_dynamic_source": true,
-        "image": "shopify://shop_images/shop-banner.jpg",
         "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
         "bg_overlay": 54,
         "space_item": 10,
-        "pd": "54px,,54px,",
-        "pd_mb": "54px,,54px,",
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "54px,,54px,",
+        "pd_mb": "54px,,54px,"
       }
     },
     "custom_section_qTGJeH": {
@@ -136,45 +141,13 @@
                 "space": 20
               },
               "blocks": {}
-            },
-            "button_TDdCef": {
-              "type": "button",
-              "settings": {
-                "label": "Read More",
-                "link": "shopify://pages/about-us",
-                "open_in_new_tab": false,
-                "full_width": false,
-                "btn_style": "",
-                "color_btn": "#fff",
-                "color_hover_btn": "#fff",
-                "background_btn": "#222",
-                "background_hover_btn": "#333",
-                "border_w_btn": "",
-                "border_btn": "#222",
-                "border_hover_btn": "#333",
-                "size": "m",
-                "text_size": "hdt-text-base",
-                "font_weight": "normal",
-                "font_size_btn": 14,
-                "padding_btn": 30,
-                "min_width_btn": 100,
-                "min_width_dt_btn": 100,
-                "min_height_btn": 40,
-                "rounded": "hdt-btn-radius-sm",
-                "icon": "none",
-                "icon_position": "after",
-                "icon_height": 14,
-                "icon_spacing": 5
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "heading_xadRtp",
             "spacer_hXU6MQ",
             "text_mmc8WW",
-            "spacer_4x34r9",
-            "button_TDdCef"
+            "spacer_4x34r9"
           ]
         }
       },
@@ -195,7 +168,7 @@
         "background_opacity": 0,
         "section_layout": "container",
         "hdt_background_parallax": false,
-        "mg": "50px,,,",
+        "mg": "50px,,50px,",
         "mg_mb": "",
         "pd": "",
         "pd_mb": ""
