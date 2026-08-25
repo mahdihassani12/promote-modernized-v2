@@ -34,30 +34,17 @@
       ],
       "settings": {
         "use_dynamic_source": false,
-        "image": "shopify://shop_images/shop-category.jpg",
         "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
         "bg_overlay": 57,
         "space_item": 0,
+        "mg": "",
+        "mg_mb": "",
         "pd": "50px,,50px,",
-        "pd_mb": "31px,,31px,",
-        "mg": "",
-        "mg_mb": ""
-      }
-    },
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "full_width": false,
-        "color_scheme": "",
-        "pd": "50px,,60px,",
-        "pd_mb": "37px,,45px,",
-        "mg": "",
-        "mg_mb": ""
+        "pd_mb": "31px,,31px,"
       }
     }
   },
   "order": [
-    "heading",
-    "main"
+    "heading"
   ]
 }
