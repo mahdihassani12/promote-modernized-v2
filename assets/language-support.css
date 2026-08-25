@@ -1,0 +1,81 @@
+.language-switcher {
+  position: relative;
+  z-index: 30;
+  display: flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 16px;
+  background: rgb(var(--color-background, 255 255 255));
+  color: rgb(var(--color-foreground, 18 18 18));
+  border-bottom: 1px solid rgb(var(--color-foreground, 18 18 18) / 0.1);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.language-switcher__options {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.language-switcher button {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.language-switcher button[aria-current='page'] {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.language-switcher button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+html[lang^='ar'] body,
+html[lang^='ar'] h1,
+html[lang^='ar'] h2,
+html[lang^='ar'] h3,
+html[lang^='ar'] h4,
+html[lang^='ar'] h5,
+html[lang^='ar'] h6,
+html[lang^='ar'] p,
+html[lang^='ar'] a,
+html[lang^='ar'] button,
+html[lang^='ar'] input,
+html[lang^='ar'] select,
+html[lang^='ar'] textarea,
+html[lang^='ar'] label {
+  font-family: 'Cairo', sans-serif !important;
+}
+
+/* Embla (the theme slider engine) reads the document direction. These rules
+   also cover native/modern scroll carousels and keep navigation physically
+   ordered: left is back and right is forward in both languages. */
+html[dir='rtl'] .hdt-slider,
+html[dir='rtl'] .hdt-slider__viewport,
+html[dir='rtl'] .hdt-slider__container,
+html[dir='rtl'] [data-modern-track] {
+  direction: rtl;
+}
+
+html[dir='rtl'] .hdt-navigation,
+html[dir='rtl'] .modern-carousel__nav {
+  direction: ltr;
+}
+
+@media (max-width: 749px) {
+  .language-switcher {
+    min-height: 30px;
+    padding-inline: 10px;
+    font-size: 12px;
+  }
+}

@@ -15,8 +15,25 @@
       const dots = carousel.querySelector('[data-modern-dots]');
       if (!track || !prev || !next || !dots) return;
       carousel.dataset.modernReady = 'true';
+      const isRtl = document.documentElement.dir === 'rtl';
+      let rtlScrollType = 'negative';
+      if (isRtl) {
+        track.scrollLeft = 1;
+        rtlScrollType = track.scrollLeft === 0 ? 'negative' : 'reverse';
+        track.scrollLeft = rtlScrollType === 'negative' ? 0 : track.scrollWidth;
+      }
+      const maxScroll = () => Math.max(0, track.scrollWidth - track.clientWidth);
+      const logicalScroll = () => {
+        if (!isRtl) return track.scrollLeft;
+        return rtlScrollType === 'negative' ? -track.scrollLeft : maxScroll() - track.scrollLeft;
+      };
+      const scrollToPage = (index) => {
+        const logicalLeft = Math.min(maxScroll(), index * track.clientWidth);
+        const left = !isRtl ? logicalLeft : rtlScrollType === 'negative' ? -logicalLeft : maxScroll() - logicalLeft;
+        track.scrollTo({ left, behavior: 'smooth' });
+      };
       const pageCount = () => Math.max(1, Math.ceil((track.scrollWidth - 1) / track.clientWidth));
-      const activePage = () => Math.min(pageCount() - 1, Math.round(track.scrollLeft / track.clientWidth));
+      const activePage = () => Math.min(pageCount() - 1, Math.round(logicalScroll() / track.clientWidth));
       const render = () => {
         const count = pageCount();
         if (dots.children.length !== count) {
@@ -25,17 +42,17 @@
             dot.type = 'button';
             dot.className = 'modern-carousel__dot';
             dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
-            dot.addEventListener('click', () => track.scrollTo({ left: index * track.clientWidth, behavior: 'smooth' }));
+            dot.addEventListener('click', () => scrollToPage(index));
             return dot;
           }));
         }
         const active = activePage();
         [...dots.children].forEach((dot, index) => dot.classList.toggle('is-active', index === active));
-        prev.disabled = track.scrollLeft <= 2;
-        next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+        prev.disabled = logicalScroll() <= 2;
+        next.disabled = logicalScroll() >= maxScroll() - 2;
       };
-      prev.addEventListener('click', () => track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' }));
-      next.addEventListener('click', () => track.scrollBy({ left: track.clientWidth, behavior: 'smooth' }));
+      prev.addEventListener('click', () => scrollToPage(Math.max(0, activePage() - 1)));
+      next.addEventListener('click', () => scrollToPage(Math.min(pageCount() - 1, activePage() + 1)));
       track.addEventListener('scroll', render, { passive: true });
       new ResizeObserver(render).observe(track);
       render();
