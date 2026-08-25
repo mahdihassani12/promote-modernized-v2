@@ -13,162 +13,92 @@
   line-height: 1.4;
 }
 
-.language-switcher__options {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
+.language-switcher__options { display: inline-flex; align-items: center; gap: 7px; }
+.language-switcher button { appearance: none; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.language-switcher button[aria-current='page'] { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.language-switcher button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
 
-.language-switcher button {
-  appearance: none;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-}
-
-.language-switcher button[aria-current='page'] {
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.language-switcher button:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 3px;
-}
-
-html[lang='ar'][dir='rtl'] {
+html[lang^='ar'][dir='rtl'] {
   --font-body-family: 'Cairo', sans-serif;
   --font-heading-family: 'Cairo', sans-serif;
   --font-sheading-family: 'Cairo', sans-serif;
-}
-
-html[lang='ar'][dir='rtl'] body {
-  font-family: 'Cairo', sans-serif;
-}
-
-html[lang='ar'][dir='rtl'] :is(button, input, select, textarea) {
-  font-family: inherit;
-}
-
-/* Only the custom carousel's control row is kept in DOM order. Never change
-   direction on theme slider containers: Embla owns their transforms and reads
-   the direction from the document. */
-html[lang='ar'][dir='rtl'] .modern-carousel__nav {
-  direction: ltr;
-}
-
-/* Navigation remains in Shopify's source order. In RTL that puts the first
-   (Home) link at the right edge without reversing or duplicating menu data. */
-html[lang='ar'][dir='rtl'] :is(#hdt-nav-ul, #hdt-nav-ul-mb, .hdt-menu-list) {
-  direction: rtl;
-  text-align: right;
-}
-
-html[lang='ar'][dir='rtl'] header :is(.hdt-menu-link, summary),
-html[lang='ar'][dir='rtl'] footer {
-  text-align: right;
-}
-
-html[lang='ar'][dir='rtl'] :is(header, footer) :is(.hdt-container, .hdt-row, .hdt-col, .hdt-header-col, .hdt-footer-col-block) {
-  min-width: 0;
-}
-
-html[lang='ar'][dir='rtl'] :is(header, footer) :is(img, video, iframe) {
-  max-inline-size: 100%;
-}
-
-html[lang='ar'][dir='rtl'] footer :is(a, p, address, .hdt-rte) {
-  overflow-wrap: anywhere;
-}
-
-html[lang='ar'][dir='rtl'] .hdt-menu-item-arrow,
-html[lang='ar'][dir='rtl'] [accordion-icon] {
-  margin-inline-start: auto;
-}
-
-/* Arabic-only layout spacing.
-   Translation can leave the theme's optional section padding variables empty.
-   Keep the section background/full-bleed media untouched and pad the content
-   containers instead, so sliders retain their calculated track widths. */
-html[lang='ar'][dir='rtl'] {
   --arabic-page-gutter: 48px;
   --arabic-section-space: 56px;
 }
 
-html[lang='ar'][dir='rtl'] body {
-  overflow-x: clip;
-}
+html[lang^='ar'][dir='rtl'] body { font-family: 'Cairo', sans-serif; overflow-x: hidden; overflow-x: clip; }
+html[lang^='ar'][dir='rtl'] :is(button, input, select, textarea) { font-family: inherit; }
 
-html[lang='ar'][dir='rtl'] #MainContent > .shopify-section,
-html[lang='ar'][dir='rtl'] #MainContent > .hdt-section {
-  max-inline-size: 100%;
-}
+/* Keep carousel controls in DOM order. Slider libraries own track transforms. */
+html[lang^='ar'][dir='rtl'] .modern-carousel__nav { direction: ltr; }
 
-html[lang='ar'][dir='rtl'] #MainContent .hdt-section > .hdt-container,
-html[lang='ar'][dir='rtl'] #MainContent .hdt-section > [class~='hdt-container'],
-html[lang='ar'][dir='rtl'] #MainContent .hdt-section .hdt-container,
-html[lang='ar'][dir='rtl'] #MainContent .hdt-main-page > .hdt-container,
-html[lang='ar'][dir='rtl'] #MainContent .hdt-about-us.hdt-container {
+/* Arabic navigation order and alignment. */
+html[lang^='ar'][dir='rtl'] :is(#hdt-nav-ul, #hdt-nav-ul-mb, .hdt-menu-list) { direction: rtl; text-align: right; }
+html[lang^='ar'][dir='rtl'] header :is(.hdt-menu-link, summary),
+html[lang^='ar'][dir='rtl'] footer { text-align: right; }
+html[lang^='ar'][dir='rtl'] .hdt-menu-item-arrow,
+html[lang^='ar'][dir='rtl'] [accordion-icon] { margin-inline-start: auto; }
+
+/* Prevent translated rows and columns from expanding beyond the viewport. */
+html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(
+  .hdt-row, .hdt-grid, .hdt-col, .hdt-column, .hdt-column_inner,
+  .hdt-header-col, .hdt-footer-col-block, .hdt-rte
+) { min-inline-size: 0; max-inline-size: 100%; }
+
+html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(img, video, iframe) { max-inline-size: 100%; }
+html[lang^='ar'][dir='rtl'] :is(#MainContent, footer) :is(a, p, address, .hdt-rte) { overflow-wrap: break-word; }
+
+/* Arabic-only gutters for every standard and full-width theme container. */
+html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(.hdt-container, .hdt-container-full) {
   box-sizing: border-box;
-  padding-inline: var(--arabic-page-gutter) !important;
+  padding-inline-start: var(--arabic-page-gutter) !important;
+  padding-inline-end: var(--arabic-page-gutter) !important;
 }
 
-/* Give ordinary content sections comfortable vertical breathing room. */
-html[lang='ar'][dir='rtl'] #MainContent :is(
-  .hdt-section--custom,
-  .hdt-section-main-page,
-  .hdt-about-us-container
+/* Avoid doubled spacing when the theme nests a normal container. */
+html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(.hdt-container, .hdt-container-full) .hdt-container {
+  padding-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+}
+
+/* Full-width sections can place content directly below their wrapper. */
+html[lang^='ar'][dir='rtl'] :is(#MainContent, footer) .hdt-container-full > :is(
+  .hdt-section-spacing, .hdt-grid, .hdt-row, .hdt-footer-content
+) {
+  box-sizing: border-box;
+  padding-inline-start: var(--arabic-page-gutter) !important;
+  padding-inline-end: var(--arabic-page-gutter) !important;
+}
+
+/* Comfortable vertical spacing for content sections with empty settings. */
+html[lang^='ar'][dir='rtl'] #MainContent :is(
+  .hdt-section--custom, .hdt-section-main-page, .hdt-about-us-container
 ) .hdt-section-spacing {
   padding-block-start: var(--arabic-section-space) !important;
   padding-block-end: var(--arabic-section-space) !important;
 }
 
-/* Rich text must wrap inside its padded container in Arabic. */
-html[lang='ar'][dir='rtl'] #MainContent :is(
-  .hdt-rte,
-  .hdt-column,
-  .hdt-column_inner,
-  .hdt-main-page,
-  .hdt-main-area
-) {
-  min-inline-size: 0;
-  max-inline-size: 100%;
+/* Footer columns need an inner gap after their RTL order changes. */
+html[lang^='ar'][dir='rtl'] footer :is(.hdt-footer-col-block, .hdt-column, .hdt-column_inner) {
+  box-sizing: border-box;
+  padding-inline: 16px;
 }
 
-html[lang='ar'][dir='rtl'] #MainContent :is(.hdt-rte, .hdt-column_inner) :is(p, h1, h2, h3, h4, h5, h6) {
-  overflow-wrap: break-word;
-}
+html[lang^='ar'][dir='rtl'] footer :is(.hdt-grid, .hdt-row) { margin-inline: 0 !important; }
 
-/* Modern custom sections have their own container system. */
-html[lang='ar'][dir='rtl'] #MainContent .modern-section {
-  padding-block: var(--arabic-section-space) !important;
-}
-
-html[lang='ar'][dir='rtl'] #MainContent .modern-section__inner {
+/* Modern custom sections use a separate container system. */
+html[lang^='ar'][dir='rtl'] #MainContent .modern-section { padding-block: var(--arabic-section-space) !important; }
+html[lang^='ar'][dir='rtl'] #MainContent .modern-section__inner {
   box-sizing: border-box;
   width: min(var(--modern-width, 1400px), calc(100% - (var(--arabic-page-gutter) * 2)));
 }
 
 @media (max-width: 1149px) {
-  html[lang='ar'][dir='rtl'] {
-    --arabic-page-gutter: 30px;
-    --arabic-section-space: 44px;
-  }
+  html[lang^='ar'][dir='rtl'] { --arabic-page-gutter: 30px; --arabic-section-space: 44px; }
 }
 
 @media (max-width: 749px) {
-  html[lang='ar'][dir='rtl'] {
-    --arabic-page-gutter: 18px;
-    --arabic-section-space: 32px;
-  }
-
-  .language-switcher {
-    min-height: 30px;
-    padding-inline: 10px;
-    font-size: 12px;
-  }
+  html[lang^='ar'][dir='rtl'] { --arabic-page-gutter: 18px; --arabic-section-space: 32px; }
+  .language-switcher { min-height: 30px; padding-inline: 10px; font-size: 12px; }
+  html[lang^='ar'][dir='rtl'] footer :is(.hdt-footer-col-block, .hdt-column, .hdt-column_inner) { padding-inline: 0; }
 }
