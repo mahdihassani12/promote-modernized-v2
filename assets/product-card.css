@@ -33,6 +33,12 @@
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.065);
 }
 
+/* Keep the final line of card content clear of the new shadow. Existing card
+ * layouts with their own info padding remain in control of their spacing. */
+:where(.hdt-card-product > .hdt-card-product__wrapper > .hdt-card-product__info) {
+  padding-block-end: 1.5rem;
+}
+
 .hdt-card-product__media-wrapp {
   border-start-start-radius: var(--radius-product-media);
   border-start-end-radius: var(--radius-product-media);
