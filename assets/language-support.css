@@ -64,17 +64,12 @@ html[lang^='ar'][dir='rtl'] {
   --font-body-family: 'Cairo', sans-serif;
   --font-heading-family: 'Cairo', sans-serif;
   --font-sheading-family: 'Cairo', sans-serif;
-  --arabic-page-gutter: 48px;
-  --arabic-section-space: 56px;
 }
 
 html[lang^='ar'], html[dir='rtl'] { font-family: 'Cairo', sans-serif; }
 html[lang^='ar'] body, html[dir='rtl'] body { font-family: 'Cairo', sans-serif; overflow-x: hidden; overflow-x: clip; }
 html[lang^='ar'] body :is(h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, label),
 html[dir='rtl'] body :is(h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, label) { font-family: 'Cairo', sans-serif; }
-
-/* Keep carousel controls in DOM order. Slider libraries own track transforms. */
-html[lang^='ar'][dir='rtl'] .modern-carousel__nav { direction: ltr; }
 
 /* Arabic navigation order and alignment. */
 html[lang^='ar'][dir='rtl'] :is(#hdt-nav-ul, #hdt-nav-ul-mb, .hdt-menu-list) { direction: rtl; text-align: right; }
@@ -83,70 +78,10 @@ html[lang^='ar'][dir='rtl'] footer { text-align: right; }
 html[lang^='ar'][dir='rtl'] .hdt-menu-item-arrow,
 html[lang^='ar'][dir='rtl'] [accordion-icon] { margin-inline-start: auto; }
 
-/* Prevent translated rows and columns from expanding beyond the viewport. */
-html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(
-  .hdt-row, .hdt-grid, .hdt-col, .hdt-column, .hdt-column_inner,
-  .hdt-header-col, .hdt-footer-col-block, .hdt-rte
-) { min-inline-size: 0; max-inline-size: 100%; }
-
-html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(img, video, iframe) { max-inline-size: 100%; }
-html[lang^='ar'][dir='rtl'] :is(#MainContent, footer) :is(a, p, address, .hdt-rte) { overflow-wrap: break-word; }
-
-/* Arabic-only gutters for every standard and full-width theme container. */
-html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(.hdt-container, .hdt-container-full) {
-  box-sizing: border-box;
-  padding-inline-start: var(--arabic-page-gutter) !important;
-  padding-inline-end: var(--arabic-page-gutter) !important;
-}
-
-/* Avoid doubled spacing when the theme nests a normal container. */
-html[lang^='ar'][dir='rtl'] :is(header, #MainContent, footer) :is(.hdt-container, .hdt-container-full) .hdt-container {
-  padding-inline-start: 0 !important;
-  padding-inline-end: 0 !important;
-}
-
-/* Full-width sections can place content directly below their wrapper. */
-html[lang^='ar'][dir='rtl'] :is(#MainContent, footer) .hdt-container-full > :is(
-  .hdt-section-spacing, .hdt-grid, .hdt-row, .hdt-footer-content
-) {
-  box-sizing: border-box;
-  padding-inline-start: var(--arabic-page-gutter) !important;
-  padding-inline-end: var(--arabic-page-gutter) !important;
-}
-
-/* Comfortable vertical spacing for content sections with empty settings. */
-html[lang^='ar'][dir='rtl'] #MainContent :is(
-  .hdt-section--custom, .hdt-section-main-page, .hdt-about-us-container
-) .hdt-section-spacing {
-  padding-block-start: var(--arabic-section-space) !important;
-  padding-block-end: var(--arabic-section-space) !important;
-}
-
-/* Footer columns need an inner gap after their RTL order changes. */
-html[lang^='ar'][dir='rtl'] footer :is(.hdt-footer-col-block, .hdt-column, .hdt-column_inner) {
-  box-sizing: border-box;
-  padding-inline: 16px;
-}
-
-html[lang^='ar'][dir='rtl'] footer :is(.hdt-grid, .hdt-row) { margin-inline: 0 !important; }
-
-/* Modern custom sections use a separate container system. */
-html[lang^='ar'][dir='rtl'] #MainContent .modern-section { padding-block: var(--arabic-section-space) !important; }
-html[lang^='ar'][dir='rtl'] #MainContent .modern-section__inner {
-  box-sizing: border-box;
-  width: min(var(--modern-width, 1400px), calc(100% - (var(--arabic-page-gutter) * 2)));
-}
-
-@media (max-width: 1149px) {
-  html[lang^='ar'][dir='rtl'] { --arabic-page-gutter: 30px; --arabic-section-space: 44px; }
-}
-
 @media (max-width: 749px) {
-  html[lang^='ar'][dir='rtl'] { --arabic-page-gutter: 18px; --arabic-section-space: 32px; }
   .language-switcher { font-size: 12px; }
   .language-switcher__trigger { min-width: 34px; min-height: 34px; justify-content: center; gap: 0; padding: 7px; }
   .language-switcher__globe { width: 17px; height: 17px; }
   .language-switcher__current,
   .language-switcher__chevron { display: none; }
-  html[lang^='ar'][dir='rtl'] footer :is(.hdt-footer-col-block, .hdt-column, .hdt-column_inner) { padding-inline: 0; }
 }

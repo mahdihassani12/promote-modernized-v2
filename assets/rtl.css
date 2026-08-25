@@ -1,137 +1,60 @@
-/* Arabic storefront overrides. This asset is conditionally loaded by the layouts. */
+/* Directional overrides only. Layout widths and spacing intentionally remain
+   owned by the base theme so an RTL locale renders at exactly the LTR width. */
 html[dir='rtl'] { direction: rtl; }
-
-html[dir='rtl'] body {
-  overflow-x: clip;
-  text-align: start;
-}
+html[dir='rtl'] body { text-align: start; overflow-x: clip; }
 
 html[dir='rtl'] :is(button, input, select, textarea) {
   font-family: inherit;
   text-align: start;
 }
 
-/* Values whose character order is meaningful must not inherit visual RTL
-   reordering from their surrounding controls. */
+/* Keep machine-readable values in their natural character order. */
 html[dir='rtl'] :is(
   .money, .hdt-money, .price, .hdt-price, .hdt-price-item,
   [type='email'], [type='tel'], [inputmode='email'], [inputmode='tel'],
-  time, .hdt-countdown__inner
-) {
-  direction: ltr;
-  unicode-bidi: isolate;
-}
+  time, .hdt-countdown__inner, .hdt-quantity, input[name='quantity']
+) { direction: ltr; unicode-bidi: isolate; }
 
-html[dir='rtl'] :is([type='email'], [type='tel'], [inputmode='email'], [inputmode='tel']) {
-  text-align: start;
-}
+html[dir='rtl'] :is(
+  .hdt-menu-list, .hdt-sub-menu, .hdt-predictive-search, .hdt-search-form,
+  .hdt-facets, .hdt-filter, .hdt-cart-drawer, .hdt-mini-cart,
+  .hdt-customer, .hdt-footer, .hdt-rte
+) { text-align: start; }
 
-html[dir='rtl'] :is(header, main, footer, dialog, .hdt-modal, .hdt-drawer) :is(
+html[dir='rtl'] :is(
   .hdt-row, .hdt-grid, .hdt-col, .hdt-column, .hdt-column_inner,
   .hdt-header-col, .hdt-footer-col-block, .hdt-rte
-) {
-  min-inline-size: 0;
-  max-inline-size: 100%;
-}
-
-html[dir='rtl'] :is(img, video, iframe) { max-inline-size: 100%; }
+) { min-inline-size: 0; }
 
 html[dir='rtl'] :is(p, address, .hdt-rte, .hdt-product__title, .hdt-card-product__title) {
   overflow-wrap: anywhere;
 }
 
-/* Navigation, search, forms and layered UI follow the reading direction. */
-html[dir='rtl'] :is(
-  #hdt-nav-ul, #hdt-nav-ul-mb, .hdt-menu-list, .hdt-sub-menu,
-  .hdt-predictive-search, .hdt-search-form, .hdt-facets, .hdt-filter,
-  .hdt-cart-drawer, .hdt-mini-cart, .hdt-customer, .hdt-footer
-) {
-  direction: rtl;
-  text-align: start;
-}
-
-/* Theme utility classes use physical names. Limit their mirroring to the
-   storefront components that use them as inline-start/end anchors. */
-html[dir='rtl'] :is(header, main, footer, dialog, .hdt-modal, .hdt-drawer) .hdt-left-0 {
-  left: auto;
-  right: 0;
-}
-
-html[dir='rtl'] :is(header, main, footer, dialog, .hdt-modal, .hdt-drawer) .hdt-right-0 {
-  right: auto;
-  left: 0;
-}
-
-html[dir='rtl'] :is(
-  .hdt-dialog-drawer__header, .hdt-cart-drawer__header,
-  .hdt-modal__header, .hdt-predictive-search__header
-) { text-align: start; }
-
-/* Toasts are anchored with a logical inset; mirror only their entrance motion. */
-html[dir='rtl'] .toast:not(.show) { transform: translateX(-100%); }
-
-html[dir='rtl'] :is(
-  .hdt-dialog-btn__close, .hdt-modal__close, .hdt-cart-drawer__close,
-  .hdt-predictive-search__close
-) {
+html[dir='rtl'] :is(.hdt-menu-item-arrow, [accordion-icon], .hdt-dialog-btn__close,
+  .hdt-modal__close, .hdt-cart-drawer__close, .hdt-predictive-search__close) {
   margin-inline-start: auto;
   margin-inline-end: 0;
 }
 
-/* Forms, customer pages, filters and cart summaries retain label/control
-   alignment without changing the bidi order of values. */
-html[dir='rtl'] :is(
-  .hdt-field, .hdt-form-field, .hdt-customer, .hdt-addresses,
-  .hdt-facets, .hdt-filter-group, .hdt-cart-item, .hdt-cart__footer,
-  .hdt-quick-order-list, .hdt-newsletter
-) { text-align: start; }
-
-html[dir='rtl'] :is(.hdt-quantity, .hdt-quantity__inner, .hdt-quantity-wrapp) {
+/* The page direction supplies RTL to both theme and custom slider tracks.
+   Controls stay LTR so previous/next retain their visual DOM order. */
+html[dir='rtl'] :is(.hdt-slider__button, .modern-carousel__nav, .modern-carousel__dots) {
   direction: ltr;
 }
 
-html[dir='rtl'] :is(.hdt-quantity input, input[name='quantity']) {
-  direction: ltr;
-  text-align: center;
-}
-
-/* Keep product media itself natural. Only the thumbnail rail and navigation
-   follow the page's inline progression. */
-html[dir='rtl'] :is(.hdt-product-media, .hdt-product__media, .pswp) :is(img, video, model-viewer) {
-  direction: ltr;
-}
-
-html[dir='rtl'] :is(.hdt-thumbnail-list, .hdt-product__media-list, .hdt-variant-picker) {
-  direction: rtl;
-}
-
-html[dir='rtl'] :is(.hdt-menu-item-arrow, [accordion-icon]) {
-  margin-inline-start: auto;
-  margin-inline-end: 0;
-}
-
-html[dir='rtl'] :is(
-  .hdt-icon--mirrored, .hdt-breadcrumb svg,
+html[dir='rtl'] :is(.hdt-icon--mirrored, .hdt-breadcrumb svg,
   .hdt-pagination__item--next svg, .hdt-pagination__item--prev svg,
-  .hdt-slider__button--prev svg, .hdt-slider__button--next svg,
-  [data-modern-prev] svg, [data-modern-next] svg
-) { transform: scaleX(-1); }
-
-/* Tracks start at the right edge; controls keep their familiar visual order. */
-html[dir='rtl'] :is(.hdt-slider, .hdt-slider__container, [data-modern-track]) { direction: rtl; }
-html[dir='rtl'] :is(.hdt-slider__button, .modern-carousel__nav, .modern-carousel__dots) { direction: ltr; }
+  .hdt-slider__button--prev svg, .hdt-slider__button--next svg) {
+  transform: scaleX(-1);
+}
 
 html[dir='rtl'] .modern-section { text-align: start; }
 html[dir='rtl'] .modern-promo::after {
   background: linear-gradient(270deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 5%));
 }
 html[dir='rtl'] .modern-promo__content {
-  inset-inline-start: clamp(24px, 4vw, 56px);
-  inset-inline-end: auto;
-}
-
-@media (max-width: 749px) {
-  html[dir='rtl'] :is(.hdt-drawer, .hdt-modal, .hdt-menu-mobile) { max-inline-size: 100vw; }
+  right: clamp(24px, 4vw, 56px);
+  left: auto;
 }
 
 @supports not (overflow: clip) {
