@@ -3375,8 +3375,19 @@
             "debit": "أنفقت",
             "debit_revert": "تم رد الأموال",
             "expiration": "انتهت صلاحيته"
-          }
-        }
+          },
+          "load_error": "تعذر تحميل رصيد المتجر.",
+          "title": "رصيد متجر ينتهي مفعوله",
+          "balance_label": "الرصيد",
+          "expiration_date_label": "تاريخ انتهاء الصلاحية",
+          "amount_label": "المبلغ",
+          "date_label": "تاريخ",
+          "event_label": "حدث"
+        },
+        "label": "رصيد المتجر",
+        "accessibility_label": "رصيد المتجر - {{formattedBalance}}",
+        "expirable_amounts_button": "عرض المبالغ القابلة للانتهاء",
+        "expirable_amounts_label": "المبالغ التي توشك على الانتهاء"
       },
       "payment_details": {
         "title": "تفاصيل طريقة الدفع",
@@ -3461,6 +3472,64 @@
         "card_verification_value_label": "الرمز الأمني",
         "card_verification_value_placeholder": "الرمز الأمني",
         "card_start_label": "تاريخ الإصدار (شهر / سنة)"
+      },
+      "replacement_payment_method_title": "طريقة دفع بديلة",
+      "title": "طرق الدفع",
+      "add_payment_method_button": "إضافة طريقة دفع",
+      "add_payment_method_dropdown": {
+        "bank_account_consent": "بإضافة طريقة دفع، فإنك تفوض بخصم المبلغ من بطاقتك أو حسابك البنكي للمشتريات المستقبلية التي توافق عليها، وذلك إلى أن تقوم بالإلغاء."
+      },
+      "bank_account": {
+        "loading_accessibility_message": "زر الحساب البنكي قيد التحميل",
+        "iframe_title_accessibility_label": "إعداد الحساب المصرفي",
+        "display_name": "الحساب المصرفي",
+        "generic_error": "تعذرت إضافة الحساب البنكي. حاول مرة أخرى لاحقًا."
+      },
+      "add_payment_method_banner": "أضف طريقة دفع لإتمام عملية الشراء بشكل أسرع أو للخدمات المفوضة مسبقًا",
+      "no_payment_methods_banner": "لم تتم إضافة طرق دفع",
+      "edit_payment_method_button_accessibility_label": "تعديل {{paymentMethodName}} التي تنتهي بـ {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "تعديل {{paymentMethodName}}",
+      "delete_payment_method_button": "حذف",
+      "delete_payment_method_button_accessibility_label": "حذف {{paymentMethodName}}",
+      "back_button": "الظهر",
+      "back_button_accessibility_label": "العودة إلى {{paymentMethodStepTitle}}",
+      "default": "افتراضي",
+      "generic_card": "بطاقة",
+      "expiration_warning_button_accessibility_label": "عرض تحذير انتهاء الصلاحية لـ {{paymentMethodName}} وينتهي بـ {{lastDigits}}",
+      "expires_soon": "هذه البطاقة ستنتهي صلاحيتها قريباً",
+      "expired": "هذه البطاقة منتهية الصلاحية",
+      "expired_badge_label": "انتهت صلاحيته",
+      "expiring_badge_label": "ينتهي قريبًا",
+      "card_update_consent": "سيتم حفظ طريقة الدفع هذه للمشتريات المستقبلية.",
+      "card_update_consent_subscriptions": "سيتم حفظ طريقة الدفع هذه للمشتريات المستقبلية، وقد تُستخدم لأي عملية شراء متكررة أو مؤجلة.",
+      "digital_wallet_title": "المحفظة الرقمية",
+      "credit_or_debit_card_title": "بطاقة ائتمان أو خصم",
+      "credit_card_title": "بطاقة ائتمان",
+      "additional_payment_methods": "طرق دفع إضافية",
+      "or": "أو",
+      "google_pay": {
+        "iframe_title_accessibility_label": "أضف طريقة دفع Google Pay",
+        "loading_accessibility_message": "جارٍ تحميل Google Pay",
+        "loading": "جارٍ تحميل Google Pay",
+        "errors": {
+          "generic": "حدثت مشكلة في Google Pay. يُرجى إعادة المحاولة أو استخدام طريقة دفع مختلفة.",
+          "missing_billing_address": "يتطلب Google Pay عنوان إرسال فواتير. يرجى إضافة واحد إلى حسابك."
+        }
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "أضف طريقة دفع PayPal",
+        "loading_accessibility_message": "جارٍ تحميل PayPal",
+        "errors": {
+          "generic": "حدثت مشكلة في PayPal. الرجاء المحاولة مرة أخرى أو استخدام طريقة دفع مختلفة."
+        }
+      },
+      "apple_pay": {
+        "loading": "جارٍ تحميل Apple Pay",
+        "errors": {
+          "generic": "حدثت مشكلة في Apple Pay. يُرجى إعادة المحاولة أو استخدام طريقة دفع مختلفة.",
+          "not_available": "Apple Pay غير متوفر على هذا الجهاز.",
+          "missing_billing_address": "يتطلب Apple Pay عنوان فوترة. يرجى إضافته إلى حسابك."
+        }
       }
     },
     "B2B": {
@@ -3611,6 +3680,93 @@
           "order_label": "اطلب {{name}}",
           "draft_label": "Draft order {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "أضف رقم أمر الشراء",
+        "add_modal_title": "أضف رقم أمر الشراء",
+        "cancel": "إلغاء",
+        "close_modal_accessibility_label": "إغلاق نافذة الرقم التعريفي لأمر الشراء",
+        "discard": "تجاهل",
+        "discard_changes_modal_title": "تجاهل التغييرات؟",
+        "edit_accessibility_label": "تعديل رقم أمر الشراء",
+        "edit_modal_title": "تعديل رقم أمر الشراء",
+        "empty_state": "لا يوجد رقم أمر شراء",
+        "modal_po_number_input_label": "رقم أمر الشراء",
+        "modal_po_number_input_max_length_error": "أرقام أوامر الشراء يجب ألا تتعدى {{maxLength}} حرفًا.",
+        "save": "حفظ",
+        "title": "أمر شراء رقم #{{poNumber}}"
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "حدثت مشكلة أثناء حذف هذا العنوان. حاول مرة أخرى أو قم بتحديث الصفحة."
+      },
+      "addresses_loading_issue": {
+        "description": "خطأ في الاتصال. تحقق من اتصالك بالإنترنت وحاول مرة أخرى."
+      },
+      "banner_title": {
+        "one": "يوجد {{count}} خطأ",
+        "other": "يوجد {{count}} أخطاء"
+      },
+      "failed_address_creation": {
+        "description": "حدثت مشكلة أثناء إنشاء عنوانك. حاول تحديث هذه الصفحة أو تحقق من اتصالك بالإنترنت."
+      },
+      "failed_address_update": {
+        "description": "حدثت مشكلة أثناء تحديث عنوانك. حاول تحديث هذه الصفحة أو تحقق من اتصالك بالإنترنت."
+      },
+      "load_address_form_error": {
+        "title": "تعذر تحميل نموذج العنوان",
+        "description": "تعذر تحميل نموذج العنوان.",
+        "refresh_button": "تحديث الصفحة"
+      },
+      "load_orders_error": {
+        "title": "تعذر تحميل الطلبات",
+        "description": "أعد المحاولة أو عُد لاحقاً.",
+        "retry_button": "إعادة المحاولة"
+      },
+      "load_paypal_error": {
+        "description": "حدثت مشكلة في تحميل PayPal. يرجى إعادة المحاولة."
+      },
+      "logout_everywhere": {
+        "description": "حدث خطأ أثناء تسجيل الخروج. يُرجى المحاولة مرة أخرى."
+      },
+      "no_access_to_locations": {
+        "description": "لا تملك صلاحية الوصول إلى أي مواقع."
+      },
+      "not_found": {
+        "description": "تحقق من عنوان URL أو حاول مرة أخرى خلال بضع دقائق.",
+        "title": "حدثت مشكلة أثناء تحميل هذه الصفحة"
+      },
+      "order_not_found": {
+        "description": "هذا الطلب غير موجود أو ليس لديك صلاحية لعرضه.",
+        "title": "الطلب غير موجود"
+      },
+      "profile_update_error": {
+        "description": "حدثت مشكلة أثناء تحديث ملفك الشخصي. حاول تحديث هذه الصفحة أو تحقق من اتصالك بالإنترنت."
+      },
+      "profile_name_update_error": {
+        "description": "حدثت مشكلة أثناء تحديث اسمك. حاول تحديث هذه الصفحة أو تحقق من اتصالك بالإنترنت."
+      },
+      "retry_action_label": "حاول مرة أخرى",
+      "resend_link": {
+        "too_many_requests": "العديد من الطلبات. حاول مرة أخرى لاحقًا.",
+        "generic": "طلب فاشل"
+      },
+      "load_extension_error": {
+        "title": "خطأ",
+        "description": "حدث هذه الصفحة أو حاول مرة أخرى خلال بضع دقائق.",
+        "refresh_button": "تحديث الصفحة"
+      },
+      "already_upgraded": "تمت ترقية حسابات العملاء بالفعل.",
+      "failed_to_upgrade": "فشل تحديث إعدادات حساب العميل.",
+      "not_upgraded": "لم تتم ترقية حسابات العملاء.",
+      "failed_to_revert": "فشل في استعادة إعدادات حساب العميل.",
+      "revert_window_expired": "انتهت صلاحية فترة التراجع."
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "محاولات كثيرة جداً",
+        "description": "الرجاء المحاولة مرة أخرى في غضون بضع دقائق"
       }
     }
   },
@@ -3643,7 +3799,15 @@
       "title": "نتائج البحث",
       "search_for": "البحث عن \"{{ terms }}\"",
       "suggestions": "اقتراحات",
-      "pages": "صفحات"
+      "pages": "صفحات",
+      "general_title": {
+        "label": "ابحث في موقعنا"
+      },
+      "no_results": "لم يتم العثور على نتائج لـ \"{{ terms }}\". تحقق من الإملاء أو استخدم كلمة أو عبارة مختلفة.",
+      "page": "صفحة",
+      "products": "المنتجات",
+      "collection": "المجموعات",
+      "article": "مقالات"
     },
     "cart": {
       "cart": "عربة التسوق"
@@ -3875,7 +4039,139 @@
       "include_taxes": "شامل للضريبة.",
       "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">الشحن</a> يُحسب عند إتمام الشراء.",
       "size_chart_button": "دليل المقاسات",
-      "ask_question": "اطرح سؤالاً"
+      "ask_question": "اطرح سؤالاً",
+      "compare_color": "مقارنة الألوان",
+      "delivery_return": "التوصيل والإرجاع",
+      "quantity_not_available": "الكمية التي اخترتها غير متوفرة.",
+      "review": {
+        "no_review": "لا توجد مراجعة"
+      },
+      "colors_count": {
+        "one": "{{ count }} لون متاح",
+        "other": "{{ count }} ألوان متوفرة"
+      },
+      "product_single": {
+        "view_in_space": "عرض في مساحتك",
+        "view_in_space_label": "اعرضها في مساحتك، حمّل العنصر في نافذة الواقع المعزز",
+        "view_360": "عرض المنتج بزاوية 360 درجة",
+        "click_zoom": "انقر للتكبير",
+        "order_dayNames": "الأحد,الاثنين,الثلاثاء,الأربعاء,الخميس,الجمعة,السبت",
+        "order_monthNames": "يناير,فبراير,مارس,أبريل,مايو,يونيو,يوليو,أغسطس,سبتمبر,أكتوبر,نوفمبر,ديسمبر"
+      },
+      "sizes_count": {
+        "one": "{{ count }} حجم متاح",
+        "other": "{{ count }} مقاسًا متاحًا"
+      },
+      "media": {
+        "gallery_viewer": "عارض الصور",
+        "load_image": "تحميل الصورة {{ index }} في عرض المعرض",
+        "load_model": "عرض نموذج ثلاثي الأبعاد {{ index }} في عرض المعرض",
+        "load_video": "تشغيل الفيديو {{ index }} في عرض المعرض",
+        "image_available": "الصورة {{ index }} متوفرة الآن في عرض المعرض",
+        "open_media": "افتح الوسائط {{ index }} في نافذة مشروطة",
+        "play_model": "تشغيل عارض ثلاثي الأبعاد",
+        "play_video": "تشغيل الفيديو"
+      },
+      "quantity": {
+        "label": "الكمية",
+        "input_label": "الكمية لـ {{ product }}",
+        "increase": "زيادة الكمية لـ {{ product }}",
+        "decrease": "تقليل الكمية لـ {{ product }}",
+        "minimum_of": "الحد الأدنى {{ quantity }}",
+        "maximum_of": "الحد الأقصى {{ quantity }}",
+        "multiples_of": "زيادات قدرها {{ quantity }}",
+        "in_cart_html": "<span class=\"hdt-quantity-cart\">{{ quantity }}</span> في السلة"
+      },
+      "volume_pricing": {
+        "title": "تسعير الحجم",
+        "note": "تتوفر أسعار الجملة",
+        "minimum": "{{ quantity }}+",
+        "price_at_each": "بواقع {{ price }} للقطعة",
+        "price_range_html": "<span class=\"hdt-money\">{{ minimum }}</span> - <span class=\"hdt-money\">{{ maximum }}</span>"
+      },
+      "pickup_availability": {
+        "view_store_info": "عرض معلومات المتجر",
+        "check_other_stores": "التحقق من التوفر في المتاجر الأخرى",
+        "pick_up_available": "الاستلام متاح",
+        "pick_up_unavailable": "خدمة الاستلام غير متاحة حالياً",
+        "pick_up_available_at_html": "الاستلام متاح في <span class=\"hdt-s-text\">{{ location_name }}</span>",
+        "pick_up_unavailable_at_html": "الاستلام غير متاح حاليًا في <span class=\"hdt-s-text\">{{ location_name }}</span>",
+        "check_map": "تحقق من هذا على خرائط جوجل"
+      },
+      "price": {
+        "from_price_html": "من <span class=\"hdt-money\">{{ price }}</span>",
+        "regular_price": "السعر الاعتيادي",
+        "sale_price": "سعر البيع",
+        "regular_total_price": "إجمالي السعر العادي",
+        "sale_total_price": "إجمالي سعر البيع",
+        "unit_price": "سعر الوحدة"
+      },
+      "delivery": {
+        "day_names": "الأحد,الاثنين,الثلاثاء,الأربعاء,الخميس,الجمعة,السبت",
+        "month_names": "يناير,فبراير,مارس,أبريل,مايو,يونيو,يوليو,أغسطس,سبتمبر,أكتوبر,نوفمبر,ديسمبر"
+      },
+      "back_in_stock": {
+        "title": "أعلمني عند توفر المنتج",
+        "sub_title": "أدخل عنوان بريدك الإلكتروني ليتم إعلامك في حال توفر المنتج مرة أخرى.",
+        "please_notify": "الرجاء إعلامي عند توفر هذا المنتج",
+        "email": "البريد الإلكتروني*",
+        "submit": "إرسال",
+        "success": "سنبلغك عندما يتوفر المنتج"
+      }
+    },
+    "modal": {
+      "label": "معرض الوسائط"
+    },
+    "facets": {
+      "no_found": "لا توجد منتجات مطابقة لهذه الفلاتر.",
+      "btn_filter": "عامل تصفية",
+      "use_fewer_filters_html": "<div>استخدم عددًا أقل من الفلاتر أو <wrapp-hdt-facet-url><a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">إزالة الكل</a></wrapp-hdt-facet-url>\n</div>",
+      "apply": "تقديم",
+      "clear": "واضح",
+      "clear_all": "إزالة الكل",
+      "filter_and_sort": "تصفية وفرز",
+      "filter_by_label": "تصفية:",
+      "filter_button": "عامل تصفية",
+      "filters_selected": {
+        "one": "{{ count }} محدد",
+        "other": "{{ count }} محدد"
+      },
+      "filter_result_count_html": {
+        "one": "<span>{{ count }}</span> منتج تم العثور عليه",
+        "other": "<span>{{ count }}</span>  منتجات متوفرة"
+      },
+      "filter_selected_accessibility": "{{ type }} ({{ count }} فلاتر مختارة)",
+      "show_more": "أظهر المزيد",
+      "show_less": "عرض أقل",
+      "product_count": {
+        "one": "{{ product_count }} من أصل {{ count }} منتج",
+        "other": "{{ product_count }} من أصل {{ count }} منتج"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} منتج",
+        "other": "{{ count }} منتجات"
+      },
+      "filter_button_price": "عامل تصفية",
+      "switch_view": "التبديل إلى عرض الشبكة {{ number }}",
+      "switch_view_list": "التبديل إلى عرض القائمة",
+      "reset": "إعادة ضبط",
+      "sort_button": "فرز",
+      "sort_by_label": "الترتيب حسب",
+      "from_price": "ابتداءً من السعر",
+      "to_price": "للتسعير",
+      "clear_filter": "إزالة الفلتر",
+      "price": "السعر:"
+    },
+    "breadcrumb": {
+      "home": "الرئيسية",
+      "back_to": "العودة إلى {{title}}"
+    },
+    "fbt": {
+      "title": "frequently bought together",
+      "tt_price": "السعر الإجمالي:",
+      "tt_price_2": "سعر الكل:",
+      "add_tc": "أضف المحدد إلى سلة التسوق",
+      "this_item": "هذا المنتج:"
     }
   }
 }
