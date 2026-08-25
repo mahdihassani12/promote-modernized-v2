@@ -129,6 +129,10 @@
     track.addEventListener('scroll', render, { passive: true, signal });
     track.addEventListener('pointerdown', (event) => {
       if (event.pointerType !== 'mouse' || event.button !== 0) return;
+      // Do not capture the pointer when the customer is clicking a link or
+      // control. Pointer capture changes the click target to the carousel
+      // track in some browsers, preventing product titles/images from opening.
+      if (event.target.closest('hdt-card-product, a, button, input, select, textarea, summary, label, form, [role="button"]')) return;
       dragStartX = event.clientX;
       dragScrollLeft = track.scrollLeft;
       dragged = false;
