@@ -55,463 +55,242 @@
         "mg_mb": ""
       }
     },
-    "custom_section_mnTphP": {
+    "custom_section_qTGJeH": {
       "type": "custom-section",
       "blocks": {
-        "multi_column_DCDGjR": {
+        "multi_column_Uci3Ma": {
           "type": "_multi_column",
           "settings": {
             "column_dk": "6",
             "column_tb": "6",
             "column_mb": "12",
+            "column_dk_10": "10",
+            "column_tb_10": "10",
+            "column_mb_10": "10",
             "spacing_h_dk": 0,
             "spacing_v_dk": 0,
             "spacing_h_tb": 0,
             "spacing_v_tb": 0,
             "spacing_h_mb": 0,
             "spacing_v_mb": 0,
-            "content_position": "start",
-            "content_position_mb": "center-start",
-            "alignment": "left",
-            "alignment_mb": "left",
-            "background_color": "rgba(0,0,0,0)",
-            "rounded": "none"
-          },
-          "blocks": {
-            "text_JNRV4X": {
-              "type": "text",
-              "settings": {
-                "text": "<h6>OUR MISSION</h6>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "2xl",
-                "text_color": "hdt-s-text",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
-            "spacer_kRAtyr": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 10,
-                "space_md": 10,
-                "space": 10
-              },
-              "blocks": {}
-            },
-            "liquid_rgJ8Fd": {
-              "type": "_liquid",
-              "settings": {
-                "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<hdt-font-3> totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</hdt-font-3> vitae dicta sunt explicabo nemo enim ipsam.",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "text_size": "base",
-                "text_color": "hdt-text-secondary",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_JNRV4X",
-            "spacer_kRAtyr",
-            "liquid_rgJ8Fd"
-          ]
-        },
-        "multi_column_mJ4tbf": {
-          "type": "_multi_column",
-          "settings": {
-            "column_dk": "6",
-            "column_tb": "6",
-            "column_mb": "12",
-            "spacing_h_dk": 0,
-            "spacing_v_dk": 0,
-            "spacing_h_tb": 0,
-            "spacing_v_tb": 0,
-            "spacing_h_mb": 0,
-            "spacing_v_mb": 20,
-            "content_position": "start",
-            "content_position_mb": "center-start",
-            "alignment": "left",
-            "alignment_mb": "left",
-            "background_color": "rgba(0,0,0,0)",
-            "rounded": "none"
-          },
-          "blocks": {
-            "text_YnAUrb": {
-              "type": "text",
-              "settings": {
-                "text": "<h6>OUR<strong> </strong>STORIES</h6>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "2xl",
-                "text_color": "hdt-s-text",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
-            "spacer_JK7pAQ": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 10,
-                "space_md": 10,
-                "space": 10
-              },
-              "blocks": {}
-            },
-            "text_kHUw3G": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "base",
-                "text_color": "hdt-text-secondary",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_YnAUrb",
-            "spacer_JK7pAQ",
-            "text_kHUw3G"
-          ]
-        },
-        "multi_column_N8zgbM": {
-          "type": "_multi_column",
-          "settings": {
-            "column_dk": "6",
-            "column_tb": "6",
-            "column_mb": "12",
-            "spacing_h_dk": 0,
-            "spacing_v_dk": 10,
-            "spacing_h_tb": 0,
-            "spacing_v_tb": 0,
-            "spacing_h_mb": 0,
-            "spacing_v_mb": 0,
-            "content_position": "start",
-            "content_position_mb": "center-start",
-            "alignment": "left",
-            "alignment_mb": "left",
-            "background_color": "rgba(0,0,0,0)",
-            "rounded": "none"
-          },
-          "blocks": {
-            "text_3qbFR6": {
-              "type": "text",
-              "settings": {
-                "text": "<h6>OUR APPROACH</h6>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "2xl",
-                "text_color": "hdt-s-text",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
-            "spacer_TFppb4": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 10,
-                "space_md": 10,
-                "space": 10
-              },
-              "blocks": {}
-            },
-            "liquid_YjyfWf": {
-              "type": "_liquid",
-              "settings": {
-                "text": "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,<hdt-font-3> sed quia non numquam eius modi tempora incidunt ut labore</hdt-font-3>  et dolore magnam aliquam quaerat voluptatem.",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "text_size": "base",
-                "text_color": "hdt-text-secondary",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
-            "spacer_cDrtpW": {
-              "type": "spacer",
-              "name": "Spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 0,
-                "space_md": 14,
-                "space": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_3qbFR6",
-            "spacer_TFppb4",
-            "liquid_YjyfWf",
-            "spacer_cDrtpW"
-          ]
-        },
-        "multi_column_q8pbfr": {
-          "type": "_multi_column",
-          "settings": {
-            "column_dk": "6",
-            "column_tb": "6",
-            "column_mb": "12",
-            "spacing_h_dk": 0,
-            "spacing_v_dk": 10,
-            "spacing_h_tb": 0,
-            "spacing_v_tb": 0,
-            "spacing_h_mb": 0,
-            "spacing_v_mb": 20,
-            "content_position": "start",
-            "content_position_mb": "center-start",
-            "alignment": "left",
-            "alignment_mb": "left",
-            "background_color": "rgba(0,0,0,0)",
-            "rounded": "none"
-          },
-          "blocks": {
-            "text_nddCYE": {
-              "type": "text",
-              "settings": {
-                "text": "<h6>OUR PHILOSOPHY</h6>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "2xl",
-                "text_color": "hdt-s-text",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            },
-            "spacer_MBmq6H": {
-              "type": "spacer",
-              "settings": {
-                "direction": false,
-                "space_lg": 10,
-                "space_md": 10,
-                "space": 10
-              },
-              "blocks": {}
-            },
-            "text_VETPai": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Quis nostrum exercitationem ullam.</p>",
-                "hidden_br_mobile": false,
-                "hidden_on_mobile": false,
-                "ffamily": "",
-                "text_size": "base",
-                "text_color": "hdt-text-secondary",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_nddCYE",
-            "spacer_MBmq6H",
-            "text_VETPai"
-          ]
-        },
-        "multi_column_L3VjgX": {
-          "type": "_multi_column",
-          "settings": {
-            "column_dk": "12",
-            "column_tb": "12",
-            "column_mb": "12",
-            "spacing_h_dk": 0,
-            "spacing_v_dk": 0,
-            "spacing_h_tb": 0,
-            "spacing_v_tb": 0,
-            "spacing_h_mb": 0,
-            "spacing_v_mb": 0,
-            "content_position": "center",
-            "content_position_mb": "center",
+            "content_position": "auto",
+            "align_content": false,
+            "content_position_mb": "auto",
             "alignment": "left",
             "alignment_mb": "left",
             "background_color": "#ffffff",
             "rounded": "none"
           },
           "blocks": {
-            "blockquote_enU7Da": {
-              "type": "blockquote",
+            "heading_xadRtp": {
+              "type": "heading",
               "settings": {
-                "quote": "<p><em>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Quis nostrum exercitationem ullam.</em></p>"
+                "heading": "<h2>Barberry for general trading</h2>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "line_height": "",
+                "font_weight": "normal",
+                "heading_size": "h2",
+                "text_color": "hdt-s-text",
+                "font_size_heading_lg": 50,
+                "font_size_heading": 24,
+                "letter_spacing_heading": 0
+              },
+              "blocks": {}
+            },
+            "spacer_hXU6MQ": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 10,
+                "space_md": 10,
+                "space": 10
+              },
+              "blocks": {}
+            },
+            "text_mmc8WW": {
+              "type": "text",
+              "settings": {
+                "text": "<p>At BarBerry, we are dedicated to providing our customers with the latest and most innovative mobile and smart phone technology. With a passion for connectivity and communication, we strive to offer a wide range of top-quality products that cater to every individual’s needs and preferences. Our team is committed to staying ahead of the curve when it comes to technological advancements, ensuring that our customers have access to the most cutting-edge devices on the market. From sleek and stylish designs to powerful performance capabilities, we have carefully curated our selection to offer something for everyone.</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "lg",
+                "line_height": "",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "countdown": "2025-12-30 15:00:00",
+                "txt_day": "days",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
+            "spacer_4x34r9": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 20,
+                "space_md": 20,
+                "space": 20
+              },
+              "blocks": {}
+            },
+            "button_TDdCef": {
+              "type": "button",
+              "settings": {
+                "label": "Read More",
+                "link": "shopify://pages/about-us",
+                "open_in_new_tab": false,
+                "full_width": false,
+                "btn_style": "",
+                "color_btn": "#fff",
+                "color_hover_btn": "#fff",
+                "background_btn": "#222",
+                "background_hover_btn": "#333",
+                "border_w_btn": "",
+                "border_btn": "#222",
+                "border_hover_btn": "#333",
+                "size": "m",
+                "text_size": "hdt-text-base",
+                "font_weight": "normal",
+                "font_size_btn": 14,
+                "padding_btn": 30,
+                "min_width_btn": 100,
+                "min_width_dt_btn": 100,
+                "min_height_btn": 40,
+                "rounded": "hdt-btn-radius-sm",
+                "icon": "none",
+                "icon_position": "after",
+                "icon_height": 14,
+                "icon_spacing": 5
               },
               "blocks": {}
             }
           },
           "block_order": [
-            "blockquote_enU7Da"
+            "heading_xadRtp",
+            "spacer_hXU6MQ",
+            "text_mmc8WW",
+            "spacer_4x34r9",
+            "button_TDdCef"
           ]
         }
       },
       "block_order": [
-        "multi_column_DCDGjR",
-        "multi_column_mJ4tbf",
-        "multi_column_N8zgbM",
-        "multi_column_q8pbfr",
-        "multi_column_L3VjgX"
+        "multi_column_Uci3Ma"
       ],
       "custom_css": [
-        "blockquote {font-family: var(--f_family_3); color: rgb(var(--color-foreground2));background-color: #f5f5f5;}",
-        "hdt-font-3{font-style: italic;}"
+        "p {text-align: justify;}"
       ],
+      "name": "t:sections.custom_section.name",
       "settings": {
-        "layout": "12",
-        "item_spacing": 30,
-        "item_spacing_tb": 15,
-        "item_spacing_mb": 15,
-        "color_scheme": "",
-        "pd": "60px,,50px,",
-        "pd_mb": "48px,,40px,",
-        "mg": "",
-        "mg_mb": ""
-      }
-    },
-    "our_team_VpLJtG": {
-      "type": "our-team",
-      "blocks": {
-        "ourteam_carousel_cxphgq": {
-          "type": "_ourteam_carousel",
-          "settings": {
-            "loop": false,
-            "autoplay": 0,
-            "pauseOnHover": false,
-            "navUI": true,
-            "nav_position": "default",
-            "nav_visible": "hover",
-            "nav_style": "default",
-            "nav_shape": "rounded",
-            "nav_size": "small",
-            "nav_hide_mobile": false,
-            "dotUI": false,
-            "pag_style": "default",
-            "pag_rounded": false,
-            "pag_space": 10,
-            "pag_mgt": 10,
-            "pag_hide_mobile": false
-          },
-          "blocks": {
-            "ourteam_item_G4UN6c": {
-              "type": "_ourteam_item",
-              "settings": {
-                "image": "shopify://shop_images/mem-01.jpg",
-                "name": "Lisa John",
-                "position": "Fashion Design",
-                "facebook": "https://facebook.com/",
-                "instagram": "https://instagram.com",
-                "behance": "https://behance.net/",
-                "tiktok": ""
-              },
-              "blocks": {}
-            },
-            "ourteam_item_FNc7q9": {
-              "type": "_ourteam_item",
-              "settings": {
-                "image": "shopify://shop_images/mem-02.jpg",
-                "name": "Jane Doe",
-                "position": "Director",
-                "facebook": "https://facebook.com/",
-                "instagram": "https://instagram.com/",
-                "behance": "",
-                "tiktok": ""
-              },
-              "blocks": {}
-            },
-            "ourteam_item_MMyXqF": {
-              "type": "_ourteam_item",
-              "settings": {
-                "image": "shopify://shop_images/mem-03.jpg",
-                "name": "Cartherin Forres",
-                "position": "Marketing Director",
-                "facebook": "https://facebook.com/",
-                "instagram": "https://instagram.com/",
-                "behance": "",
-                "tiktok": "https://tiktok.com/"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "ourteam_item_G4UN6c",
-            "ourteam_item_FNc7q9",
-            "ourteam_item_MMyXqF"
-          ]
-        },
-        "our-team": {
-          "type": "section-heading",
-          "disabled": true,
-          "static": true,
-          "settings": {
-            "design_heading": "2",
-            "horizontal": false,
-            "alignment": "center",
-            "heading_gap": 15,
-            "margin_bottom": 30
-          },
-          "blocks": {
-            "heading_section_d3A4By": {
-              "type": "_heading_section",
-              "settings": {
-                "heading": "Our Team",
-                "line_height": "",
-                "heading_size": "h5",
-                "text_color": "hdt-s-text"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading_section_d3A4By"
-          ]
-        }
-      },
-      "block_order": [
-        "ourteam_carousel_cxphgq"
-      ],
-      "settings": {
-        "image_ratio": "adapt_image",
-        "col_dk": "3",
-        "col_tb": "2",
-        "col_mb": "1",
+        "layout": "10",
+        "item_spacing": 0,
+        "item_spacing_tb": 0,
+        "item_spacing_mb": 0,
         "colors_by_section": false,
         "color_scheme": "",
         "background_opacity": 0,
         "section_layout": "container",
-        "pd": ",,85px,",
-        "pd_mb": ",,49px,",
-        "mg": "",
-        "mg_mb": ""
+        "hdt_background_parallax": false,
+        "mg": "50px,,,",
+        "mg_mb": "",
+        "pd": "",
+        "pd_mb": ""
+      }
+    },
+    "modern_parallax_banner_Xyj4wt": {
+      "type": "modern-parallax-banner",
+      "name": "Modern parallax banner",
+      "settings": {
+        "image": "shopify://shop_images/seller-man-mobile-phone-professional-consultant-tech-store-shop_627829-4983.jpg",
+        "height": 500,
+        "height_tablet": 400,
+        "height_mobile": 360,
+        "overlay": 35,
+        "color": "#ffffff",
+        "title": "",
+        "text": "",
+        "label": "",
+        "link": ""
+      }
+    },
+    "modern_image_boxes_wREnFd": {
+      "type": "modern-image-boxes",
+      "blocks": {
+        "image_box_rCJd9W": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/blank-smartphone-screen-with-design-space_53876-119806.jpg",
+            "title": "Latest Mobile Technology",
+            "description": "<p>Explore innovative devices designed to keep you connected every day.</p>",
+            "link": ""
+          }
+        },
+        "image_box_jDCy8a": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/young-delivery-man-red-uniform-cap-showing-smartphone-showing-ok-sign-standing-white-wall_141793-26556.jpg",
+            "title": "Trusted Product Quality",
+            "description": "<p>We carefully select reliable products for lasting performance and satisfaction.</p>",
+            "link": ""
+          }
+        },
+        "image_box_EFJV9q": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/girl-delivering-box-young-man_23-2147767721.jpg",
+            "title": "Fast Secure Delivery",
+            "description": "<p>Receive your orders quickly through our safe and reliable service.</p>",
+            "link": ""
+          }
+        },
+        "image_box_wrAfgW": {
+          "type": "image_box",
+          "settings": {
+            "image": "shopify://shop_images/call-center-operator-coworkers-dealing-with-upset-customers_482257-117868.jpg",
+            "title": "Dedicated Customer Support",
+            "description": "<p>Our friendly team provides helpful support before and after purchase.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_box_rCJd9W",
+        "image_box_jDCy8a",
+        "image_box_EFJV9q",
+        "image_box_wrAfgW"
+      ],
+      "name": "Modern image boxes",
+      "settings": {
+        "title": "Why choose us",
+        "subtitle": "<p>Discover the features that make our products a better choice.</p>",
+        "columns": 4,
+        "columns_tablet": 2,
+        "columns_mobile": 1,
+        "image_height": 240,
+        "image_height_tablet": 220,
+        "image_height_mobile": 200,
+        "image_fit": "cover",
+        "alignment": "center",
+        "title_size": 22,
+        "content_padding": 24,
+        "radius": 16,
+        "gap": 24,
+        "shadow": true,
+        "card_color": "#ffffff",
+        "border_color": "#eeeeee",
+        "text_color": "#222222",
+        "padding": 64
       }
     }
   },
   "order": [
     "main_heading_fgVmaw",
-    "custom_section_mnTphP",
-    "our_team_VpLJtG"
+    "custom_section_qTGJeH",
+    "modern_parallax_banner_Xyj4wt",
+    "modern_image_boxes_wREnFd"
   ]
 }
