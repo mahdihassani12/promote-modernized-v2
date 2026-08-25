@@ -1,5 +1,11 @@
 <!-- blocks/_heading_liquid.liquid -->
 {%- liquid 
+  assign heading_text = block.settings.text
+  assign language_code = request.locale.iso_code | split: '-' | first
+  if language_code == 'ar' and heading_text == 'Follow your passion, and success will follow you'
+    assign heading_text = 'اتبع شغفك، وسيتبعك النجاح'
+  endif
+
   capture heading_title
     case request.page_type
       when 'page'
@@ -41,7 +47,7 @@
     endcase
   endcapture -%}
 <div hdt-reveal="slide-in" timeline id="block-{{ block.id }}" class="hdt-text-warry hdt-heading-liquid {{ block.settings.text_color }} hdt-text-{{ block.settings.text_size }} {{ block.settings.font_family }} {{ block.settings.line_height }}{% if block.settings.italic %} hdt-italic{% endif %}{% if block.settings.uppercase %} hdt-uppercase{% endif %}" {{ block.shopify_attributes }}>
-  {{- block.settings.text | default: heading_title -}}
+  {{- heading_text | default: heading_title -}}
   {%- if block.settings.text_size == "custom" -%}
     {%- style -%}
       #block-{{ block.id }} {
