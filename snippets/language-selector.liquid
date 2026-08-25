@@ -1,28 +1,57 @@
 {%- comment -%}
-  The localization form is handled by Shopify, so translated resources keep their
-  equivalent URL instead of sending customers back to the home page.
+  Shopify's localization form resolves the translated version of `return_to`, so
+  customers remain on the equivalent page rather than being sent to the home page.
 {%- endcomment -%}
-<div class="language-switcher" role="navigation" aria-label="Language selector">
-  {%- form 'localization', id: 'HeaderLanguageForm', class: 'language-switcher__form' -%}
-    <input type="hidden" name="return_to" value="{{ request.path }}">
-    <span class="language-switcher__options" dir="rtl">
-      <button
-        type="submit"
-        name="locale_code"
-        value="ar"
-        lang="ar"
-        data-language-option
-        aria-current="{% if request.locale.iso_code == 'ar' %}page{% else %}false{% endif %}"
-      >العربية</button>
-      <span aria-hidden="true">–</span>
-      <button
-        type="submit"
-        name="locale_code"
-        value="en"
-        lang="en"
-        data-language-option
-        aria-current="{% if request.locale.iso_code == 'en' %}page{% else %}false{% endif %}"
-      >English</button>
-    </span>
-  {%- endform -%}
-</div>
+{%- assign active_language_code = request.locale.iso_code | split: '-' | first -%}
+{%- assign supported_language_count = 0 -%}
+{%- for language in localization.available_languages -%}
+  {%- assign language_code = language.iso_code | split: '-' | first -%}
+  {%- if language_code == 'ar' or language_code == 'en' -%}
+    {%- assign supported_language_count = supported_language_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if supported_language_count > 1 -%}
+  <nav class="language-switcher" aria-label="Language selector">
+    <details class="language-switcher__details">
+      <summary class="language-switcher__trigger" aria-label="Choose language">
+        <svg class="language-switcher__globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3 12h18M12 3c2.4 2.5 3.7 5.5 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.5-3.7-9S9.6 5.5 12 3Z"></path>
+        </svg>
+        <span class="language-switcher__current" lang="{{ request.locale.iso_code }}">
+          {%- if active_language_code == 'ar' -%}العربية{%- else -%}English{%- endif -%}
+        </span>
+        <svg class="language-switcher__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true" focusable="false"><path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+
+      <div class="language-switcher__menu">
+        {%- form 'localization', id: 'HeaderLanguageForm', class: 'language-switcher__form' -%}
+          <input type="hidden" name="return_to" value="{{ request.path }}">
+          <div class="language-switcher__options" role="list">
+            {%- for language in localization.available_languages -%}
+              {%- assign language_code = language.iso_code | split: '-' | first -%}
+              {%- if language_code == 'ar' or language_code == 'en' -%}
+                <div role="listitem">
+                  <button
+                    class="language-switcher__option"
+                    type="submit"
+                    name="locale_code"
+                    value="{{ language.iso_code }}"
+                    lang="{{ language.iso_code }}"
+                    {% if language.iso_code == request.locale.iso_code %}aria-current="true"{% endif %}
+                  >
+                    <span>{%- if language_code == 'ar' -%}العربية{%- else -%}English{%- endif -%}</span>
+                    {%- if language.iso_code == request.locale.iso_code -%}
+                      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="m3 8 3 3 7-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    {%- endif -%}
+                  </button>
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endform -%}
+      </div>
+    </details>
+  </nav>
+{%- endif -%}
