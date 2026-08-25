@@ -17,10 +17,11 @@
         "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
         "background_opacity": 1,
         "section_layout": "wrapper_container",
-        "pd": "20px,,20px,",
-        "pd_mb": "15px,,15px,",
+        "hdt_background_parallax": false,
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "20px,,20px,",
+        "pd_mb": "15px,,15px,"
       }
     },
     "main-product": {
@@ -54,12 +55,21 @@
             "product_description_AJaqwJ": {
               "type": "_product-description",
               "settings": {
-                
+                "des": "2",
                 "short_des": "<p>Go kalles this summer with this vintage navy and white striped v-neck t-shirt from the Nike. Perfect for pairing with denim and white kicks for a stylish kalles vibe.</p>",
                 "readm": false,
                 "length": 31,
                 "readm_txt": "Read more",
-                "readl_txt": "Read less"
+                "readl_txt": "Read less",
+                "ffamily": "",
+                "text_size": "base",
+                "line_height": "",
+                "font_weight": "normal",
+                "heading_color": "",
+                "text_color": "hdt-text-secondary",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
               },
               "blocks": {}
             },
@@ -87,7 +97,13 @@
                 "show_dynamic_checkout": false,
                 "show_gift_card_recipient": true,
                 "show_wishlist": true,
+                "color_wishlist": "#222222",
+                "color_hover_wishlist": "#56cfe1",
+                "color_active_wishlist": "#e81e1e",
                 "show_compare": true,
+                "color_compare": "#222222",
+                "color_hover_compare": "#56cfe1",
+                "color_active_compare": "#e81e1e",
                 "ani": "hdt-ani-shake is--infinite",
                 "time": 6,
                 "btn_transform": "hdt-uppercase",
@@ -108,19 +124,6 @@
               "type": "_product-pickup",
               "name": "t:sections.main-product.blocks.pickup_availability.name",
               "settings": {},
-              "blocks": {}
-            },
-            "product_trust_badge_QALnxQ": {
-              "type": "_product-trust-badge",
-              "settings": {
-                "mess": "",
-                "size": 16,
-                "source": "1",
-                "image": "shopify://shop_images/trust_img.png",
-                "wimg": 370,
-                "svg": "amazon,american_express,apple_pay,bitcoin,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,google_pay,jcb,klarna,klarna-pay-later,litecoin,maestro,master,paypal,shopify_pay,sofort,visa",
-                "height": 30
-              },
               "blocks": {}
             },
             "product_extra_link_HfDmDV": {
@@ -217,16 +220,26 @@
             "product_buy_button_aPmAbD",
             "product_back_instock_qMdMA6",
             "product_pickup_Jpchr6",
-            "product_trust_badge_QALnxQ",
             "product_extra_link_HfDmDV",
             "product_meta_hnDEjn",
             "socials_XYJPwj"
           ]
         },
+        "main-product-sidebar": {
+          "type": "_product_sidebar",
+          "static": true,
+          "settings": {
+            "color_scheme": "",
+            "space": 50,
+            "last_order": false
+          },
+          "blocks": {}
+        },
         "main-product-medias": {
           "type": "_product-medias",
           "static": true,
           "settings": {
+            "media_box_size": 50,
             "desktop_media_layout": "thumbnail_left",
             "media_size": "medium",
             "mobile_media_layout": "thumbnails",
@@ -257,6 +270,9 @@
       "settings": {
         "product_list_fbt": [],
         "sticky_atc": true,
+        "hdt_enable_choose_variant": true,
+        "hdt_layout_atc_mob": "hdt_layout_atc_mob_default",
+        "hdt_show_sticky_atc": "hdt_show_always",
         "ani": "hdt-ani-shake is--infinite",
         "time": 6,
         "btn_transform": "hdt-uppercase",
@@ -265,10 +281,10 @@
         "color_scheme": "",
         "background_opacity": 1,
         "fullwidth": false,
-        "pd": "30px,,60px,",
-        "pd_mb": "22px,,45px,",
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "30px,,60px,",
+        "pd_mb": "22px,,45px,"
       }
     },
     "tabs": {
@@ -307,10 +323,10 @@
         "colors_by_section": true,
         "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
         "background_opacity": 1,
-        "pd": "60px,,60px,",
-        "pd_mb": "30px,,30px,",
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "60px,,60px,",
+        "pd_mb": "30px,,30px,"
       }
     },
     "sidebar": {
@@ -387,10 +403,11 @@
         "color_scheme": "",
         "background_opacity": 0,
         "section_layout": "container",
-        "pd": "75px,,75px,",
-        "pd_mb": "37px,,37px,",
+        "hdt_background_parallax": false,
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "75px,,75px,",
+        "pd_mb": "37px,,37px,"
       }
     },
     "recently-products": {
@@ -458,10 +475,11 @@
         "color_scheme": "",
         "background_opacity": 0,
         "section_layout": "container",
-        "pd": ",,50px,",
-        "pd_mb": ",,40px,",
+        "hdt_background_parallax": false,
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": ",,50px,",
+        "pd_mb": ",,40px,"
       }
     }
   },
