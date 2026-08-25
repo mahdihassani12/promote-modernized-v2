@@ -108,7 +108,7 @@
             "hide_on_desktop": false,
             "hide_on_mobile": false,
             "only_mobile": true,
-            "sec_heading_size": "lg",
+            "sec_heading_size": "xl",
             "font_size_text_lg": 16,
             "font_size_text": 14,
             "font_weight_text": "medium",
@@ -154,7 +154,7 @@
                 "direction": false,
                 "space_lg": 16,
                 "space_md": 16,
-                "space": 50
+                "space": 16
               },
               "blocks": {}
             },
