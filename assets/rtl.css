@@ -30,6 +30,51 @@ html[dir='rtl'] :is(p, address, .hdt-rte, .hdt-product__title, .hdt-card-product
   overflow-wrap: anywhere;
 }
 
+/* Keep the delivery strip and footer inside the same centered content area in
+   Arabic. Their grid/flex children can otherwise use the intrinsic width of
+   mixed Arabic and Latin copy and push the second half of the row off-screen. */
+html[lang^='ar'][dir='rtl'] :is(.hdt-shipping, footer) {
+  overflow-x: clip;
+}
+
+html[lang^='ar'][dir='rtl'] :is(.hdt-shipping, footer) .hdt-container {
+  inline-size: 100%;
+  max-inline-size: var(--container-max-width);
+  margin-inline: auto;
+}
+
+html[lang^='ar'][dir='rtl'] .hdt-shipping :is(
+  .hdt-content-inner, .hdt-row-grid, .hdt-shipping-item,
+  .hdt-ship-item-wrap, .hdt-ship-content
+),
+html[lang^='ar'][dir='rtl'] footer :is(
+  .hdt-row, .hdt-footer-col-block, .hdt-section-spacing,
+  .hdt-col-content
+) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+html[lang^='ar'][dir='rtl'] .hdt-shipping .hdt-row-grid {
+  inline-size: 100%;
+  direction: rtl;
+}
+
+html[lang^='ar'][dir='rtl'] .hdt-shipping .hdt-ship-content,
+html[lang^='ar'][dir='rtl'] footer :is(.hdt-footer-heading, .hdt-col-content) {
+  text-align: start;
+}
+
+html[lang^='ar'][dir='rtl'] footer :is(p, li, address) {
+  overflow-wrap: anywhere;
+  word-break: normal;
+  unicode-bidi: plaintext;
+}
+
+html[lang^='ar'][dir='rtl'] footer :is(img, svg) {
+  max-inline-size: 100%;
+}
+
 html[dir='rtl'] :is(.hdt-menu-item-arrow, [accordion-icon], .hdt-dialog-btn__close,
   .hdt-modal__close, .hdt-cart-drawer__close, .hdt-predictive-search__close) {
   margin-inline-start: auto;
