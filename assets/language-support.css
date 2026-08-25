@@ -90,7 +90,82 @@ html[lang='ar'][dir='rtl'] [accordion-icon] {
   margin-inline-start: auto;
 }
 
+/* Arabic-only layout spacing.
+   Translation can leave the theme's optional section padding variables empty.
+   Keep the section background/full-bleed media untouched and pad the content
+   containers instead, so sliders retain their calculated track widths. */
+html[lang='ar'][dir='rtl'] {
+  --arabic-page-gutter: 48px;
+  --arabic-section-space: 56px;
+}
+
+html[lang='ar'][dir='rtl'] body {
+  overflow-x: clip;
+}
+
+html[lang='ar'][dir='rtl'] #MainContent > .shopify-section,
+html[lang='ar'][dir='rtl'] #MainContent > .hdt-section {
+  max-inline-size: 100%;
+}
+
+html[lang='ar'][dir='rtl'] #MainContent .hdt-section > .hdt-container,
+html[lang='ar'][dir='rtl'] #MainContent .hdt-section > [class~='hdt-container'],
+html[lang='ar'][dir='rtl'] #MainContent .hdt-section .hdt-container,
+html[lang='ar'][dir='rtl'] #MainContent .hdt-main-page > .hdt-container,
+html[lang='ar'][dir='rtl'] #MainContent .hdt-about-us.hdt-container {
+  box-sizing: border-box;
+  padding-inline: var(--arabic-page-gutter) !important;
+}
+
+/* Give ordinary content sections comfortable vertical breathing room. */
+html[lang='ar'][dir='rtl'] #MainContent :is(
+  .hdt-section--custom,
+  .hdt-section-main-page,
+  .hdt-about-us-container
+) .hdt-section-spacing {
+  padding-block-start: var(--arabic-section-space) !important;
+  padding-block-end: var(--arabic-section-space) !important;
+}
+
+/* Rich text must wrap inside its padded container in Arabic. */
+html[lang='ar'][dir='rtl'] #MainContent :is(
+  .hdt-rte,
+  .hdt-column,
+  .hdt-column_inner,
+  .hdt-main-page,
+  .hdt-main-area
+) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+html[lang='ar'][dir='rtl'] #MainContent :is(.hdt-rte, .hdt-column_inner) :is(p, h1, h2, h3, h4, h5, h6) {
+  overflow-wrap: break-word;
+}
+
+/* Modern custom sections have their own container system. */
+html[lang='ar'][dir='rtl'] #MainContent .modern-section {
+  padding-block: var(--arabic-section-space) !important;
+}
+
+html[lang='ar'][dir='rtl'] #MainContent .modern-section__inner {
+  box-sizing: border-box;
+  width: min(var(--modern-width, 1400px), calc(100% - (var(--arabic-page-gutter) * 2)));
+}
+
+@media (max-width: 1149px) {
+  html[lang='ar'][dir='rtl'] {
+    --arabic-page-gutter: 30px;
+    --arabic-section-space: 44px;
+  }
+}
+
 @media (max-width: 749px) {
+  html[lang='ar'][dir='rtl'] {
+    --arabic-page-gutter: 18px;
+    --arabic-section-space: 32px;
+  }
+
   .language-switcher {
     min-height: 30px;
     padding-inline: 10px;
