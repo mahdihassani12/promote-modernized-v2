@@ -30,7 +30,8 @@
  * The zero-specificity selector lets layouts that already define a shadow
  * (for example bordered grids) keep their own treatment. */
 :where(.hdt-card-product) {
-  padding-bottom: 15px;
+  padding-bottom: 25px;
+  border-radius: 10px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.065);
 }
 
