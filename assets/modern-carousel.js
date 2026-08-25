@@ -14,7 +14,8 @@
     if (!track || !previous || !next || !dots) return;
 
     const items = [...track.children];
-    const isRtl = document.documentElement.lang === 'ar' && document.documentElement.dir === 'rtl';
+    const isRtl = document.documentElement.lang.toLowerCase().split('-')[0] === 'ar'
+      && document.documentElement.dir === 'rtl';
     const loops = carousel.dataset.loop === 'true';
     const autoplayDelay = Number(carousel.dataset.autoplay || 0) * 1000;
     const abortController = new AbortController();
