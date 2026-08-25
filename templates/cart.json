@@ -34,14 +34,13 @@
       ],
       "settings": {
         "use_dynamic_source": false,
-        "image": "shopify://shop_images/shopping-cart-head.jpg",
         "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
         "bg_overlay": 54,
         "space_item": 0,
-        "pd": "50px,,50px,",
-        "pd_mb": "50px,,50px,",
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "50px,,50px,",
+        "pd_mb": "50px,,50px,"
       }
     },
     "main-cart": {
@@ -53,7 +52,9 @@
         },
         "tax_WBJRLG": {
           "type": "tax",
-          "settings": {}
+          "settings": {
+            "url": ""
+          }
         },
         "agree_x98Xcr": {
           "type": "agree",
@@ -65,6 +66,22 @@
           "type": "btn_checkout",
           "settings": {
             "btn_style": "hdt-btn-accent",
+            "color_btn": "#ffffff",
+            "color_hover_btn": "#ffffff",
+            "background_btn": "#222222",
+            "background_hover_btn": "#333333",
+            "border_w_btn": "",
+            "border_btn": "#222222",
+            "border_hover_btn": "#333333",
+            "size": "m",
+            "text_size": "hdt-text-base",
+            "font_weight": "normal",
+            "font_size_btn": 14,
+            "padding_btn": 30,
+            "min_width_btn": 100,
+            "min_width_dt_btn": 100,
+            "min_height_btn": 40,
+            "rounded": "",
             "icon": "none",
             "icon_position": "before",
             "icon_height": 16,
@@ -74,14 +91,6 @@
         "accelerated_btns_gxxE7x": {
           "type": "accelerated_btns",
           "settings": {}
-        },
-        "img_trust_fbdPTB": {
-          "type": "img_trust",
-          "settings": {
-            "wimg": 350,
-            "svg": "visa,paypal,master,american_express,amazon",
-            "height": 25
-          }
         },
         "payment_terms_K7tERW": {
           "type": "payment-terms",
@@ -94,7 +103,6 @@
         "agree_x98Xcr",
         "btn_checkout_mF3EDB",
         "accelerated_btns_gxxE7x",
-        "img_trust_fbdPTB",
         "payment_terms_K7tERW"
       ],
       "settings": {
@@ -104,10 +112,11 @@
         "show_gift": true,
         "show_estimate": true,
         "show_cart_discount": true,
-        "pd": "70px,,50px,",
-        "pd_mb": "70px,,50px,",
+        "discount_error_message": "Enter a valid discount code",
         "mg": "",
-        "mg_mb": ""
+        "mg_mb": "",
+        "pd": "70px,,50px,",
+        "pd_mb": "70px,,50px,"
       }
     }
   },
