@@ -49,14 +49,6 @@
             "icon_height": 16,
             "icon_spacing": 5
           }
-        },
-        "img_trust_zatTgB": {
-          "type": "img_trust",
-          "settings": {
-            "wimg": 350,
-            "svg": "visa,paypal,master,american_express,amazon",
-            "height": 25
-          }
         }
       },
       "block_order": [
@@ -64,8 +56,7 @@
         "tax_rkEdFK",
         "agree_y3A6EM",
         "btn_cart_74AGUK",
-        "btn_checkout_bcnmpT",
-        "img_trust_zatTgB"
+        "btn_checkout_bcnmpT"
       ],
       "settings": {
         "colors_by_section": true,
