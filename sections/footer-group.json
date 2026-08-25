@@ -101,98 +101,6 @@
             "spacer_NL7ph9"
           ]
         },
-        "footer_column_C3zLBR": {
-          "type": "_footer-column",
-          "settings": {
-            "col_heading": "Categories",
-            "hide_on_desktop": false,
-            "hide_on_mobile": false,
-            "only_mobile": true,
-            "sec_heading_size": "lg",
-            "font_size_text_lg": 16,
-            "font_size_text": 14,
-            "font_weight_text": "medium",
-            "letter_spacing_text": 0,
-            "space": 30,
-            "alignment": "left",
-            "alignment_mb": "left",
-            "colors_by_section": false,
-            "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
-            "background_opacity": 0,
-            "width_lg": 20,
-            "width_md": 50,
-            "width": 100,
-            "mg": ",,0px,",
-            "mg_mb": ",,0px,",
-            "pd": "",
-            "pd_mb": ""
-          },
-          "blocks": {
-            "linklist_mTLiQc": {
-              "type": "_linklist",
-              "settings": {
-                "menu_inline": false,
-                "align": "left",
-                "align_mb": "left",
-                "menu": "categories",
-                "text_size": "lg",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "linklist_mTLiQc"
-          ]
-        },
-        "footer_column_3Dap6p": {
-          "type": "_footer-column",
-          "settings": {
-            "col_heading": "Information",
-            "hide_on_desktop": false,
-            "hide_on_mobile": false,
-            "only_mobile": true,
-            "sec_heading_size": "lg",
-            "font_size_text_lg": 16,
-            "font_size_text": 14,
-            "font_weight_text": "medium",
-            "letter_spacing_text": 0,
-            "space": 30,
-            "alignment": "left",
-            "alignment_mb": "left",
-            "colors_by_section": false,
-            "color_scheme": "scheme-c9476b69-abc7-454f-a946-2d5a9f5f3a37",
-            "background_opacity": 0,
-            "width_lg": 20,
-            "width_md": 50,
-            "width": 100,
-            "mg": ",,0px,",
-            "mg_mb": ",,0px,",
-            "pd": "",
-            "pd_mb": ""
-          },
-          "blocks": {
-            "linklist_BDr677": {
-              "type": "_linklist",
-              "settings": {
-                "menu_inline": false,
-                "align": "left",
-                "align_mb": "left",
-                "menu": "information",
-                "text_size": "lg",
-                "font_size_text_lg": 16,
-                "font_size_text": 14,
-                "letter_spacing_text": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "linklist_BDr677"
-          ]
-        },
         "footer_column_U4EkTn": {
           "type": "_footer-column",
           "settings": {
@@ -220,6 +128,36 @@
             "pd_mb": ""
           },
           "blocks": {
+            "liquid_XjmHpX": {
+              "type": "_liquid",
+              "name": "t:blocks.liquid.name",
+              "settings": {
+                "option_type": "liquid",
+                "page": "",
+                "text": "<ul style=\"margin: 0; padding: 0; list-style: none; line-height: 24px;\">\n  <li style=\"display: block; white-space: nowrap;\">Email: <b>info@yourdomain.com</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Phone: <b>07734343439</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Address: <b>Iraq, Baghdad, Zayoona, Zayoona Mall, F1</b></li>\n</ul>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "base",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
+            "spacer_7fgwrF": {
+              "type": "spacer",
+              "name": "t:blocks.spacer.name",
+              "settings": {
+                "direction": false,
+                "space_lg": 16,
+                "space_md": 16,
+                "space": 50
+              },
+              "blocks": {}
+            },
             "socials_LF4Xki": {
               "type": "socials",
               "name": "t:settings_schema.social-media.name",
@@ -242,18 +180,18 @@
             }
           },
           "block_order": [
+            "liquid_XjmHpX",
+            "spacer_7fgwrF",
             "socials_LF4Xki"
           ]
         }
       },
       "block_order": [
         "footer_column_dYTFqa",
-        "footer_column_C3zLBR",
-        "footer_column_3Dap6p",
         "footer_column_U4EkTn"
       ],
       "custom_css": [
-        "p {text-align: justify}"
+        "p {text-align: justify;}"
       ],
       "settings": {
         "collapse": true,
