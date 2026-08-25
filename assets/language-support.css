@@ -40,37 +40,54 @@
   outline-offset: 3px;
 }
 
-html[lang='ar'] {
+html[lang='ar'][dir='rtl'] {
   --font-body-family: 'Cairo', sans-serif;
   --font-heading-family: 'Cairo', sans-serif;
   --font-sheading-family: 'Cairo', sans-serif;
 }
 
-html[lang='ar'] body {
+html[lang='ar'][dir='rtl'] body {
   font-family: 'Cairo', sans-serif;
 }
 
-html[lang='ar'] :is(button, input, select, textarea) {
+html[lang='ar'][dir='rtl'] :is(button, input, select, textarea) {
   font-family: inherit;
 }
 
-/* Keep controls in physical left/back, right/forward order. Slider tracks are
-   deliberately not targeted: the theme and custom carousel engines own them. */
-html[lang='ar'] :is(.hdt-navigation, .modern-carousel__nav) {
+/* Only the custom carousel's control row is kept in DOM order. Never change
+   direction on theme slider containers: Embla owns their transforms and reads
+   the direction from the document. */
+html[lang='ar'][dir='rtl'] .modern-carousel__nav {
   direction: ltr;
 }
 
-html[lang='ar'] :is(#hdt-nav-ul, .hdt-menu-list, .hdt-footer-menu),
-html[lang='ar'] :is(header, footer) {
+/* Navigation remains in Shopify's source order. In RTL that puts the first
+   (Home) link at the right edge without reversing or duplicating menu data. */
+html[lang='ar'][dir='rtl'] :is(#hdt-nav-ul, #hdt-nav-ul-mb, .hdt-menu-list) {
+  direction: rtl;
   text-align: right;
 }
 
-html[lang='ar'] .hdt-navigation #hdt-nav-ul {
-  justify-content: flex-start;
+html[lang='ar'][dir='rtl'] header :is(.hdt-menu-link, summary),
+html[lang='ar'][dir='rtl'] footer {
+  text-align: right;
 }
 
-html[lang='ar'] :is(header, footer) :is(img, svg) {
-  max-width: 100%;
+html[lang='ar'][dir='rtl'] :is(header, footer) :is(.hdt-container, .hdt-row, .hdt-col, .hdt-header-col, .hdt-footer-col-block) {
+  min-width: 0;
+}
+
+html[lang='ar'][dir='rtl'] :is(header, footer) :is(img, video, iframe) {
+  max-inline-size: 100%;
+}
+
+html[lang='ar'][dir='rtl'] footer :is(a, p, address, .hdt-rte) {
+  overflow-wrap: anywhere;
+}
+
+html[lang='ar'][dir='rtl'] .hdt-menu-item-arrow,
+html[lang='ar'][dir='rtl'] [accordion-icon] {
+  margin-inline-start: auto;
 }
 
 @media (max-width: 749px) {

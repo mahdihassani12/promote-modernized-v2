@@ -14,20 +14,24 @@
     if (!track || !previous || !next || !dots) return;
 
     const items = [...track.children];
-    const isRtl = document.documentElement.lang === 'ar';
+    const isRtl = document.documentElement.lang === 'ar' && document.documentElement.dir === 'rtl';
     const loops = carousel.dataset.loop === 'true';
     const autoplayDelay = Number(carousel.dataset.autoplay || 0) * 1000;
     const abortController = new AbortController();
     const { signal } = abortController;
     let timer;
     let activeIndex = 0;
+    let dragStartX = 0;
+    let dragScrollLeft = 0;
+    let dragged = false;
 
     track.dir = isRtl ? 'rtl' : 'ltr';
 
     const visibleCount = () => {
       if (!items[0]) return 1;
       const itemWidth = items[0].getBoundingClientRect().width;
-      return Math.max(1, Math.round(track.clientWidth / itemWidth));
+      const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;
+      return Math.max(1, Math.floor((track.clientWidth + gap) / (itemWidth + gap)));
     };
 
     const lastIndex = () => Math.max(0, items.length - visibleCount());
@@ -73,7 +77,13 @@
 
     const goTo = (index, behavior = 'smooth') => {
       activeIndex = Math.max(0, Math.min(index, lastIndex()));
-      items[activeIndex]?.scrollIntoView({ behavior, block: 'nearest', inline: 'start' });
+      const item = items[activeIndex];
+      if (item) {
+        const trackRect = track.getBoundingClientRect();
+        const itemRect = item.getBoundingClientRect();
+        const delta = isRtl ? itemRect.right - trackRect.right : itemRect.left - trackRect.left;
+        track.scrollBy({ left: delta, behavior });
+      }
       window.setTimeout(render, behavior === 'smooth' ? 350 : 0);
     };
 
@@ -96,11 +106,38 @@
     previous.addEventListener('click', () => move(false), { signal });
     next.addEventListener('click', () => move(true), { signal });
     track.addEventListener('scroll', render, { passive: true, signal });
+    track.addEventListener('pointerdown', (event) => {
+      if (event.pointerType !== 'mouse' || event.button !== 0) return;
+      dragStartX = event.clientX;
+      dragScrollLeft = track.scrollLeft;
+      dragged = false;
+      track.setPointerCapture(event.pointerId);
+      stopAutoplay();
+    }, { signal });
+    track.addEventListener('pointermove', (event) => {
+      if (!track.hasPointerCapture(event.pointerId)) return;
+      const distance = event.clientX - dragStartX;
+      dragged ||= Math.abs(distance) > 5;
+      track.scrollLeft = dragScrollLeft - distance;
+    }, { signal });
+    track.addEventListener('pointerup', (event) => {
+      if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
+      startAutoplay();
+    }, { signal });
+    track.addEventListener('click', (event) => {
+      if (!dragged) return;
+      event.preventDefault();
+      event.stopPropagation();
+      dragged = false;
+    }, { capture: true, signal });
     carousel.addEventListener('pointerenter', stopAutoplay, { signal });
     carousel.addEventListener('pointerleave', startAutoplay, { signal });
     carousel.addEventListener('focusin', stopAutoplay, { signal });
     carousel.addEventListener('focusout', startAutoplay, { signal });
-    const resizeObserver = new ResizeObserver(render);
+    const resizeObserver = new ResizeObserver(() => {
+      goTo(Math.min(activeIndex, lastIndex()), 'auto');
+      startAutoplay();
+    });
     resizeObserver.observe(track);
     render();
     startAutoplay();
