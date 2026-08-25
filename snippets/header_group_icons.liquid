@@ -70,6 +70,7 @@
 {%- endcase -%}
 
 <div class="hdt-site-top_nav hdt-flex hdt-align-center hdt-justify-{{ icons_position }} hdt-header-icons-hover-{{ section.settings.hover_icon }} hdt-cart-design{{ section.settings.cart_des }}">
+  {%- render 'language-selector' -%}
   {%- if section.settings.search_type != "none" -%}
 	<div class="hdt-site-nav_icon hdt-site-nav_search hdt-inline-flex hdt-align-center">
 		{%- if section.settings.search_type == "short_form" -%}

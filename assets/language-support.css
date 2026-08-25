@@ -1,22 +1,64 @@
 .language-switcher {
   position: relative;
-  z-index: 30;
-  display: flex;
-  min-height: 32px;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 16px;
-  background: rgb(var(--color-background, 255 255 255));
-  color: rgb(var(--color-foreground, 18 18 18));
-  border-bottom: 1px solid rgb(var(--color-foreground, 18 18 18) / 0.1);
+  z-index: 31;
   font-size: 13px;
-  line-height: 1.4;
+  line-height: 1;
 }
 
-.language-switcher__options { display: inline-flex; align-items: center; gap: 7px; }
-.language-switcher button { appearance: none; padding: 0; border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
-.language-switcher button[aria-current='page'] { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-.language-switcher button:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.language-switcher__details { position: relative; }
+.language-switcher__trigger {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border: 1px solid rgb(var(--color-foreground, 18 18 18) / 0.16);
+  border-radius: 999px;
+  background: rgb(var(--color-background, 255 255 255) / 0.72);
+  color: inherit;
+  cursor: pointer;
+  list-style: none;
+  transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+}
+.language-switcher__trigger::-webkit-details-marker { display: none; }
+.language-switcher__trigger:hover { border-color: currentColor; background: rgb(var(--color-background, 255 255 255)); }
+.language-switcher__trigger:focus-visible,
+.language-switcher__option:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.language-switcher__globe { flex: 0 0 auto; }
+.language-switcher__current { white-space: nowrap; font-weight: 600; }
+.language-switcher__chevron { transition: transform .2s ease; }
+.language-switcher__details[open] .language-switcher__chevron { transform: rotate(180deg); }
+.language-switcher__menu {
+  position: absolute;
+  inset-block-start: calc(100% + 8px);
+  inset-inline-end: 0;
+  min-width: 150px;
+  padding: 6px;
+  border: 1px solid rgb(var(--color-foreground, 18 18 18) / 0.12);
+  border-radius: 12px;
+  background: rgb(var(--color-background, 255 255 255));
+  color: rgb(var(--color-foreground, 18 18 18));
+  box-shadow: 0 12px 30px rgb(0 0 0 / 0.14);
+}
+.language-switcher__option {
+  appearance: none;
+  display: flex;
+  width: 100%;
+  min-height: 38px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}
+.language-switcher__option:hover { background: rgb(var(--color-foreground, 18 18 18) / 0.07); }
+.language-switcher__option[aria-current='true'] { font-weight: 700; background: rgb(var(--color-foreground, 18 18 18) / 0.05); }
 
 html[lang^='ar'][dir='rtl'] {
   --font-body-family: 'Cairo', sans-serif;
@@ -26,8 +68,10 @@ html[lang^='ar'][dir='rtl'] {
   --arabic-section-space: 56px;
 }
 
-html[lang^='ar'][dir='rtl'] body { font-family: 'Cairo', sans-serif; overflow-x: hidden; overflow-x: clip; }
-html[lang^='ar'][dir='rtl'] :is(button, input, select, textarea) { font-family: inherit; }
+html[lang^='ar'], html[dir='rtl'] { font-family: 'Cairo', sans-serif; }
+html[lang^='ar'] body, html[dir='rtl'] body { font-family: 'Cairo', sans-serif; overflow-x: hidden; overflow-x: clip; }
+html[lang^='ar'] body :is(h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, label),
+html[dir='rtl'] body :is(h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea, label) { font-family: 'Cairo', sans-serif; }
 
 /* Keep carousel controls in DOM order. Slider libraries own track transforms. */
 html[lang^='ar'][dir='rtl'] .modern-carousel__nav { direction: ltr; }
@@ -99,6 +143,10 @@ html[lang^='ar'][dir='rtl'] #MainContent .modern-section__inner {
 
 @media (max-width: 749px) {
   html[lang^='ar'][dir='rtl'] { --arabic-page-gutter: 18px; --arabic-section-space: 32px; }
-  .language-switcher { min-height: 30px; padding-inline: 10px; font-size: 12px; }
+  .language-switcher { font-size: 12px; }
+  .language-switcher__trigger { min-width: 34px; min-height: 34px; justify-content: center; gap: 0; padding: 7px; }
+  .language-switcher__globe { width: 17px; height: 17px; }
+  .language-switcher__current,
+  .language-switcher__chevron { display: none; }
   html[lang^='ar'][dir='rtl'] footer :is(.hdt-footer-col-block, .hdt-column, .hdt-column_inner) { padding-inline: 0; }
 }
