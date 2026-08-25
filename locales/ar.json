@@ -1423,6 +1423,176 @@
         "paginator": {
           "next_accessibility_label": "الصفحة التالية"
         }
+      },
+      "remote_merchandise_only": {
+        "single_shop_transition": "جارٍ إعادة توجيهك إلى %{advertiser} لإكمال عملية الشراء."
+      },
+      "stock": {
+        "page_title": "مشكلات المخزون",
+        "title": "نفد المخزون",
+        "items_unavailable_notice": "بعض المنتجات غير متوفرة حالياً.",
+        "product_column_header": "المنتجات",
+        "quantity_column_header": "الكمية",
+        "price_column_header": "السعر",
+        "status_column_header": "الحالة",
+        "removed_from_cart_notice": "تمت إزالته من السلة",
+        "sold_out_label": "نفد المخزون",
+        "reduced_label": "مُخفَّض",
+        "reduced_with_quantity_label": "تبقى %{quantity_available} فقط",
+        "remove_from_cart_button_label": "إزالة من سلة التسوق",
+        "continue_shopping_button_label": "استمر/استمروا",
+        "go_back_to_cart_button_label": "العودة إلى سلة التسوق الخاصة بي",
+        "remove": "إزالة",
+        "return_to_store_label": "العودة إلى المتجر",
+        "continue_cta_label": "متابعة الدفع",
+        "item_label": {
+          "one": "{{count}} عنصر",
+          "other": "{{count}} عناصر"
+        },
+        "empty_cart_label": "سلة التسوق فارغة",
+        "quantity_update": {
+          "page_title": "تحديث الكمية",
+          "title": "تحديث الكمية",
+          "description": "تغيرت الكميات المتوفرة لهذه الأصناف وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "unpurchasable_product": {
+          "title": "منتج غير قابل للشراء",
+          "header": "تمت إزالة بعض العناصر من سلة التسوق الخاصة بك",
+          "message": "هذه المنتجات غير متاحة لطلبات الشركات.",
+          "status_column_header": "غير متاح"
+        },
+        "unpurchasable_product_generic": {
+          "title": "منتج غير قابل للشراء",
+          "header": "تمت إزالة بعض العناصر من سلة التسوق الخاصة بك",
+          "message": "هذه العناصر غير متوفرة.",
+          "status_column_header": "غير متاح"
+        },
+        "unfulfillable_product": {
+          "title": "التوصيل غير متاح",
+          "message": {
+            "one": "طريقة التسليم هذه (%{delivery_method}) غير متاحة لهذا المنتج.",
+            "other": "لم تعد %{delivery_method} متاحة لهذه العناصر."
+          },
+          "default_message": {
+            "one": "طريقة التسليم المختارة غير متوفرة لهذا المنتج.",
+            "other": "طريقة التسليم المختارة لم تعد متوفرة لهذه العناصر."
+          }
+        },
+        "unshippable_product": {
+          "title": "لا يوجد توصيل متاح",
+          "header": {
+            "one": "لا يتوفر توصيل لـ %{count} من الأصناف",
+            "other": "لا تتوفر خدمة توصيل لـ %{count} من الأصناف"
+          },
+          "message": {
+            "one": "سيتم إزالة هذا المنتج من سلة التسوق الخاصة بك لأنه لا توجد طرق توصيل متاحة لعنوانك.",
+            "other": "ستتم إزالة هذه المنتجات من سلة التسوق الخاصة بك نظرًا لعدم توفر طرق توصيل لعنوانك."
+          },
+          "status_column_header": "لم يتم التسليم"
+        },
+        "price_update": {
+          "title": "تحديث السعر",
+          "description": "لقد تغيرت أسعار هذه السلع وتم تحديثها في سلة التسوق الخاصة بك.",
+          "updated_price": "السعر المحدث"
+        },
+        "price_and_quantity_update": {
+          "title": "تحديث السعر والكمية",
+          "description": "تغيرت أسعار وكميات هذه المنتجات المتاحة وتم تحديثها في سلة التسوق الخاصة بك."
+        },
+        "out_of_stock": {
+          "description": "هذه المنتجات لم تعد متوفرة وستتم إزالتها من سلة التسوق الخاصة بك.",
+          "items_unavailable": "بعض المنتجات لم تعد متوفرة وسيتم حذفها من سلة التسوق الخاصة بك.",
+          "missing_items": {
+            "title": {
+              "one": "{{count}} منتجًا لم يعد متوفرًا",
+              "other": "{{count}} عناصر لم تعد متوفرة"
+            },
+            "some_available_notice": {
+              "one": "لا تزال العناصر المتبقية متاحة للدفع. ستتم إزالة العنصر غير المتاح من سلة التسوق.",
+              "other": "العناصر المتبقية لا تزال متاحة للدفع. سيتم إزالة العناصر غير المتاحة من سلة التسوق."
+            },
+            "none_available_notice": {
+              "one": "هذا المنتج لم يعد متوفراً وقد تم حذفه من سلة مشترياتك.",
+              "other": "هذه المنتجات لم تعد متوفرة وتمت إزالتها من سلة التسوق الخاصة بك."
+            },
+            "mixed_issues_title": "بعض العناصر لم تعد متوفرة"
+          }
+        },
+        "out_of_stock_in_context_label": "هذا المنتج غير متوفر في بلدك/منطقتك."
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "منتج غير متوفر",
+          "other": "منتجات غير متوفرة"
+        },
+        "products_not_available": {
+          "one": "ستتم إزالة هذا المنتج من سلة التسوق الخاصة بك لأنه غير متوفر في بلدك/منطقتك.",
+          "other": "ستُزال هذه المنتجات من سلة التسوق الخاصة بك لأنها غير متوفرة في بلدك/منطقتك."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "هذا المنتج غير متوفر في بلدك/منطقتك.",
+          "other": "هذه المنتجات غير متوفرة في بلدك/منطقتك."
+        },
+        "unavailable_label": "غير متاح"
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "هذا المنتج غير متاح للتوصيل إلى %{location_name}.",
+          "some_products_other": "هذه المنتجات غير متاحة للتوصيل إلى %{location_name}.",
+          "all_products_one": "المنتج في سلة التسوق الخاصة بك غير متوفر للتسليم إلى %{location_name}.",
+          "all_products_other": "المنتجات الموجودة في سلة التسوق الخاصة بك غير متاحة للتسليم إلى %{location_name}."
+        },
+        "missing_country_fallback": "بلدك",
+        "indeterminate_location_fallback": "موقعك",
+        "cart_updated": "تم تحديث عربة التسوق الخاصة بك.",
+        "change_address_only": "غيّر عنوان التسليم للمتابعة.",
+        "change_address_or_remove": "تغيير عنوان التوصيل أو %{remove_action}.",
+        "remove_items_action": {
+          "one": "إزالة المنتج غير المتوفر",
+          "other": "إزالة العناصر غير المتوفرة"
+        },
+        "empty_cart_action": "إفراغ السلة والعودة إلى المتجر",
+        "unavailable_line_item": "%{product_name} / %{variant_label}"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "لا يتوفر توصيل لـ %{count} من الأصناف",
+            "other": "لا تتوفر خدمة توصيل لـ %{count} من الأصناف"
+          },
+          "message": {
+            "one": "سيتم إزالة هذا المنتج من سلة التسوق الخاصة بك لأنه لا توجد طرق توصيل متاحة لعنوانك.",
+            "other": "ستتم إزالة هذه المنتجات من سلة التسوق الخاصة بك نظرًا لعدم توفر طرق توصيل لعنوانك."
+          },
+          "label": "لم يتم التسليم"
+        }
+      },
+      "order_summary": {
+        "title": "ملخص الطلب",
+        "product_disclosures": {
+          "title": "إفصاحات المنتج"
+        },
+        "group_title_label": "جزء من \"%{group_title}\"",
+        "for_add_on": "لـ: %{group_title}",
+        "from_shop_heading": "من %{shop_name}",
+        "from_other_stores_heading": "من متاجر أخرى",
+        "from_multiple_stores_heading": "من متاجر متعددة",
+        "number_items": {
+          "one": "%{count} بند",
+          "other": "%{count} بند"
+        },
+        "view_all_items": {
+          "one": "عرض %{count} عنصر",
+          "other": "عرض جميع العناصر (%{count})"
+        },
+        "more_items_modal": {
+          "search_item": "بحث",
+          "clear_search": "مسح البحث",
+          "empty_results": "لم يتم العثور على نتائج لـ \"%{searchText}\". يرجى التحقق من الهجاء أو استخدام كلمة أو عبارة مختلفة.",
+          "number_items_shown": "%{shownNumber} من %{totalNumber} عنصرًا"
+        },
+        "order_name_label": "اطلب %{name}",
+        "shopping_cart_label": "عربة التسوق"
       }
     },
     "notices": {
@@ -2377,6 +2547,156 @@
         "card_verification_value_label": "الرمز الأمني",
         "card_verification_value_placeholder": "الرمز الأمني",
         "card_start_label": "تاريخ الإصدار (شهر / سنة)"
+      }
+    },
+    "B2B": {
+      "location_selection": {
+        "search": "البحث عن المواقع",
+        "search_location_title": "حدد موقعًا",
+        "selection_cancel_button": "إلغاء",
+        "selection_confirmation_button": "اختر موقعًا",
+        "selection_continue_button": "استمر/استمروا",
+        "title": "ما هو الموقع الذي تشتري لأجله؟",
+        "title_choose_location": "اختر موقعًا",
+        "clear_search": "مسح البحث",
+        "try_new_search": "جرّب بحثًا جديدًا"
+      },
+      "addresses": {
+        "add_billing_address_button": "إضافة عنوان الفوترة",
+        "add_billing_address_section_accessibility_label": "إضافة عنوان الفوترة",
+        "add_shipping_address_button": "أضف عنوان الشحن",
+        "add_shipping_address_section_accessibility_label": "أضف عنوان الشحن",
+        "billing_address_card_title": "عنوان الفواتير",
+        "no_billing_address_banner": "لم تتم إضافة عنوان فوترة",
+        "cancel_adding_billing_address_accessibility_label": "إلغاء إضافة عنوان الفواتير",
+        "cancel_adding_shipping_address_accessibility_label": "إلغاء إضافة عنوان الشحن",
+        "save_new_billing_address_accessibility_label": "حفظ عنوان الفواتير",
+        "save_new_shipping_address_accessibility_label": "حفظ عنوان الشحن",
+        "shipping_address_card_title": "عنوان الشحن"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "إخفاء الكل",
+          "show_all": "إظهار الكل",
+          "hide_all_accessibility_label": "إخفاء جميع الطلبات قيد المراجعة",
+          "show_all_accessibility_label": "إظهار جميع الطلبات قيد المراجعة",
+          "show_all_orders_in_review": "إظهار جميع الطلبات قيد المراجعة",
+          "show_less_orders_in_review": "إظهار عدد أقل من الطلبات في المراجعة",
+          "title": "قيد الانتظار",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "ليس لديك أي طلبات معلقة",
+            "pending_orders": {
+              "one": "لديك {{count}} طلب قيد الانتظار",
+              "other": "لديك {{count}} طلبات معلقة"
+            },
+            "more_than_pagination_length": "لديك أكثر من {{count}} طلبات قيد الانتظار"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}}+",
+          "pagination": {
+            "nav_accessibility_label": "أزرار التنقل في شاشة \"الطلبات قيد المراجعة\""
+          }
+        },
+        "order_list_column_headers_location": "الموقع",
+        "order_list_column_headers_contact": "جهات الاتصال",
+        "order_list_column_headers_status": "الحالة",
+        "removed_company_contact_tooltip": "تم فصله من الشركة"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "تأكيد {{date}} من الطلب {{draftOrderName}}",
+        "loading": "جاري تحميل تفاصيل الطلب",
+        "loading_finished_accessibility_message": "تم تحميل تفاصيل الطلب",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "دفعتك متأخرة {{count}} يوم",
+              "other": "فاتورة الدفع الخاصة بك متأخرة {{count}} أيام"
+            },
+            "banner_due": {
+              "one": "مدفوعاتك مستحقة خلال {{count}} يوم",
+              "other": "تاريخ استحقاق دفعتك بعد {{count}} أيام"
+            },
+            "banner_due_today": "تاريخ استحقاق دفعتك اليوم",
+            "banner_due_today_for_multiple_fulfillments": "تاريخ الاستحقاق اليوم لعدد {{count}} طلبًا منفذًا",
+            "banner_overdue_for_multiple_fulfillments": "الدفع مستحق مقابل {{count}} طلبًا منفّذًا",
+            "title": "الدفع مستحق",
+            "title_with_date": "تاريخ الاستحقاق {{date}}",
+            "title_due_on_receipt": "الدفع غير مستحق بعد",
+            "title_due_on_fulfillment": "الدفع مستحق عند الإنجاز",
+            "description_overdue": "دفعك متأخر.",
+            "description_partially_paid": "تم دفع جزء من هذا الطلب. لديك رصيد متبقٍ.",
+            "description_authorized": "سيتم خصم الدفعة من طريقة الدفع الخاصة بك في تاريخ الاستحقاق، أو يمكنك الدفع الآن.",
+            "description_waiting_for_manual_payment": "هذا الطلب قيد الدفع. سيتم تحديث الرصيد عند استلام الدفعة.",
+            "description_due_on_receipt": "ستتلقى فاتورة عند استحقاق الدفع.",
+            "description_due_on_receipt_partially_paid": "تم دفع هذا الطلب جزئيًا. لديك رصيد متبقٍ. ستتلقى فاتورة عند استحقاق الدفع.",
+            "description_due_on_fulfillment": "تستحق الدفعة بعد استيفاء جميع الأصناف في هذا الطلب.",
+            "description_due_on_fulfillment_partially_paid": "تم دفع هذا الطلب جزئيًا. لديك رصيد مستحق. الدفع مستحق بمجرد تلبية جميع الأصناف في هذا الطلب.",
+            "description_due_on_fulfillment_partially_paid_next": "تم دفع جزء من هذا الطلب. لديك رصيد متبقٍ."
+          },
+          "draft": {
+            "description": "يتم تحديد تفاصيل الدفع عند تأكيد الطلب.",
+            "title": "الدفع غير مستحق بعد",
+            "in_review": {
+              "description": "يتم تحديد تفاصيل الدفع عند تأكيد الطلب.",
+              "title": "الدفع غير مستحق بعد"
+            },
+            "submitted": {
+              "description": "يرجى إتمام عملية الدفع لتأكيد هذا الطلب.",
+              "title": "ادفع للتأكيد",
+              "deposit": {
+                "title": "الدفع مستحق",
+                "due_later": "الرصيد مستحق طبقًا لشروط {{translatedName}} في {{dueDate}}.",
+                "due_on_fulfillment": "يُستحق الرصيد بمجرد تسليم جميع الأصناف في هذا الطلب.",
+                "due_on_receipt": "ستتلقى فاتورة بالرصيد المتبقي.",
+                "due_on_date": "الرصيد مستحق في {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} سيتم استحقاقها عند تأكيد طلبك. سيكون الرصيد على شروط {{translatedName}}.",
+              "due_on_fulfillment": "{{depositAmount}} تستحق عند تأكيد طلبك. وسيتم دفع الرصيد عند تلبية الطلب.",
+              "due_on_receipt": "{{depositAmount}} تستحق عند تأكيد طلبك. الرصيد المتبقي سيستحق لاحقًا.",
+              "due_on_date": "{{depositAmount}} سيكون مستحقًا عند تأكيد طلبك. سيكون الرصيد مستحقًا في {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "مدفوع",
+            "title_with_date": "مدفوعة {{date}}",
+            "description": "تم دفع طلبك بالكامل."
+          },
+          "refund": {
+            "title": "تم رد الأموال",
+            "title_with_date": "تم رد المبلغ {{date}}",
+            "description_full_refund": "لقد استرددت كامل المبلغ لهذا الطلب.",
+            "description_single_refund": "لقد استرددت جزءًا من المبلغ المدفوع لهذا الطلب.",
+            "description_multiple_refunds": "لقد تلقيت استردادات جزئية لهذا الطلب."
+          },
+          "canceled": {
+            "title": "تم إلغاء الدفع",
+            "description": "لم يتم محاسبتك."
+          },
+          "due_date": "تاريخ الاستحقاق {{date}}",
+          "total_balance": "إجمالي الرصيد",
+          "pay_now": "ادفع الآن",
+          "pay_now_accessibility_label": "ادفع الآن لطلب {{orderName}}",
+          "title": "حالة الدفع"
+        },
+        "order_timeline": {
+          "expand_events_label": "عرض التفاصيل",
+          "expand_events_accessibility_label": "عرض تفاصيل أمر المسودة",
+          "hide_events_label": "إخفاء التفاصيل",
+          "hide_events_accessibility_label": "إخفاء تفاصيل طلب المسودة"
+        },
+        "subtitle": "أُرسلت {{date}}",
+        "title": "اطلب {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "طريقة الدفع هذه لن تكون متاحة بعد الآن للمشتريات المستقبلية من هذا الموقع.",
+          "description_with_replacement": "سيؤثر حذف طريقة الدفع هذه على الدفعات المُفوّتة مسبقًا لهذا الموقع. استبدلها بطريقة دفع بديلة لمواصلة استلام الطلبات القادمة."
+        },
+        "payment_details": {
+          "order_label": "اطلب {{name}}",
+          "draft_label": "Draft order {{name}}"
+        }
       }
     }
   },
