@@ -49,6 +49,7 @@
     {{ content_for_header }}
     {{ 'modern-overflow-fix.css' | asset_url | stylesheet_tag }}
     {{ 'language-support.css' | asset_url | stylesheet_tag }}
+    {{ 'layout-refinements.css' | asset_url | stylesheet_tag }}
     {%- if is_rtl -%}
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

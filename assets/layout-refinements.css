@@ -1,0 +1,67 @@
+/* Product-page and footer spacing refinements. */
+
+/* Keep each major product section visually separated. */
+.hdt-page-type-product #MainContent > .shopify-section + .shopify-section {
+  margin-block-start: 24px;
+}
+
+/* Guarantee comfortable inner spacing when theme spacing variables are empty. */
+.hdt-page-type-product .hdt-product-tab,
+.hdt-page-type-product product-recommendations.related-products {
+  box-sizing: border-box;
+  padding-block: 48px;
+}
+
+.hdt-page-type-product .hdt-product-tab > .hdt-container,
+.hdt-page-type-product product-recommendations.related-products {
+  padding-inline: 20px;
+}
+
+/* Footer sections need breathing room around and between their contents. */
+footer .hdt-footer-section {
+  box-sizing: border-box;
+  padding-block: 36px;
+}
+
+footer .hdt-footer-section > .hdt-container,
+footer .hdt-footer-section > .hdt-container-full {
+  padding-inline: 20px;
+}
+
+footer .hdt-footer-section .hdt-row {
+  row-gap: 28px;
+}
+
+footer .hdt-footer-section .hdt-footer-col-block {
+  padding-block: 8px;
+}
+
+footer .hdt-footer-section .hdt-col-content > * + * {
+  margin-block-start: 16px;
+}
+
+@media (max-width: 749px) {
+  .hdt-page-type-product #MainContent > .shopify-section + .shopify-section {
+    margin-block-start: 16px;
+  }
+
+  .hdt-page-type-product .hdt-product-tab,
+  .hdt-page-type-product product-recommendations.related-products {
+    padding-block: 30px;
+  }
+
+  .hdt-page-type-product .hdt-product-tab > .hdt-container,
+  .hdt-page-type-product product-recommendations.related-products,
+  footer .hdt-footer-section > .hdt-container,
+  footer .hdt-footer-section > .hdt-container-full {
+    padding-inline: 15px;
+  }
+
+  footer .hdt-footer-section {
+    padding-block: 28px;
+  }
+
+  footer .hdt-footer-section .hdt-row {
+    row-gap: 22px;
+  }
+}
