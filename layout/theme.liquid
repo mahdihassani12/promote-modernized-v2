@@ -1,13 +1,7 @@
 <!doctype html>
 {%- liquid
-  assign iso_code  = request.locale.iso_code
-  assign language_code = iso_code | split: '-' | first
   assign is_rtl = false
   assign dir = 'ltr'
-  if language_code == 'ar'
-    assign is_rtl = true
-    assign dir = 'rtl'
-  endif
 -%}
 
 <html class="no-js hdt-pr-img__effect-{{ settings.effect_secondary_image }} hdt-badge__shape-{{ settings.badge_shape }} dir--{{ dir }}{% if request.design_mode %} shopify-design-mode{% endif %} {% if settings.minimal_products %} hdt-minimal-products{% endif %}{% if settings.hidden_badges %} hdt-hidden-pr-badges{% endif %}{% if settings.hidden_quickview %} hdt-hidden-pr-quickview{% endif %}{% if settings.hidden_wishlist %} hdt-hidden-pr-wishlist{% endif %}{% if settings.hidden_compare %} hdt-hidden-pr-compare{% endif %}{% if settings.uppercase_title %} hdt-pr-uppercase_title{% endif %}" lang="{{ request.locale.iso_code }}" dir="{{ dir }}">
@@ -28,11 +22,6 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endif -%}
     {%- if settings.library_font == 'google' -%}{{ settings.embed_google_font }}{%- endif -%}
-    {%- if language_code == 'ar' -%}
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    {%- endif -%}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; {{ 'general.meta.tag' | t }} "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -53,8 +42,7 @@
     -%}
 
     {{ content_for_header }}
-    {{ 'language-support.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'language-support.js' | asset_url }}" defer></script>
+    {{ 'modern-overflow-fix.css' | asset_url | stylesheet_tag }}
     {%- endunless -%}
   </head>
 
@@ -66,7 +54,6 @@
     {%- endif -%}
     {%- render 's-dom-temp' -%}
     <a class="skip-to-content-link button sr-only " href="#MainContent">{{ 'accessibility.skip_to_text' | t }}</a>
-    {%- render 'language-selector' -%}
     {%- sections 'header-group' -%}
     {%- endunless -%}
 
