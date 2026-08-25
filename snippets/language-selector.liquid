@@ -1,0 +1,28 @@
+{%- comment -%}
+  The localization form is handled by Shopify, so translated resources keep their
+  equivalent URL instead of sending customers back to the home page.
+{%- endcomment -%}
+<div class="language-switcher" role="navigation" aria-label="Language selector">
+  {%- form 'localization', id: 'HeaderLanguageForm', class: 'language-switcher__form' -%}
+    <input type="hidden" name="return_to" value="{{ request.path }}">
+    <span class="language-switcher__options" dir="rtl">
+      <button
+        type="submit"
+        name="locale_code"
+        value="ar"
+        lang="ar"
+        data-language-option
+        aria-current="{% if request.locale.iso_code contains 'ar' %}page{% else %}false{% endif %}"
+      >العربية</button>
+      <span aria-hidden="true">–</span>
+      <button
+        type="submit"
+        name="locale_code"
+        value="en"
+        lang="en"
+        data-language-option
+        aria-current="{% if request.locale.iso_code contains 'en' %}page{% else %}false{% endif %}"
+      >English</button>
+    </span>
+  {%- endform -%}
+</div>
