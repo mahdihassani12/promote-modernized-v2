@@ -1,9 +1,8 @@
 {%- capture class -%}{{ class }}hdt-icon hdt-icon-{{ icon | handle }}{%- endcapture -%}
 {%- liquid
   assign iso_code  = request.locale.iso_code
-  assign language_code = iso_code | split: '-' | first
   assign is_rtl = false
-  if language_code == 'ar'
+  if request.locale.iso_code == 'ar'
     assign is_rtl = true
   endif
 -%}

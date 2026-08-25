@@ -12,7 +12,7 @@
         value="ar"
         lang="ar"
         data-language-option
-        aria-current="{% if request.locale.iso_code contains 'ar' %}page{% else %}false{% endif %}"
+        aria-current="{% if request.locale.iso_code == 'ar' %}page{% else %}false{% endif %}"
       >العربية</button>
       <span aria-hidden="true">–</span>
       <button
@@ -21,7 +21,7 @@
         value="en"
         lang="en"
         data-language-option
-        aria-current="{% if request.locale.iso_code contains 'en' %}page{% else %}false{% endif %}"
+        aria-current="{% if request.locale.iso_code == 'en' %}page{% else %}false{% endif %}"
       >English</button>
     </span>
   {%- endform -%}

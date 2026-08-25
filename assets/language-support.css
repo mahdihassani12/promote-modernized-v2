@@ -40,36 +40,37 @@
   outline-offset: 3px;
 }
 
-html[lang^='ar'] body,
-html[lang^='ar'] h1,
-html[lang^='ar'] h2,
-html[lang^='ar'] h3,
-html[lang^='ar'] h4,
-html[lang^='ar'] h5,
-html[lang^='ar'] h6,
-html[lang^='ar'] p,
-html[lang^='ar'] a,
-html[lang^='ar'] button,
-html[lang^='ar'] input,
-html[lang^='ar'] select,
-html[lang^='ar'] textarea,
-html[lang^='ar'] label {
-  font-family: 'Cairo', sans-serif !important;
+html[lang='ar'] {
+  --font-body-family: 'Cairo', sans-serif;
+  --font-heading-family: 'Cairo', sans-serif;
+  --font-sheading-family: 'Cairo', sans-serif;
 }
 
-/* Embla (the theme slider engine) reads the document direction. These rules
-   also cover native/modern scroll carousels and keep navigation physically
-   ordered: left is back and right is forward in both languages. */
-html[dir='rtl'] .hdt-slider,
-html[dir='rtl'] .hdt-slider__viewport,
-html[dir='rtl'] .hdt-slider__container,
-html[dir='rtl'] [data-modern-track] {
-  direction: rtl;
+html[lang='ar'] body {
+  font-family: 'Cairo', sans-serif;
 }
 
-html[dir='rtl'] .hdt-navigation,
-html[dir='rtl'] .modern-carousel__nav {
+html[lang='ar'] :is(button, input, select, textarea) {
+  font-family: inherit;
+}
+
+/* Keep controls in physical left/back, right/forward order. Slider tracks are
+   deliberately not targeted: the theme and custom carousel engines own them. */
+html[lang='ar'] :is(.hdt-navigation, .modern-carousel__nav) {
   direction: ltr;
+}
+
+html[lang='ar'] :is(#hdt-nav-ul, .hdt-menu-list, .hdt-footer-menu),
+html[lang='ar'] :is(header, footer) {
+  text-align: right;
+}
+
+html[lang='ar'] .hdt-navigation #hdt-nav-ul {
+  justify-content: flex-start;
+}
+
+html[lang='ar'] :is(header, footer) :is(img, svg) {
+  max-width: 100%;
 }
 
 @media (max-width: 749px) {
