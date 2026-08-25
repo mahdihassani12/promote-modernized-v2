@@ -1249,6 +1249,180 @@
         "call_issuer": "تم رفض بطاقتك. استخدم طريقة دفع مختلفة أو اتصل بالمصرف الذي تتعامل معه للحصول على مزيد من المعلومات.",
         "test_mode_live_card": "هذا المتجر لا يمكنه قبول طلبات حقيقية أو مدفوعات حقيقية.",
         "test_mode_enabled_only_test_cards": "وضع الاختبار ممكّن، لا يمكن إضافة إلا بطاقات الائتمان الاختبارية."
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "يوم",
+            "other": "%{count} أيام"
+          },
+          "week": {
+            "one": "أسبوع",
+            "other": "%{count} أسابيع"
+          },
+          "month": {
+            "one": "شهر",
+            "other": "%{count} أشهر"
+          },
+          "year": {
+            "one": "عام",
+            "other": "%{count} سنوات"
+          }
+        },
+        "recurring_totals": "%{total_price} كل %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "الدفعة الأولى %{total_price_with_discount}، ثم %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "الدفعة الأولى %{total_price}",
+            "other": "أول %{count} دفعات بقيمة %{total_price} لكل دفعة"
+          },
+          "following_cycles": "، ثم %{total_price} كل %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": "، ثم %{count} دفعة بقيمة %{total_price}",
+            "other": "، ثم %{count} دفعات بقيمة %{total_price} لكل دفعة"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "طرق الدفع",
+        "title": "طرق الدفع",
+        "update_card_button_label": "تحديث البطاقة",
+        "delete_customer_mandate": {
+          "generic_error": "حدثت مشكلة أثناء معالجة طلبك.",
+          "success_message": "تم حذف طريقة الدفع الخاصة بك بنجاح"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "محاولات كثيرة جداً",
+          "description": "حاول مرة أخرى بعد بضع دقائق"
+        },
+        "line_to_check_out": "أنت في الصف للدفع",
+        "cart_summary_heading": "عربة التسوق الخاصة بك",
+        "merchandise": {
+          "available": "متاح",
+          "sold_out": "نفدت الكمية"
+        },
+        "inventory": {
+          "partial_inventory_banner": "جزء من سلة تسوقك نفد من المخزون ولن يكون متاحًا للشراء عند الدفع.",
+          "sold_out": {
+            "heading": "عربتك فارغة",
+            "storefront_body": "العودة إلى المتجر لمتابعة التسوق",
+            "no_storefront_body": "للأسف، السلعة التي ترغب في شرائها لم تعد متوفرة.",
+            "link": "العودة إلى المتجر"
+          }
+        },
+        "title": "طابور",
+        "time_to_checkout_title": "حان وقت المغادرة - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "حساب وقت الانتظار التقديري",
+          "less_than_one": "الوقت المتوقع للانتظار: أقل من دقيقة",
+          "one": "الوقت المقدر للانتظار: {{count}} دقيقة",
+          "other": "الوقت المقدر للانتظار: {{count}} دقيقة"
+        },
+        "last_checked": "(آخر فحص: {{time}})",
+        "footer": {
+          "heading": "لا تقم بتحديث هذه الصفحة، سيتم تحديثها تلقائياً.",
+          "body": "العناصر الموجودة في سلة التسوق الخاصة بك لا تُحجز حتى تكمل عملية الدفع."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "حدثت مشكلة أثناء معالجة طلبك. يُرجى التواصل مع مالك المتجر."
+      },
+      "no_address_location": {
+        "title": "موقع بلا عنوان",
+        "header": "ليس لديك عنوان شحن لهذا الموقع",
+        "alt_header": "عنوان الشحن مفقود",
+        "message": "يرجى الاتصال بنا لإضافة عنوان لهذا الموقع لإتمام عملية الشراء.",
+        "email_us_button_label": "أرسل لنا رسالة إلكترونية"
+      },
+      "shop_wallet": {
+        "title": "محفظة Shop Pay",
+        "description": "اختر ما تريد استخدامه لعملية الشراء هذه.",
+        "loading": "جارٍ تحميل محفظة Shop Pay الخاصة بك…",
+        "ready_status": "محفظة Shop Pay الخاصة بك جاهزة. اختر طريقة الدفع.",
+        "cancel": "إلغاء",
+        "retry": "حاول مرة أخرى",
+        "return_to_hatch": "العودة إلى الفتحة",
+        "choose_again": "اختر مرة أخرى",
+        "payment_method": {
+          "heading": "طريقة الدفع",
+          "expiry": "ينتهي في {{expiry}}"
+        },
+        "shipping_address": {
+          "heading": "عنوان الشحن"
+        },
+        "confirm": {
+          "label": "تأكيد الاختيار",
+          "success_title": "تم تأكيد الاختيار",
+          "success_message": "تفاصيل المحفظة المحددة جاهزة. لا تُرجع هذه النسخة التجريبية التفاصيل إلى التطبيق الشريك بعد.",
+          "retryable_error_title": "لم تتم مشاركة التحديد",
+          "retryable_error_message": "حاول تأكيد اختيار محفظتك مرة أخرى.",
+          "terminal_error_title": "انتهى اتصال المحفظة",
+          "terminal_error_message": "عد وافتح Shop Pay مرة أخرى."
+        },
+        "cancelled": {
+          "title": "تم إلغاء التحديد",
+          "message": "لم يتم تقديم تفاصيل المحفظة ولم تتم أي عملية شراء."
+        },
+        "empty": {
+          "title": "لا توجد بطاقات محفوظة",
+          "message": "لا توجد بطاقات محفوظة في محفظة Shop Pay هذه."
+        },
+        "ineligible": {
+          "title": "لا توجد بطاقات مؤهلة",
+          "message": "لا يمكن استخدام أي من البطاقات المحفوظة لهذا الشراء."
+        },
+        "expired": {
+          "title": "انتهت صلاحية جلسة المحفظة هذه",
+          "message": "العودة إلى تطبيق الشريك وبدء عملية الشراء مرة أخرى."
+        },
+        "revoked": {
+          "title": "لم يعد Shop Pay متصلاً",
+          "message": "أعد ربط Shop Pay في تطبيق الشريك قبل المتابعة."
+        },
+        "error": {
+          "title": "تعذر تحميل محفظة Shop Pay الخاصة بك",
+          "message": "ارجع إلى Hatch وحاول فتح Shop Pay مرة أخرى."
+        }
+      },
+      "order_errors": {
+        "creation_failure": "حدثت مشكلة في إنشاء طلبك. يُرجى المحاولة مرة أخرى، أو الاتصال بنا للحصول على مزيد من التفاصيل.",
+        "network_failure": "تعذر إرسال طلبك بسبب خطأ في الشبكة. تحقق من اتصالك وحاول مرة أخرى.",
+        "inventory_reservation_failure": "بعض المنتجات غير متوفرة حالياً."
+      },
+      "session_errors": {
+        "session_not_unique": "حدثت مشكلة أثناء معالجة طلبك. يرجى تحديث هذه الصفحة للعودة إلى المتجر.",
+        "session_already_finished": "تم تقديم هذا الطلب بالفعل. يمكنك العودة إلى المتجر لبدء طلب جديد."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "حدثت مشكلة أثناء معالجة طلبك. يُرجى إعادة المحاولة بعد بضع دقائق."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "مغلق",
+        "business_hours": "ساعات العمل",
+        "no_business_hours": "ساعات العمل غير متاحة",
+        "open_twenty_four_hours": "مفتوح 24/7",
+        "title": "نقطة الاستلام",
+        "or": "أو",
+        "search_button": "بحث",
+        "address_label": "العنوان",
+        "selector_tabs": "أداة تحديد نقطة الالتقاء",
+        "selector_tab_map": "خريطة",
+        "selector_tab_list": "قائمة",
+        "could_not_resolve_address": "تعذر تحديد موقع عنوانك. حاول مرة أخرى أو استخدم عنوانًا مختلفًا.",
+        "no_pickup_points_near_you": "لم يتم العثور على نقاط استلام بالقرب من العنوان المحدد",
+        "no_pickup_points_near_location": "لا توجد نقاط استلام قريبة من موقعك",
+        "pickup_unavailable_banner_title": {
+          "one": "لا توجد نقاط استلام متاحة لمنتجك",
+          "other": "لا توجد نقاط استلام متاحة لعناصرك"
+        },
+        "no_pickup_points_found": "لم يتم العثور على نقاط استلام",
+        "paginator": {
+          "next_accessibility_label": "الصفحة التالية"
+        }
       }
     },
     "notices": {
