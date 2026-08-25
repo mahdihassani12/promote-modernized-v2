@@ -250,7 +250,261 @@
         "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
         "thank_you_payments_app_pending_payment_description_default_with_email": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
         "thank_you_payments_app_pending_payment_description_default_with_email_payment": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
-        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا."
+        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_pick_up": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_provider_action_required_default": "ستتلقى رسالة بريد إلكتروني عند تأكيد دفعتك.",
+        "track_your_order_link_text": "تتبع طلبك",
+        "checkout_again": "تسجيل الخروج مرة أخرى",
+        "checkout_on_remote_shop_link_text": "تحقق من %{remoteShopName}",
+        "checkout_on_another_store": "اطلع على متجر آخر",
+        "order_status_confirmed_order_with_email": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا.",
+        "order_status_confirmed_order_with_phone": "قد تتلقى رسالة نصية عندما يكون طلبك جاهزًا.",
+        "order_status_confirmed_order_with_email_and_phone": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا.",
+        "order_status_confirmed_order_with_email_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_email_and_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_email_pick_up": "سوف تتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
+        "order_status_confirmed_order_with_phone_pick_up": "سوف تتلقى رسالة نصية عندما يصبح طلبك جاهزًا للاستلام.",
+        "order_status_confirmed_order_with_email_and_phone_pick_up": "ستتلقى رسالة بريد إلكتروني ورسالة نصية عندما يصبح طلبك جاهزاً للاستلام.",
+        "order_status_payments_app_pending_payment_description_default_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_phone": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_pick_up": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_failed_pending_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "order_status_payments_app_failed_pending_payment_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "order_status_payments_app_failed_pending_payment_pick_up": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "order_status_confirmed_order_local": "نحن نجهز طلبك للتسليم.",
+        "order_status_confirmed_order_local_pick_up": "نحن نجهز طلبك.",
+        "order_status_confirmed_order_local_payment": "نحن نُجهز طلبك.",
+        "order_status_updates_with_email": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
+        "order_status_updates_with_phone": "يمكنك الحصول على تحديثات الشحن والتسليم عبر الرسائل النصية.",
+        "order_status_updates_with_email_and_phone": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
+        "order_status_updates_with_missing": "اختر الطريقة التي تريد تلقي تحديثات الشحن بها.",
+        "order_status_confirmed_with_installments_payment_return": "أعد انتباهك إلى موظف المبيعات.",
+        "order_status_confirmed_with_installments_payment_confirm": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك وتفاصيل جدول أقساطك قريبًا.",
+        "confirmed_title": "تم تأكيد طلبك",
+        "confirmed_description": "لقد قبلنا طلبك، ونحن نعمل على تجهيزه. يُرجى العودة إلى هذه الصفحة للحصول على تحديثات حول حالة شحنتك.",
+        "confirmed_orders_title": "تم تأكيد طلباتك.",
+        "ready_for_pickup_title": "طلبك جاهز للاستلام",
+        "ready_for_pickup_description": "طلبك جاهز للاستلام. يرجى إحضار تأكيد الطلب عند الاستلام.",
+        "ready_for_delivery_title": "طلبك جاهز للتسليم",
+        "ready_for_delivery_description": "لقد قمنا بتجهيز طلبك.",
+        "order_updates_title": "تحديثات الطلب",
+        "shop_phone_description": "ستتلقى رسالة نصية تتضمن رابطًا لتطبيق Shop للمساعدة في تتبع طلبك.",
+        "order_updates_description_html": "سيتم إرسال التحديثات إلى %{customer_contact}",
+        "order_updates_current_step_prefix": "الخطوة الحالية:",
+        "order_updates_past_step_prefix": "الخطوة السابقة:",
+        "order_updates_upcoming_step_prefix": "الخطوة القادمة:",
+        "in_transit": "في طريقها",
+        "in_transit_title": "طلبك في الطريق",
+        "in_transit_description": "ستصلك تحديثات حول تقدمها.",
+        "in_transit_description_days": "يجب أن تستلم طلبك خلال %{number} أيام القادمة.",
+        "in_transit_description_today": "يجب أن تستلم طلبك اليوم.",
+        "in_transit_description_tomorrow": "يجب أن تستلم طلبك في اليوم التالي.",
+        "no_tracking_number": "لا يوجد رقم تتبع لهذا الطلب.",
+        "out_for_delivery": "خارج للتسليم",
+        "out_for_delivery_title": "طلبك في طريقه للتسليم",
+        "out_for_delivery_description_html": "طلبك في الطريق ويجب أن يصل اليوم. إذا لم يتم تسليمه خلال اليومين القادمين، %{contact_us}.",
+        "out_for_delivery_local_title": "طلبك في طريقه للتسليم",
+        "out_for_delivery_local_description_html": "طلبك سيصل قريباً.",
+        "attempted_delivery": "محاولة تسليم",
+        "attempted_delivery_title": "تمت محاولة لتسليم طلبك",
+        "attempted_delivery_description_html": "تمت محاولة توصيل طلبك ولكنها لم تنجح. %{contact_us} لترتيب محاولة توصيل أخرى.",
+        "attempted_delivery_local_title": "فات التسليم",
+        "attempted_delivery_local_description_html": "لم نتمكن من توصيل طلبك. لجدولة موعد تسليم آخر، %{contact_us}.",
+        "delivered": "تم التسليم",
+        "delivered_title": "تم تسليم طلبك",
+        "delivered_description_html": "تم تسليم طلبك إلى العنوان الذي زودتنا به. إذا لم تستلمه أو كانت لديك أي مشاكل أخرى، فيرجى %{contact_us}.",
+        "delivered_local_title": "تم تسليم طلبك",
+        "delivered_local_description_html": "ألم تستلم طلبك؟ %{let_us_know}."
+      }
+    }
+  },
+  "sections": {
+    "cart": {
+      "shipping_estimator": {
+        "estimate": "تقدير",
+        "multiple_rates": "وجدنا العديد من أسعار الشحن المتاحة لعنوانك:",
+        "one_rate": "لقد وجدنا سعر شحن واحد متاح لعنوانك:",
+        "no_rates": "عذرًا، نحن لا نشحن إلى هذا الوجهة.",
+        "errors": "توجد بعض الأخطاء:",
+        "free": "مجاني"
+      },
+      "tool": {
+        "save": "حفظ",
+        "cancel": "إلغاء",
+        "close": "إغلاق",
+        "apply": "تقديم",
+        "note": "إضافة ملاحظة للطلب",
+        "edit_note": "تعديل ملاحظة الطلب",
+        "discount": "أضف رمز الخصم",
+        "edit_discount": "تعديل رمز الخصم",
+        "placeholder_discount": "أدخل رمز الخصم",
+        "gift_wrap_html": "<span class=\"hdt-s-text hdt-font-normal\">هل ترغب في تغليف الهدايا؟</span> <span class=\"hdt-s-text2\">فقط {{ money }}</span>",
+        "add_gift_wrap": "أضف تغليف الهدايا",
+        "placeholder_coupon": "رمز القسيمة"
+      }
+    },
+    "testimonials": {
+      "verified_buyer": "مشترٍ تم التحقق منه"
+    },
+    "newsletter_form": {
+      "email_placeholder": "أدخل عنوان البريد الإلكتروني",
+      "submit": "اشترك",
+      "subscribing": "جارٍ الاشتراك...",
+      "confirmation": "شكراً لاشتراكك!",
+      "error_exist": "البريد الإلكتروني مستخدم بالفعل لحساب آخر"
+    },
+    "footer": {
+      "payment": "طرق الدفع"
+    },
+    "featured_blog": {
+      "view_all": "عرض الكل",
+      "onboarding_title": "مشاركة مدونة",
+      "onboarding_content": "زود عملاءك بملخص لمنشور مدونتك"
+    },
+    "featured_collection": {
+      "view_all": "عرض الكل",
+      "view_all_label": "عرض جميع المنتجات في مجموعة {{ collection_name }}",
+      "product_stock": {
+        "available": "متاح:",
+        "sold": "مباع:"
+      }
+    },
+    "featured_collection_2": {
+      "shop_now": "تسوق الآن"
+    },
+    "collection_list": {
+      "view_all": "عرض الكل"
+    },
+    "collection_template": {
+      "title": "مجموعة",
+      "short_by_txt": "فرز",
+      "empty": "هذه المجموعة فارغة",
+      "continue_shopping": "مواصلة التسوق",
+      "continue_shopping_html": "<a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">متابعة التسوق</a>"
+    },
+    "countdown_timmer": {
+      "day": "يوم",
+      "day_plural": "أيام",
+      "hr": "ساعة",
+      "hr_plural": "ساعات",
+      "min": "دقيقة",
+      "min_plural": "دقائق",
+      "sec": "ثانيًا",
+      "sec_plural": "ثواني",
+      "day_plural_mini": "أيام",
+      "hr_plural_mini": "ساعات",
+      "min_plural_mini": "دقيقة",
+      "sec_plural_mini": "ثوانٍ"
+    },
+    "video": {
+      "load_video": "تحميل الفيديو: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "تحميل الشريحة",
+      "previous_slideshow": "الشريحة السابقة",
+      "next_slideshow": "الشريحة التالية",
+      "pause_slideshow": "إيقاف عرض الشرائح مؤقتًا",
+      "play_slideshow": "تشغيل عرض الشرائح",
+      "carousel": "دائري",
+      "slide": "شريحة"
+    },
+    "store_locator": {
+      "need_api": "تحتاج إلى رمز وصول Mapbox API"
+    },
+    "page": {
+      "title": "عنوان الصفحة"
+    }
+  },
+  "general": {
+    "meta": {
+      "tag": "موسومة",
+      "page": "صفحة"
+    },
+    "aria": {
+      "back_to_top": "العودة إلى الأعلى",
+      "exit_popup": {
+        "copy": "نسخة",
+        "copied": "تم النسخ"
+      }
+    },
+    "password_page": {
+      "login_form_heading": "أدخل كلمة المرور",
+      "login_password_button": "ادخل باستخدام كلمة المرور",
+      "login_form_password_label": "كلمة المرور",
+      "login_form_password_placeholder": "كلمة المرور الخاصة بك",
+      "login_form_error": "كلمة المرور خاطئة!",
+      "login_form_submit": "إدخال",
+      "admin_link_html": "هل أنت مالك المتجر؟ <a href=\"/admin\" class=\"link underlined-link\">سجّل الدخول هنا</a>",
+      "powered_by_shopify_html": "سيتم تشغيل هذا المتجر بواسطة {{ shopify }}"
+    },
+    "social": {
+      "shares": {
+        "share_on_facebook": "مشاركة عبر الفيسبوك",
+        "share_on_x": "تغريدة على تويتر",
+        "share_on_pinterest": "تثبيت في بنترست",
+        "share_on_tumblr": "مشاركة على تمبلر",
+        "share_on_telegram": "مشاركة على تيليجرام",
+        "share_on_whatsapp": "مشاركة عبر واتساب",
+        "share_on_email": "إرسال عبر البريد",
+        "share_btn": "مشاركة",
+        "share_header": "مشاركة",
+        "share_btn_copy": "نسخة",
+        "success_message": "تم نسخ الرابط إلى الحافظة"
+      },
+      "links": {
+        "x": "تويتر",
+        "facebook": "فيسبوك",
+        "pinterest": "بينترست",
+        "instagram": "انستغرام",
+        "tumblr": "تامبلر",
+        "snapchat": "سناب شات",
+        "youtube": "يوتيوب",
+        "vimeo": "فيميو",
+        "tiktok": "تيك توك",
+        "discord": "خلاف",
+        "kick": "ركلة",
+        "twitch": "تويتش"
+      },
+      "follow": {
+        "follow_fb": "تابعنا على فيسبوك",
+        "follow_tw": "تابع على تويتر",
+        "follow_it": "تابعنا على انستغرام"
       }
     }
   }
