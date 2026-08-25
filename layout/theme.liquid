@@ -1,7 +1,12 @@
 <!doctype html>
 {%- liquid
+  assign language_code = request.locale.iso_code | split: '-' | first
   assign is_rtl = false
   assign dir = 'ltr'
+  if language_code == 'ar'
+    assign is_rtl = true
+    assign dir = 'rtl'
+  endif
 -%}
 
 <html class="no-js hdt-pr-img__effect-{{ settings.effect_secondary_image }} hdt-badge__shape-{{ settings.badge_shape }} dir--{{ dir }}{% if request.design_mode %} shopify-design-mode{% endif %} {% if settings.minimal_products %} hdt-minimal-products{% endif %}{% if settings.hidden_badges %} hdt-hidden-pr-badges{% endif %}{% if settings.hidden_quickview %} hdt-hidden-pr-quickview{% endif %}{% if settings.hidden_wishlist %} hdt-hidden-pr-wishlist{% endif %}{% if settings.hidden_compare %} hdt-hidden-pr-compare{% endif %}{% if settings.uppercase_title %} hdt-pr-uppercase_title{% endif %}" lang="{{ request.locale.iso_code }}" dir="{{ dir }}">
@@ -43,6 +48,9 @@
 
     {{ content_for_header }}
     {{ 'modern-overflow-fix.css' | asset_url | stylesheet_tag }}
+    {%- if is_rtl -%}
+      {{ 'rtl.css' | asset_url | stylesheet_tag }}
+    {%- endif -%}
     {%- endunless -%}
   </head>
 

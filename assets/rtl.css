@@ -1,0 +1,67 @@
+/* Arabic storefront overrides. This asset is conditionally loaded by the layouts. */
+html[dir='rtl'] { direction: rtl; }
+
+html[dir='rtl'] body {
+  overflow-x: clip;
+  text-align: start;
+}
+
+html[dir='rtl'] :is(button, input, select, textarea) {
+  font-family: inherit;
+  text-align: start;
+}
+
+html[dir='rtl'] :is(header, main, footer, dialog, .hdt-modal, .hdt-drawer) :is(
+  .hdt-row, .hdt-grid, .hdt-col, .hdt-column, .hdt-column_inner,
+  .hdt-header-col, .hdt-footer-col-block, .hdt-rte
+) {
+  min-inline-size: 0;
+  max-inline-size: 100%;
+}
+
+html[dir='rtl'] :is(img, video, iframe) { max-inline-size: 100%; }
+
+html[dir='rtl'] :is(p, address, .hdt-rte, .hdt-product__title, .hdt-card-product__title) {
+  overflow-wrap: anywhere;
+}
+
+/* Navigation, search, forms and layered UI follow the reading direction. */
+html[dir='rtl'] :is(
+  #hdt-nav-ul, #hdt-nav-ul-mb, .hdt-menu-list, .hdt-sub-menu,
+  .hdt-predictive-search, .hdt-search-form, .hdt-facets, .hdt-filter,
+  .hdt-cart-drawer, .hdt-mini-cart, .hdt-customer, .hdt-footer
+) {
+  direction: rtl;
+  text-align: start;
+}
+
+html[dir='rtl'] :is(.hdt-menu-item-arrow, [accordion-icon]) {
+  margin-inline-start: auto;
+  margin-inline-end: 0;
+}
+
+html[dir='rtl'] :is(
+  .hdt-icon--mirrored, .hdt-breadcrumb svg,
+  .hdt-pagination__item--next svg, .hdt-pagination__item--prev svg
+) { transform: scaleX(-1); }
+
+/* Tracks start at the right edge; controls keep their familiar visual order. */
+html[dir='rtl'] :is(.hdt-slider, .hdt-slider__container, [data-modern-track]) { direction: rtl; }
+html[dir='rtl'] :is(.hdt-slider__button, .modern-carousel__nav, .modern-carousel__dots) { direction: ltr; }
+
+html[dir='rtl'] .modern-section { text-align: start; }
+html[dir='rtl'] .modern-promo::after {
+  background: linear-gradient(270deg, rgb(0 0 0 / 65%), rgb(0 0 0 / 5%));
+}
+html[dir='rtl'] .modern-promo__content {
+  inset-inline-start: clamp(24px, 4vw, 56px);
+  inset-inline-end: auto;
+}
+
+@media (max-width: 749px) {
+  html[dir='rtl'] :is(.hdt-drawer, .hdt-modal, .hdt-menu-mobile) { max-inline-size: 100vw; }
+}
+
+@supports not (overflow: clip) {
+  html[dir='rtl'] body { overflow-x: hidden; }
+}
