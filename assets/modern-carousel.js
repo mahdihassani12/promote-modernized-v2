@@ -14,8 +14,10 @@
     if (!track || !previous || !next || !dots) return;
 
     const items = [...track.children];
-    const isRtl = document.documentElement.lang.toLowerCase().split('-')[0] === 'ar'
-      && document.documentElement.dir === 'rtl';
+    // Direction belongs to the document, not to a particular language. This also
+    // supports merchants previewing another RTL locale and sections rendered
+    // without a lang attribute.
+    const isRtl = document.documentElement.dir.toLowerCase() === 'rtl';
     const loops = carousel.dataset.loop === 'true';
     const autoplayDelay = Number(carousel.dataset.autoplay || 0) * 1000;
     const abortController = new AbortController();
@@ -106,6 +108,13 @@
 
     previous.addEventListener('click', () => move(false), { signal });
     next.addEventListener('click', () => move(true), { signal });
+    carousel.addEventListener('keydown', (event) => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      if (event.target.matches('input, textarea, select')) return;
+      event.preventDefault();
+      const towardInlineEnd = isRtl ? event.key === 'ArrowLeft' : event.key === 'ArrowRight';
+      move(towardInlineEnd);
+    }, { signal });
     track.addEventListener('scroll', render, { passive: true, signal });
     track.addEventListener('pointerdown', (event) => {
       if (event.pointerType !== 'mouse' || event.button !== 0) return;
