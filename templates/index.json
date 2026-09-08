@@ -16,6 +16,7 @@
           "type": "_slide-item",
           "settings": {
             "image": "shopify://shop_images/luxury-foldable-phones-hero-02-1920x700.webp",
+            "image_mb": "shopify://shop_images/luxury-foldable-phones-mobile-02-480x600.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
@@ -179,6 +180,7 @@
           "type": "_slide-item",
           "settings": {
             "image": "shopify://shop_images/luxury-smartphones-hero-01-1920x700.webp",
+            "image_mb": "shopify://shop_images/luxury-smartphones-mobile-01-480x600.webp",
             "url": "",
             "banner_target": false,
             "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
