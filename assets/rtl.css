@@ -87,6 +87,23 @@ html[dir='rtl'] :is(.hdt-slider__button, .modern-carousel__nav, .modern-carousel
   direction: ltr;
 }
 
+/* Center every content element when an Arabic slideshow slide uses the centered
+   content position. The breakpoint-specific selectors preserve independent
+   mobile and desktop positioning settings. */
+@media (max-width: 767px) {
+  html[lang^='ar'][dir='rtl'] .hdt-slideshow .hdt-place-self-center .hdt-content-inner,
+  html[lang^='ar'][dir='rtl'] .hdt-slideshow .hdt-place-self-center .hdt-content-inner * {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  html[lang^='ar'][dir='rtl'] .hdt-slideshow .md\:hdt-place-self-center .hdt-content-inner,
+  html[lang^='ar'][dir='rtl'] .hdt-slideshow .md\:hdt-place-self-center .hdt-content-inner * {
+    text-align: center;
+  }
+}
+
 html[dir='rtl'] :is(.hdt-icon--mirrored, .hdt-breadcrumb svg,
   .hdt-pagination__item--next svg, .hdt-pagination__item--prev svg,
   .hdt-slider__button--prev svg, .hdt-slider__button--next svg) {
