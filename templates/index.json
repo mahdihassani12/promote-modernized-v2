@@ -52,7 +52,7 @@
             "text_YrQhtV": {
               "type": "text",
               "settings": {
-                "text": "<p>Smart Accessories</p>",
+                "text": "<p><strong>BarBerry General Trading Company</strong></p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
@@ -216,7 +216,7 @@
             "text_pzTEzj": {
               "type": "text",
               "settings": {
-                "text": "<p>Connected Living</p>",
+                "text": "<p><strong>BarBerry General Trading Company</strong></p>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
