@@ -1,34 +1,37 @@
 .modern-brands-glass {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
   padding: var(--mbl-padding, 64px) 0;
-  background: linear-gradient(135deg, rgb(var(--color-background2)), rgb(var(--color-background)));
+  background: transparent;
   color: rgb(var(--color-foreground));
 }
 .modern-brands-glass__inner {
   position: relative;
-  z-index: 1;
   width: min(1440px, calc(100% - 40px));
   margin-inline: auto;
+}
+.modern-brands-glass__header {
+  margin-bottom: 36px;
+  text-align: var(--mbl-heading-align, start);
+}
+.modern-brands-glass__header h2 {
+  margin: 0;
+  color: rgb(var(--color-foreground));
+  font-size: var(--mbl-heading-size, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.modern-brands-glass__subtitle {
+  margin-top: 10px;
+  color: rgb(var(--color-foreground2));
+  font-size: var(--mbl-subtitle-size, 17px);
+  line-height: 1.7;
+}
+.modern-brands-glass__subtitle p {
+  margin: 0;
 }
 .modern-brands-glass__viewport {
   overflow: hidden;
   padding: 14px 5px 24px;
-  mask-image: linear-gradient(
-    90deg,
-    transparent,
-    #000 4%,
-    #000 96%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent,
-    #000 4%,
-    #000 96%,
-    transparent
-  );
 }
 .modern-brands-glass__track {
   display: flex;
@@ -60,19 +63,17 @@
   padding: 30px;
   border: 1px solid rgb(var(--color-line-border) / 0.85);
   border-radius: var(--mbl-radius, 28px);
-  background: rgb(var(--color-background2) / 0.82);
-  box-shadow: 0 10px 30px -10px rgb(var(--color-overlay) / 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: transparent;
+  box-shadow: 0 6px 20px rgb(var(--color-overlay) / 0.07);
   transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .modern-brands-glass__card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-4px);
   border-color: rgb(var(--color-accent));
-  box-shadow: 0 22px 42px -16px rgb(var(--color-accent) / 0.25);
+  box-shadow: 0 10px 24px rgb(var(--color-overlay) / 0.1);
 }
 .modern-brands-glass__card[aria-disabled="true"] {
   cursor: default;
@@ -82,15 +83,12 @@
   height: var(--mbl-logo-height, 70px);
   max-width: 100%;
   object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.62;
+  opacity: 0.72;
   transition:
-    filter 0.4s ease,
-    opacity 0.4s ease,
-    transform 0.4s ease;
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 .modern-brands-glass__card:hover img {
-  filter: grayscale(0);
   opacity: 1;
   transform: scale(1.04);
 }
@@ -98,26 +96,6 @@
   width: min(100%, var(--mbl-logo-width, 150px));
   height: var(--mbl-logo-height, 70px);
   color: rgb(var(--color-foreground2));
-}
-.modern-brands-glass__orb {
-  position: absolute;
-  z-index: -1;
-  width: 340px;
-  height: 340px;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.3;
-  pointer-events: none;
-}
-.modern-brands-glass__orb--one {
-  inset-block-start: -180px;
-  inset-inline-end: -80px;
-  background: rgb(var(--color-accent));
-}
-.modern-brands-glass__orb--two {
-  inset-block-end: -210px;
-  inset-inline-start: -80px;
-  background: rgb(var(--color-secondary));
 }
 .modern-brands-glass__viewport--manual {
   overflow-x: auto;
@@ -156,6 +134,15 @@
   }
 }
 @media (max-width: 749px) {
+  .modern-brands-glass__header {
+    margin-bottom: 26px;
+  }
+  .modern-brands-glass__header h2 {
+    font-size: var(--mbl-heading-size-mobile, 32px);
+  }
+  .modern-brands-glass__subtitle {
+    font-size: var(--mbl-subtitle-size-mobile, 15px);
+  }
   .modern-brands-glass__inner {
     width: min(100% - 28px, 1440px);
   }
@@ -167,22 +154,6 @@
     min-width: 145px;
     height: 150px;
     padding: 20px;
-  }
-  .modern-brands-glass__viewport {
-    mask-image: linear-gradient(
-      90deg,
-      transparent,
-      #000 2%,
-      #000 98%,
-      transparent
-    );
-    -webkit-mask-image: linear-gradient(
-      90deg,
-      transparent,
-      #000 2%,
-      #000 98%,
-      transparent
-    );
   }
 }
 @media (prefers-reduced-motion: reduce) {

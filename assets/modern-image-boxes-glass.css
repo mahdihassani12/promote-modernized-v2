@@ -1,34 +1,33 @@
 .modern-image-boxes-glass {
   position: relative;
-  isolation: isolate;
-  overflow: hidden;
   padding: var(--mib-padding, 64px) 0;
-  background-color: rgb(var(--color-background));
-  background-image:
-    linear-gradient(rgb(var(--color-line-border) / 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(var(--color-line-border) / 0.2) 1px, transparent 1px),
-    radial-gradient(
-      circle at 85% 15%,
-      rgb(var(--color-accent) / 0.12),
-      transparent 34%
-    ),
-    radial-gradient(
-      circle at 10% 90%,
-      rgb(var(--color-secondary) / 0.1),
-      transparent 34%
-    );
-  background-size:
-    64px 64px,
-    64px 64px,
-    100% 100%,
-    100% 100%;
+  background: transparent;
   color: rgb(var(--color-foreground));
 }
 .modern-image-boxes-glass__inner {
   position: relative;
-  z-index: 1;
   width: min(1240px, calc(100% - 40px));
   margin-inline: auto;
+}
+.modern-image-boxes-glass__header {
+  margin-bottom: 36px;
+  text-align: var(--mib-heading-align, start);
+}
+.modern-image-boxes-glass__header h2 {
+  margin: 0;
+  color: rgb(var(--color-foreground));
+  font-size: var(--mib-heading-size, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.modern-image-boxes-glass__subtitle {
+  margin-top: 10px;
+  color: rgb(var(--color-foreground2));
+  font-size: var(--mib-subtitle-size, 17px);
+  line-height: 1.7;
+}
+.modern-image-boxes-glass__subtitle p {
+  margin: 0;
 }
 .modern-image-boxes-glass__grid {
   display: grid;
@@ -43,38 +42,19 @@
   padding: 42px;
   border: 1px solid rgb(var(--color-line-border) / 0.7);
   border-radius: var(--mib-radius, 28px);
-  background: rgb(var(--color-background2) / 0.82);
-  box-shadow: 0 12px 42px -16px rgb(var(--color-overlay) / 0.14);
+  background: transparent;
+  box-shadow: 0 8px 24px rgb(var(--color-overlay) / 0.08);
   color: inherit;
   text-decoration: none;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
   transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
-}
-.modern-image-boxes-glass__card:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 2px solid transparent;
-  border-radius: inherit;
-  background: linear-gradient(135deg, rgb(var(--color-secondary)), rgb(var(--color-accent))) border-box;
-  -webkit-mask:
-    linear-gradient(#fff 0 0) padding-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.45s ease;
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 .modern-image-boxes-glass__card:hover {
-  transform: translateY(-9px);
-  box-shadow: 0 24px 50px -20px rgb(var(--color-accent) / 0.3);
-}
-.modern-image-boxes-glass__card:hover:before {
-  opacity: 1;
+  transform: translateY(-4px);
+  border-color: rgb(var(--color-accent));
+  box-shadow: 0 12px 28px rgb(var(--color-overlay) / 0.12);
 }
 .modern-image-boxes-glass__content {
   position: relative;
@@ -94,11 +74,9 @@
   overflow: hidden;
   border: 1px solid rgb(var(--color-line-border));
   border-radius: 24px;
-  background: linear-gradient(135deg, rgb(var(--color-background)), rgb(var(--color-background2)));
-  box-shadow: 0 7px 20px rgb(var(--color-overlay) / 0.1);
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
+  background: transparent;
+  box-shadow: none;
+  transition: transform 0.2s ease;
 }
 .modern-image-boxes-glass__media img,
 .modern-image-boxes-glass__media svg {
@@ -109,13 +87,7 @@
   object-fit: cover;
 }
 .modern-image-boxes-glass__card:hover .modern-image-boxes-glass__media {
-  transform: scale(1.08) rotate(3deg);
-  box-shadow: 0 10px 26px rgb(var(--color-accent) / 0.22);
-}
-[dir="rtl"]
-  .modern-image-boxes-glass__card:hover
-  .modern-image-boxes-glass__media {
-  transform: scale(1.08) rotate(-3deg);
+  transform: scale(1.04);
 }
 .modern-image-boxes-glass__card h3 {
   margin: 0 0 12px;
@@ -133,55 +105,16 @@
 .modern-image-boxes-glass__description p {
   margin: 0;
 }
-.modern-image-boxes-glass__glow {
-  position: absolute;
-  inset-block-start: -50px;
-  inset-inline-end: -40px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: rgb(var(--color-accent) / 0.16);
-  filter: blur(48px);
-  transition: background 0.45s ease;
-}
-.modern-image-boxes-glass__card:hover .modern-image-boxes-glass__glow {
-  background: rgb(var(--color-secondary) / 0.2);
-}
-.modern-image-boxes-glass__orb {
-  position: absolute;
-  z-index: -1;
-  width: 360px;
-  height: 360px;
-  border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.35;
-  pointer-events: none;
-}
-.modern-image-boxes-glass__orb--one {
-  inset-block-start: -190px;
-  inset-inline-end: -100px;
-  background: rgb(var(--color-accent));
-}
-.modern-image-boxes-glass__orb--two {
-  inset-block-end: -210px;
-  inset-inline-start: -90px;
-  background: rgb(var(--color-secondary));
-}
-@media (min-width: 750px) {
-  .modern-image-boxes-glass__card:nth-child(odd) {
-    transform: translateY(-18px);
-  }
-  .modern-image-boxes-glass__card:nth-child(even) {
-    transform: translateY(18px);
-  }
-  .modern-image-boxes-glass__card:nth-child(odd):hover {
-    transform: translateY(-27px);
-  }
-  .modern-image-boxes-glass__card:nth-child(even):hover {
-    transform: translateY(9px);
-  }
-}
 @media (max-width: 749px) {
+  .modern-image-boxes-glass__header {
+    margin-bottom: 26px;
+  }
+  .modern-image-boxes-glass__header h2 {
+    font-size: var(--mib-heading-size-mobile, 32px);
+  }
+  .modern-image-boxes-glass__subtitle {
+    font-size: var(--mib-subtitle-size-mobile, 15px);
+  }
   .modern-image-boxes-glass__inner {
     width: min(100% - 28px, 1240px);
   }
