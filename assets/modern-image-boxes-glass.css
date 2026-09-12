@@ -32,17 +32,24 @@
 .modern-image-boxes-glass__grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: stretch;
   gap: var(--mib-gap, 28px) 40px;
 }
 .modern-image-boxes-glass__card {
   position: relative;
   display: block;
   overflow: hidden;
+  height: 100%;
   min-height: 300px;
   padding: 42px;
   border: 1px solid rgb(var(--color-line-border) / 0.7);
   border-radius: var(--mib-radius, 28px);
-  background: transparent;
+  background: linear-gradient(
+    135deg,
+    rgb(var(--color-background) / 0.96),
+    rgb(var(--color-accent) / 0.045)
+  );
   box-shadow: 0 8px 24px rgb(var(--color-overlay) / 0.08);
   color: inherit;
   text-decoration: none;
@@ -51,19 +58,25 @@
     border-color 0.2s ease,
     box-shadow 0.2s ease;
 }
-.modern-image-boxes-glass__card:hover {
-  transform: translateY(-4px);
-  border-color: rgb(var(--color-accent));
-  box-shadow: 0 12px 28px rgb(var(--color-overlay) / 0.12);
+.modern-image-boxes-glass__card::after {
+  content: "";
+  position: absolute;
+  inset-inline: 28px;
+  inset-block-end: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: rgb(var(--color-accent));
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
 }
 .modern-image-boxes-glass__content {
   position: relative;
   z-index: 1;
-  display: flex;
+  display: grid;
   height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  grid-template-rows: auto minmax(3em, auto) minmax(3.6em, auto);
+  align-content: center;
+  justify-items: center;
   text-align: center;
 }
 .modern-image-boxes-glass__media {
@@ -95,6 +108,9 @@
   font-size: var(--mib-title-size, 22px);
   font-weight: 750;
   line-height: 1.35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modern-image-boxes-glass__description {
   max-width: 470px;
@@ -104,6 +120,16 @@
 }
 .modern-image-boxes-glass__description p {
   margin: 0;
+}
+@media (hover: hover) {
+  .modern-image-boxes-glass__card:hover {
+    transform: translateY(-4px);
+    border-color: rgb(var(--color-accent) / 0.7);
+    box-shadow: 0 12px 28px rgb(var(--color-overlay) / 0.12);
+  }
+  .modern-image-boxes-glass__card:hover::after {
+    transform: scaleX(1);
+  }
 }
 @media (max-width: 749px) {
   .modern-image-boxes-glass__header {
@@ -120,6 +146,7 @@
   }
   .modern-image-boxes-glass__grid {
     grid-template-columns: 1fr;
+    grid-auto-rows: auto;
     gap: 18px;
   }
   .modern-image-boxes-glass__card {
@@ -133,7 +160,8 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .modern-image-boxes-glass__card,
-  .modern-image-boxes-glass__media {
+  .modern-image-boxes-glass__media,
+  .modern-image-boxes-glass__card::after {
     transition: none;
   }
 }
