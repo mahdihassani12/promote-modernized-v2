@@ -10,8 +10,11 @@
 }
 .modern-brands-glass__inner {
   position: relative;
-  width: min(1440px, calc(100% - 40px));
+  width: 100%;
+  max-width: var(--container-max-width);
   margin-inline: auto;
+  padding-inline: 1.5rem;
+  box-sizing: border-box;
 }
 .modern-brands-glass__header {
   margin-bottom: 36px;
@@ -57,8 +60,8 @@
   place-items: center;
   width: calc(
     (
-        min(1440px, 100vw - 40px) - (var(--mbl-cols, 5) - 1) *
-          var(--mbl-gap, 24px)
+        min(var(--container-max-width), 100vw) - 3rem -
+          (var(--mbl-cols, 5) - 1) * var(--mbl-gap, 24px)
       ) /
       var(--mbl-cols, 5)
   );
@@ -68,11 +71,11 @@
   border: 1px solid rgb(var(--color-line-border) / 0.85);
   border-radius: var(--mbl-radius, 28px);
   background: transparent;
-  box-shadow: 0 6px 20px rgb(var(--color-overlay) / 0.07);
+  box-shadow: none;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
-    box-shadow 0.2s ease;
+    opacity 0.2s ease;
 }
 .modern-brands-glass__card[aria-disabled="true"] {
   cursor: default;
@@ -96,7 +99,7 @@
   .modern-brands-glass__card:hover {
     transform: translateY(-4px);
     border-color: rgb(var(--color-accent) / 0.7);
-    box-shadow: 0 10px 24px rgb(var(--color-overlay) / 0.1);
+    opacity: 0.96;
   }
   .modern-brands-glass__card:hover img {
     opacity: 1;
@@ -133,7 +136,7 @@
 @media (max-width: 989px) {
   .modern-brands-glass__card {
     width: calc(
-      (100vw - 40px - (var(--mbl-cols-tablet, 3) - 1) * var(--mbl-gap, 24px)) /
+      (100vw - 3rem - (var(--mbl-cols-tablet, 3) - 1) * var(--mbl-gap, 24px)) /
         var(--mbl-cols-tablet, 3)
     );
     min-width: 170px;
@@ -150,7 +153,8 @@
     font-size: var(--mbl-subtitle-size-mobile, 15px);
   }
   .modern-brands-glass__inner {
-    width: min(100% - 28px, 1440px);
+    width: 100%;
+    padding-inline: 1.4rem;
   }
   .modern-brands-glass__card {
     width: calc(
