@@ -38,13 +38,13 @@
 }
 .modern-brands-glass__viewport {
   overflow: hidden;
-  padding: 14px 5px 24px;
+  padding: 6px 0 10px;
 }
 .modern-brands-glass__track {
   display: flex;
   width: max-content;
   gap: var(--mbl-gap, 24px);
-  animation: modern-brands-marquee var(--mbl-speed, 30s) linear infinite;
+  animation: modern-brands-marquee var(--mbl-speed, 36s) linear infinite;
   will-change: transform;
 }
 .modern-brands-glass__viewport:hover .modern-brands-glass__track,
@@ -66,8 +66,8 @@
       var(--mbl-cols, 5)
   );
   min-width: 180px;
-  height: 200px;
-  padding: 30px;
+  height: 180px;
+  padding: 24px;
   border: 1px solid rgb(var(--color-line-border) / 0.85);
   border-radius: var(--mbl-radius, 28px);
   background: transparent;

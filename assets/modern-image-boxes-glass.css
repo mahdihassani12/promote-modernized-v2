@@ -38,16 +38,16 @@
   grid-auto-rows: 1fr;
   align-items: stretch;
   gap: var(--mib-gap, 28px) 40px;
-  padding-bottom: 64px;
+  padding-bottom: 40px;
 }
 .modern-image-boxes-glass__card {
   position: relative;
   display: block;
   overflow: hidden;
   height: 100%;
-  min-height: 300px;
-  padding: 42px;
-  border: 1px solid rgb(var(--color-line-border) / 0.7);
+  min-height: 270px;
+  padding: 34px;
+  border: 1px solid rgb(var(--color-line-border) / 0.85);
   border-radius: var(--mib-radius, 28px);
   background: linear-gradient(
     135deg,
@@ -68,7 +68,7 @@
     rgb(var(--color-background)) 35%,
     rgb(var(--color-secondary) / 0.09)
   );
-  transform: translateY(64px);
+  transform: translateY(40px);
 }
 .modern-image-boxes-glass__card::after {
   content: "";
@@ -86,20 +86,20 @@
   z-index: 1;
   display: grid;
   height: 100%;
-  grid-template-rows: auto minmax(3em, auto) minmax(3.6em, auto);
+  grid-template-rows: auto minmax(2.8em, auto) minmax(3.4em, auto);
   align-content: center;
   justify-items: center;
   text-align: center;
 }
 .modern-image-boxes-glass__media {
-  width: 92px;
-  height: 92px;
-  margin-bottom: 26px;
-  padding: 7px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 22px;
+  padding: 10px;
   overflow: hidden;
   border: 1px solid rgb(var(--color-line-border));
   border-radius: 24px;
-  background: transparent;
+  background: rgb(var(--color-accent) / 0.055);
   box-shadow: none;
   transition: transform 0.2s ease;
 }
@@ -109,7 +109,7 @@
   width: 100%;
   height: 100%;
   border-radius: 18px;
-  object-fit: cover;
+  object-fit: contain;
 }
 .modern-image-boxes-glass__card:hover .modern-image-boxes-glass__media {
   transform: scale(1.04);
@@ -140,10 +140,22 @@
     box-shadow: 0 12px 28px rgb(var(--color-overlay) / 0.12);
   }
   .modern-image-boxes-glass__card:nth-child(even):hover {
-    transform: translateY(60px);
+    transform: translateY(36px);
   }
   .modern-image-boxes-glass__card:hover::after {
     transform: scaleX(1);
+  }
+}
+@media (min-width: 750px) and (max-width: 989px) {
+  .modern-image-boxes-glass__grid {
+    gap: 24px;
+    padding-bottom: 28px;
+  }
+  .modern-image-boxes-glass__card:nth-child(even) {
+    transform: translateY(28px);
+  }
+  .modern-image-boxes-glass__card:nth-child(even):hover {
+    transform: translateY(24px);
   }
 }
 @media (max-width: 749px) {
@@ -167,8 +179,8 @@
     padding-bottom: 0;
   }
   .modern-image-boxes-glass__card {
-    min-height: 250px;
-    padding: 34px 22px;
+    min-height: 235px;
+    padding: 28px 20px;
   }
   .modern-image-boxes-glass__card:nth-child(even) {
     transform: none;
@@ -178,8 +190,8 @@
     transform: none;
   }
   .modern-image-boxes-glass__media {
-    width: 84px;
-    height: 84px;
+    width: 88px;
+    height: 88px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
