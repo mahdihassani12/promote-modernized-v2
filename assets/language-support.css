@@ -4,6 +4,7 @@
   font-size: 13px;
   line-height: 1;
 }
+.language-switcher__form { margin: 0; }
 
 .language-switcher__details { position: relative; }
 .language-switcher__trigger {
@@ -86,8 +87,7 @@ html[lang^='ar'][dir='rtl'] [accordion-icon] { margin-inline-start: auto; }
 
 @media (max-width: 749px) {
   .language-switcher { font-size: 12px; }
-  .language-switcher__trigger { min-width: 34px; min-height: 34px; justify-content: center; gap: 0; padding: 7px; }
+  .language-switcher__trigger { min-width: 34px; min-height: 34px; justify-content: center; gap: 6px; padding: 7px 9px; }
   .language-switcher__globe { width: 17px; height: 17px; }
-  .language-switcher__current,
   .language-switcher__chevron { display: none; }
 }

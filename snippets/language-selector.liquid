@@ -1,57 +1,38 @@
 {%- comment -%}
-  Shopify's localization form resolves the translated version of `return_to`, so
-  customers remain on the equivalent page rather than being sent to the home page.
+  Direct EN/AR switch. Shopify resolves return_to to the equivalent translated
+  URL, keeping customers on the same product, collection, page, or article.
 {%- endcomment -%}
 {%- assign active_language_code = request.locale.iso_code | split: '-' | first -%}
-{%- assign supported_language_count = 0 -%}
+{%- assign target_language = nil -%}
+{%- assign target_language_code = '' -%}
+
 {%- for language in localization.available_languages -%}
   {%- assign language_code = language.iso_code | split: '-' | first -%}
-  {%- if language_code == 'ar' or language_code == 'en' -%}
-    {%- assign supported_language_count = supported_language_count | plus: 1 -%}
+  {%- if active_language_code == 'ar' and language_code == 'en' -%}
+    {%- assign target_language = language -%}
+    {%- assign target_language_code = 'en' -%}
+    {%- break -%}
+  {%- elsif active_language_code != 'ar' and language_code == 'ar' -%}
+    {%- assign target_language = language -%}
+    {%- assign target_language_code = 'ar' -%}
+    {%- break -%}
   {%- endif -%}
 {%- endfor -%}
 
-{%- if supported_language_count > 1 -%}
+{%- if target_language != nil -%}
   <nav class="language-switcher" aria-label="Language selector">
-    <details class="language-switcher__details">
-      <summary class="language-switcher__trigger" aria-label="Choose language">
-        <svg class="language-switcher__globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false">
-          <circle cx="12" cy="12" r="9"></circle>
-          <path d="M3 12h18M12 3c2.4 2.5 3.7 5.5 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.5-3.7-9S9.6 5.5 12 3Z"></path>
-        </svg>
-        <span class="language-switcher__current" lang="{{ request.locale.iso_code }}">
-          {%- if active_language_code == 'ar' -%}العربية{%- else -%}English{%- endif -%}
-        </span>
-        <svg class="language-switcher__chevron" viewBox="0 0 10 6" width="10" height="6" aria-hidden="true" focusable="false"><path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </summary>
-
-      <div class="language-switcher__menu">
-        {%- form 'localization', id: 'HeaderLanguageForm', class: 'language-switcher__form' -%}
-          <input type="hidden" name="return_to" value="{{ request.path }}">
-          <div class="language-switcher__options" role="list">
-            {%- for language in localization.available_languages -%}
-              {%- assign language_code = language.iso_code | split: '-' | first -%}
-              {%- if language_code == 'ar' or language_code == 'en' -%}
-                <div role="listitem">
-                  <button
-                    class="language-switcher__option"
-                    type="submit"
-                    name="locale_code"
-                    value="{{ language.iso_code }}"
-                    lang="{{ language.iso_code }}"
-                    {% if language.iso_code == request.locale.iso_code %}aria-current="true"{% endif %}
-                  >
-                    <span>{%- if language_code == 'ar' -%}العربية{%- else -%}English{%- endif -%}</span>
-                    {%- if language.iso_code == request.locale.iso_code -%}
-                      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="m3 8 3 3 7-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    {%- endif -%}
-                  </button>
-                </div>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
-        {%- endform -%}
-      </div>
-    </details>
+    {%- form 'localization', class: 'language-switcher__form' -%}
+      <input type="hidden" name="return_to" value="{{ request.path }}">
+      <button
+        class="language-switcher__trigger"
+        type="submit"
+        name="locale_code"
+        value="{{ target_language.iso_code }}"
+        aria-label="{% if target_language_code == 'ar' %}Switch to Arabic{% else %}Switch to English{% endif %}"
+      >
+        <svg class="language-switcher__globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.4 2.5 3.7 5.5 3.7 9s-1.3 6.5-3.7 9c-2.4-2.5-3.7-5.5-3.7-9S9.6 5.5 12 3Z"></path></svg>
+        <span class="language-switcher__current" lang="{{ target_language.iso_code }}"{% if target_language_code == 'ar' %} dir="rtl"{% else %} dir="ltr"{% endif %}>{% if target_language_code == 'ar' %}العربية{% else %}English{% endif %}</span>
+      </button>
+    {%- endform -%}
   </nav>
 {%- endif -%}
