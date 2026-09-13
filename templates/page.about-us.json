@@ -240,22 +240,9 @@
       "settings": {
         "title": "Why choose us",
         "subtitle": "<p>Discover the features that make our products a better choice.</p>",
-        "columns": 4,
-        "columns_tablet": 2,
-        "columns_mobile": 1,
-        "image_height": 240,
-        "image_height_tablet": 220,
-        "image_height_mobile": 200,
-        "image_fit": "cover",
-        "alignment": "center",
         "title_size": 22,
-        "content_padding": 24,
         "radius": 16,
         "gap": 24,
-        "shadow": true,
-        "card_color": "#ffffff",
-        "border_color": "#eeeeee",
-        "text_color": "#222222",
         "padding": 64
       }
     }
