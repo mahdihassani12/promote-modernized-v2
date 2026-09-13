@@ -60,8 +60,9 @@
   gap: var(--mbl-gap, 24px);
 }
 .modern-brands-glass__card {
-  display: grid;
-  place-items: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   overflow: hidden;
   box-sizing: border-box;
   width: calc(
@@ -78,6 +79,7 @@
   border-radius: var(--mbl-radius, 28px);
   background: transparent;
   box-shadow: none;
+  line-height: 0;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -87,23 +89,30 @@
   cursor: default;
 }
 .modern-brands-glass__card img {
-  display: block;
-  width: min(var(--mbl-logo-width, 150px), 100%);
-  height: min(var(--mbl-logo-height, 70px), 100%);
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  flex: 0 1 auto;
+  width: auto !important;
+  height: auto !important;
+  max-width: min(var(--mbl-logo-width, 150px), 100%) !important;
+  max-height: min(var(--mbl-logo-height, 70px), 128px) !important;
+  margin: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
   opacity: 0.72;
   transition:
     opacity 0.2s ease,
     transform 0.2s ease;
 }
 .modern-brands-glass__card svg {
-  display: block;
-  width: min(var(--mbl-logo-width, 150px), 100%);
-  height: min(var(--mbl-logo-height, 70px), 100%);
-  max-width: 100%;
-  max-height: 100%;
+  position: static !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: min(var(--mbl-logo-width, 150px), 100%) !important;
+  max-height: min(var(--mbl-logo-height, 70px), 128px) !important;
+  margin: auto !important;
   color: rgb(var(--color-foreground2));
 }
 @media (hover: hover) {
@@ -183,6 +192,10 @@
     min-width: 145px;
     height: 150px;
     padding: 20px;
+  }
+  .modern-brands-glass__card img,
+  .modern-brands-glass__card svg {
+    max-height: min(var(--mbl-logo-height, 70px), 108px) !important;
   }
 }
 @media (prefers-reduced-motion: reduce) {
