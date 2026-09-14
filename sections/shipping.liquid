@@ -51,6 +51,14 @@
 {% endcomment %}
 {% style %}
   {% render 'spacing-vars', box: section %}
+  {% if section.id contains 'shipping_xHJpJ3' %}
+    #shopify-section-{{ section.id }} .hdt-section-spacing-{{ section.id }} {
+      --pd-block-start: 50px !important;
+      --pd-block-end: 50px !important;
+      padding-block-start: 50px !important;
+      padding-block-end: 50px !important;
+    }
+  {% endif %}
 {% endstyle %}
 {% liquid
   assign section_layout         = section.settings.section_layout
