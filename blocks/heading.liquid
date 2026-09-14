@@ -4,14 +4,47 @@
     assign effect = 'reval'
   endif   
 %}
-<div {{ effect }} id="block-{{ block.id }}" class="hdt-text-warry hdt-rte {{ block.settings.text_color }}{% if block.settings.hidden_br_mobile %} hdt-br-hidden{% endif %}{% if block.settings.hidden_on_mobile %} hdt-hide-mobile{% endif %} hdt-{{ block.settings.heading_size }} {{ block.settings.line_height }} hdt-font-{{ block.settings.font_weight }}" {{ block.shopify_attributes }}>{{ block.settings.heading }}</div>
+<div {{ effect }} id="block-{{ block.id }}" class="hdt-text-warry hdt-rte {{ block.settings.text_color }}{% if block.settings.hidden_br_mobile %} hdt-br-hidden{% endif %}{% if block.settings.hidden_on_mobile %} hdt-hide-mobile{% endif %} hdt-{{ block.settings.heading_size }} {{ block.settings.line_height }} {{ block.settings.font_family }} hdt-font-{{ block.settings.font_weight }} hdt-heading-transform-{{ block.settings.text_transform }}" {{ block.shopify_attributes }}>{{ block.settings.heading }}</div>
 {%- if block.settings.heading_size == "h_custom" -%}
   {%- style -%}
     #block-{{ block.id }} {
-      --heading-fs-lg: {{ block.settings.font_size_heading_lg }}px; --heading-fs-mb: {{ block.settings.font_size_heading }}px; --heading-ls: {{ block.settings.letter_spacing_heading }}px; 
+      --heading-fs-lg: {{ block.settings.font_size_heading_lg }}px;
+      --heading-fs-mb: {{ block.settings.font_size_heading }}px;
+      --heading-lh-lg: {% if block.settings.line_height_heading_lg == 0 %}normal{% else %}{{ block.settings.line_height_heading_lg }}px{% endif %};
+      --heading-lh-mb: {% if block.settings.line_height_heading == 0 %}normal{% else %}{{ block.settings.line_height_heading }}px{% endif %};
+      --heading-ls: {{ block.settings.letter_spacing_heading }}px;
+      --heading-ls-mb: {{ block.settings.letter_spacing_heading_mobile }}px;
+      font-size: var(--heading-fs-mb);
+      line-height: var(--heading-lh-mb);
+      letter-spacing: var(--heading-ls-mb);
+    }
+    #block-{{ block.id }} * {
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+    }
+    @media (min-width: 768px) {
+      #block-{{ block.id }} {
+        font-size: var(--heading-fs-lg);
+        line-height: var(--heading-lh-lg);
+        letter-spacing: var(--heading-ls);
+      }
     }
   {%- endstyle -%}
 {%- endif -%}
+{%- style -%}
+  {%- if block.settings.font_family == 'hdt-font-1' -%}
+    #block-{{ block.id }}, #block-{{ block.id }} * { font-family: var(--f_family_1) !important; }
+  {%- elsif block.settings.font_family == 'hdt-font-2' -%}
+    #block-{{ block.id }}, #block-{{ block.id }} * { font-family: var(--f_family_2) !important; }
+  {%- elsif block.settings.font_family == 'hdt-font-3' -%}
+    #block-{{ block.id }}, #block-{{ block.id }} * { font-family: var(--f_family_3) !important; }
+  {%- endif -%}
+  #block-{{ block.id }} * { font-weight: inherit; text-transform: inherit; }
+  #block-{{ block.id }}.hdt-heading-transform-uppercase { text-transform: uppercase; }
+  #block-{{ block.id }}.hdt-heading-transform-lowercase { text-transform: lowercase; }
+  #block-{{ block.id }}.hdt-heading-transform-capitalize { text-transform: capitalize; }
+{%- endstyle -%}
 {% schema %}
 {
   "name": "t:blocks.heading.name",
@@ -86,6 +119,54 @@
       ],
       "default": "normal",
       "visible_if": "{{ block.settings.heading contains '<p>' }}"
+    },
+    {
+      "type": "select",
+      "id": "font_family",
+      "label": "Font family",
+      "options": [
+        {
+          "value": "",
+          "label": "Inherit"
+        },
+        {
+          "value": "hdt-font-1",
+          "label": "Font 1"
+        },
+        {
+          "value": "hdt-font-2",
+          "label": "Font 2"
+        },
+        {
+          "value": "hdt-font-3",
+          "label": "Font 3"
+        }
+      ],
+      "default": ""
+    },
+    {
+      "type": "select",
+      "id": "text_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "none"
     },
     {
       "type": "select",
@@ -164,7 +245,7 @@
       "type": "range",
       "id": "font_size_heading_lg",
       "min": 10,
-      "max": 100,
+      "max": 160,
       "step": 1,
       "unit": "px",
       "label": "t:settings_schema.typography.settings.font_size.label",
@@ -175,7 +256,7 @@
       "type": "range",
       "id": "font_size_heading",
       "min": 10,
-      "max": 100,
+      "max": 120,
       "step": 1,
       "unit": "px",
       "label": "t:settings_schema.typography.settings.font_size.mobile_font_size",
@@ -190,6 +271,41 @@
       "step": 0.2,
       "unit": "px",
       "label": "t:settings_schema.typography.settings.letter_spacing",
+      "default": 0,
+      "visible_if": "{{ block.settings.heading_size == 'h_custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "line_height_heading_lg",
+      "min": 0,
+      "max": 200,
+      "step": 1,
+      "unit": "px",
+      "label": "Line height",
+      "info": "Set to 0 to use the default line height.",
+      "default": 0,
+      "visible_if": "{{ block.settings.heading_size == 'h_custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "line_height_heading",
+      "min": 0,
+      "max": 160,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile line height",
+      "info": "Set to 0 to use the default line height.",
+      "default": 0,
+      "visible_if": "{{ block.settings.heading_size == 'h_custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing_heading_mobile",
+      "min": -10,
+      "max": 10,
+      "step": 0.2,
+      "unit": "px",
+      "label": "Mobile letter spacing",
       "default": 0,
       "visible_if": "{{ block.settings.heading_size == 'h_custom' }}"
     }
