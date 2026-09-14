@@ -647,7 +647,7 @@
         "image_box_rCJd9W": {
           "type": "image_box",
           "settings": {
-            "image": "shopify://shop_images/blank-smartphone-screen-with-design-space_53876-119806.jpg",
+            "image": "shopify://shop_images/smartphone_1637406.png",
             "title": "Latest Mobile Technology",
             "description": "<p>Explore innovative devices designed to keep you connected every day.</p>",
             "link": ""
@@ -656,7 +656,7 @@
         "image_box_jDCy8a": {
           "type": "image_box",
           "settings": {
-            "image": "shopify://shop_images/young-delivery-man-red-uniform-cap-showing-smartphone-showing-ok-sign-standing-white-wall_141793-26556.jpg",
+            "image": "shopify://shop_images/clearance_18511001.png",
             "title": "Trusted Product Quality",
             "description": "<p>We carefully select reliable products for lasting performance and satisfaction.</p>",
             "link": ""
@@ -665,7 +665,7 @@
         "image_box_EFJV9q": {
           "type": "image_box",
           "settings": {
-            "image": "shopify://shop_images/girl-delivering-box-young-man_23-2147767721.jpg",
+            "image": "shopify://shop_images/shipping-protection_18303407.png",
             "title": "Fast Secure Delivery",
             "description": "<p>Receive your orders quickly through our safe and reliable service.</p>",
             "link": ""
@@ -674,7 +674,7 @@
         "image_box_wrAfgW": {
           "type": "image_box",
           "settings": {
-            "image": "shopify://shop_images/call-center-operator-coworkers-dealing-with-upset-customers_482257-117868.jpg",
+            "image": "shopify://shop_images/help_11974290.png",
             "title": "Dedicated Customer Support",
             "description": "<p>Our friendly team provides helpful support before and after purchase.</p>",
             "link": ""
@@ -691,22 +691,14 @@
       "settings": {
         "title": "Why choose us",
         "subtitle": "<p>Discover the features that make our products a better choice.</p>",
-        "columns": 4,
-        "columns_tablet": 2,
-        "columns_mobile": 1,
-        "image_height": 240,
-        "image_height_tablet": 220,
-        "image_height_mobile": 200,
-        "image_fit": "cover",
-        "alignment": "center",
+        "heading_alignment": "start",
+        "section_title_size": 44,
+        "section_title_size_mobile": 32,
+        "subtitle_size": 17,
+        "subtitle_size_mobile": 15,
         "title_size": 22,
-        "content_padding": 24,
         "radius": 16,
         "gap": 24,
-        "shadow": true,
-        "card_color": "#ffffff",
-        "border_color": "#eeeeee",
-        "text_color": "#222222",
         "padding": 64
       }
     },
@@ -759,12 +751,21 @@
       "name": "Modern brand logos",
       "settings": {
         "title": "Brands we love",
+        "subtitle": "<p>Explore the brands available in our store.</p>",
+        "heading_alignment": "start",
+        "title_size": 44,
+        "title_size_mobile": 32,
+        "subtitle_size": 17,
+        "subtitle_size_mobile": 15,
+        "autoplay": true,
+        "speed": 30,
         "logo_width": 200,
         "logo_height": 180,
         "columns": 4,
         "columns_tablet": 3,
         "columns_mobile": 2,
         "gap": 24,
+        "radius": 28,
         "padding": 64
       }
     },

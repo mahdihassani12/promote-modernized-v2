@@ -22,18 +22,39 @@
 <hdt-view-layout-switch breakpoint="mobile" aria-controls="{{ controls_id }}" views="{{ col_mobile }}.{{ col_tablet }}.{{ col_desktop }}" section-id="{{ section_id }}" class="hdt-view-layout-switch hdt-flex md:hdt-hidden">
   {%- if 0 == col_mobile %}{{ html_btn_list_view | replace_first: '__class_tmp', 'is-active' }}{%- else %}{{ html_btn_list_view }}{% endif -%}
   {%- for i in (1..2) -%}
-  <button type="button" value="{{ i }}" sizes="{%- render 'sizes', full_width: section.settings.section_layout == "full_width", col_mobile: i, col_tablet: col_tablet, col_desktop: col_desktop -%}" aria-label="{{ 'products.facets.switch_view' | t: number: i | escape }}" class="hdt-view-grid{{ i }}{% if i == col_mobile %} is-active{% endif %}">{%- render 'icon' with arr_icons[i] -%}</button>
+  <button type="button" value="{{ i }}" sizes="{%- render 'sizes', full_width: section.settings.section_layout, col_mobile: i, col_tablet: col_tablet, col_desktop: col_desktop -%}" aria-label="{{ 'products.facets.switch_view' | t: number: i | escape }}" class="hdt-view-grid{{ i }}{% if i == col_mobile %} is-active{% endif %}">{%- render 'icon' with arr_icons[i] -%}</button>
   {%- endfor -%}
 </hdt-view-layout-switch>
 <hdt-view-layout-switch breakpoint="tablet" aria-controls="{{ controls_id }}" views="{{ col_mobile }}.{{ col_tablet }}.{{ col_desktop }}" section-id="{{ section_id }}" class="hdt-view-layout-switch hdt-hidden md:hdt-flex lg:hdt-hidden">
   {%- if 0 == col_tablet %}{{ html_btn_list_view | replace_first: '__class_tmp', 'is-active' }}{%- else %}{{ html_btn_list_view }}{% endif -%}
   {%- for i in (2..4) -%}
-    <button type="button" value="{{ i }}" sizes="{%- render 'sizes', full_width: section.settings.section_layout == "full_width", col_mobile: col_mobile, col_tablet: i, col_desktop: col_desktop -%}" aria-label="{{ 'products.facets.switch_view' | t: number: i | escape }}" class="hdt-view-grid{{ i }}{% if i == col_tablet %} is-active{% endif %}">{%- render 'icon' with arr_icons[i] -%}</button>
+    <button type="button" value="{{ i }}" sizes="{%- render 'sizes', full_width: section.settings.section_layout, col_mobile: col_mobile, col_tablet: i, col_desktop: col_desktop -%}" aria-label="{{ 'products.facets.switch_view' | t: number: i | escape }}" class="hdt-view-grid{{ i }}{% if i == col_tablet %} is-active{% endif %}">{%- render 'icon' with arr_icons[i] -%}</button>
   {%- endfor -%}
 </hdt-view-layout-switch>
 <hdt-view-layout-switch breakpoint="desktop" aria-controls="{{ controls_id }}" views="{{ col_mobile }}.{{ col_tablet }}.{{ col_desktop }}" section-id="{{ section_id }}" class="hdt-view-layout-switch hdt-hidden md:hdt-hidden lg:hdt-flex">
   {%- if 0 == col_desktop %}{{ html_btn_list_view | replace_first: '__class_tmp', 'is-active' }}{%- else %}{{ html_btn_list_view }}{% endif -%}
   {%- for i in (2..6) -%}
-    <button type="button" value="{{ i }}" sizes="{%- render 'sizes', full_width: section.settings.section_layout == "full_width", col_mobile: col_mobile, col_tablet: col_tablet, col_desktop: i -%}" aria-label="{{ 'products.facets.switch_view' | t: number: i | escape }}" class="hdt-view-grid{{ i }}{% if i == col_desktop %} is-active{% endif %}">{%- render 'icon' with arr_icons[i] -%}</button>
+    <button type="button" value="{{ i }}" sizes="{%- render 'sizes', full_width: section.settings.section_layout, col_mobile: col_mobile, col_tablet: col_tablet, col_desktop: i -%}" aria-label="{{ 'products.facets.switch_view' | t: number: i | escape }}" class="hdt-view-grid{{ i }}{% if i == col_desktop %} is-active{% endif %}">{%- render 'icon' with arr_icons[i] -%}</button>
   {%- endfor -%}
-</hdt-view-layout-switch>
+</hdt-view-layout-switch>{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{%- render ''sizes'', full_width: section.settings.section_layout == "full_width",
+    col_mobile: i, col_tablet: col_tablet, col_desktop: col_desktop -%}'
+  to: "{%- render 'sizes', full_width: section.settings.section_layout, col_mobile:
+    i, col_tablet: col_tablet, col_desktop: col_desktop -%}"
+  position: 1413..1545
+- from: '{%- render ''sizes'', full_width: section.settings.section_layout == "full_width",
+    col_mobile: col_mobile, col_tablet: i, col_desktop: col_desktop -%}'
+  to: "{%- render 'sizes', full_width: section.settings.section_layout, col_mobile:
+    col_mobile, col_tablet: i, col_desktop: col_desktop -%}"
+  position: 2241..2373
+- from: '{%- render ''sizes'', full_width: section.settings.section_layout == "full_width",
+    col_mobile: col_mobile, col_tablet: col_tablet, col_desktop: i -%}'
+  to: "{%- render 'sizes', full_width: section.settings.section_layout, col_mobile:
+    col_mobile, col_tablet: col_tablet, col_desktop: i -%}"
+  position: 3071..3202
+{%- endcomment -%}
