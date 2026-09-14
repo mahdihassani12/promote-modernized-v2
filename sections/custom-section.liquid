@@ -6,7 +6,9 @@
   }
   {% if request.locale.iso_code contains 'ar' and section.id contains 'custom_section_qTGJeH' %}
     #shopify-section-{{ section.id }} .hdt-section-spacing-{{ section.id }} {
+      --pd-block-start: 50px !important;
       --pd-block-end: 50px !important;
+      padding-block-start: 50px !important;
       padding-block-end: 50px !important;
     }
   {% endif %}

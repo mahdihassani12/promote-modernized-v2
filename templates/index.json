@@ -1068,8 +1068,8 @@
         "hdt_background_parallax": false,
         "mg": "",
         "mg_mb": "",
-        "pd": "48px,,48px,",
-        "pd_mb": "32px,,32px,"
+        "pd": "50px,,50px,",
+        "pd_mb": "50px,,50px,"
       }
     }
   },
