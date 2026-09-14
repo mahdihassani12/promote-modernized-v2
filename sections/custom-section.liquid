@@ -4,6 +4,11 @@
     --spacing-tb: {{ section.settings.item_spacing_tb }}px;
     --spacing-mb: {{ section.settings.item_spacing_mb }}px;
   }
+  {% if request.locale.iso_code contains 'ar' and section.id == 'custom_section_qTGJeH' %}
+    #shopify-section-{{ section.id }} {
+      padding-bottom: 50px !important;
+    }
+  {% endif %}
   {% render 'spacing-vars', box: section %}
 {% endstyle %}
 {% liquid
