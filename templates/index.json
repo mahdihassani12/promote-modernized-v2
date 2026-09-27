@@ -107,6 +107,18 @@
         "padding": 20
       }
     },
+    "full_width_banner_yCce3J": {
+      "type": "full-width-banner",
+      "name": "Full width banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-updated.webp",
+        "desktop_height": 580,
+        "mobile_height": 420,
+        "desktop_position": "center",
+        "mobile_position": "center",
+        "alt_text": ""
+      }
+    },
     "modern_product_showcase_xgBMfY": {
       "type": "modern-product-showcase",
       "name": "Modern products",
@@ -553,28 +565,16 @@
         "pd": "50px,,50px,",
         "pd_mb": "50px,,50px,"
       }
-    },
-    "full_width_banner_yCce3J": {
-      "type": "full-width-banner",
-      "name": "Full width banner",
-      "settings": {
-        "desktop_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-updated.webp",
-        "desktop_height": 580,
-        "mobile_height": 420,
-        "desktop_position": "center",
-        "mobile_position": "center",
-        "alt_text": ""
-      }
     }
   },
   "order": [
     "slideshow_EVrUzi",
     "modern_collections_ky4EFq",
+    "full_width_banner_yCce3J",
     "modern_product_showcase_xgBMfY",
     "modern_product_tabs_tTdFhi",
     "modern_brand_logos_9NQYme",
     "custom_line_WWiQAz",
-    "shipping_xHJpJ3",
-    "full_width_banner_yCce3J"
+    "shipping_xHJpJ3"
   ]
 }
