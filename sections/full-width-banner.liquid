@@ -1,0 +1,77 @@
+{%- liquid
+  assign desktop_image = section.settings.desktop_image
+  assign mobile_image = section.settings.mobile_image
+  assign image_alt = section.settings.alt_text | default: desktop_image.alt | default: ''
+  if section.index == 1
+    assign image_loading = 'eager'
+    assign image_priority = 'high'
+  else
+    assign image_loading = 'lazy'
+    assign image_priority = 'auto'
+  endif
+-%}
+{%- style -%}
+  #FullWidthBanner-{{ section.id }} {
+    width: 100%;
+    height: {{ section.settings.desktop_height }}px;
+    overflow: hidden;
+    line-height: 0;
+  }
+  #FullWidthBanner-{{ section.id }} picture,
+  #FullWidthBanner-{{ section.id }} img,
+  #FullWidthBanner-{{ section.id }} .placeholder-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #FullWidthBanner-{{ section.id }} img,
+  #FullWidthBanner-{{ section.id }} .placeholder-svg {
+    object-fit: cover;
+    object-position: {{ section.settings.desktop_position }} center;
+  }
+  @media (max-width: 749px) {
+    #FullWidthBanner-{{ section.id }} {
+      height: {{ section.settings.mobile_height }}px;
+    }
+    #FullWidthBanner-{{ section.id }} img {
+      object-position: {{ section.settings.mobile_position }} center;
+    }
+  }
+{%- endstyle -%}
+{%- if desktop_image != blank or request.design_mode -%}
+<div id="FullWidthBanner-{{ section.id }}" class="barberry-image-banner">
+  {%- if desktop_image != blank -%}
+    <picture>
+      {%- if mobile_image != blank -%}
+        <source media="(max-width: 749px)" srcset="{{ mobile_image | image_url: width: 750 }} 750w, {{ mobile_image | image_url: width: 1200 }} 1200w" sizes="100vw">
+      {%- endif -%}
+      {{ desktop_image | image_url: width: 3200 | image_tag: loading: image_loading, fetchpriority: image_priority, sizes: '100vw', widths: '400, 750, 1100, 1500, 1800, 2200, 2600, 3200', alt: image_alt }}
+    </picture>
+  {%- elsif request.design_mode -%}
+    {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+  {%- endif -%}
+</div>
+{%- endif -%}
+{% schema %}
+{
+  "name": "Full width banner",
+  "settings": [
+    { "type": "image_picker", "id": "desktop_image", "label": "Desktop image" },
+    { "type": "image_picker", "id": "mobile_image", "label": "Mobile image (optional)" },
+    { "type": "range", "id": "desktop_height", "label": "Desktop height", "min": 300, "max": 800, "step": 20, "unit": "px", "default": 580 },
+    { "type": "range", "id": "mobile_height", "label": "Mobile height", "min": 260, "max": 700, "step": 20, "unit": "px", "default": 420 },
+    { "type": "select", "id": "desktop_position", "label": "Desktop image position", "options": [
+      { "value": "left", "label": "Left" },
+      { "value": "center", "label": "Center" },
+      { "value": "right", "label": "Right" }
+    ], "default": "center" },
+    { "type": "select", "id": "mobile_position", "label": "Mobile image position", "options": [
+      { "value": "left", "label": "Left" },
+      { "value": "center", "label": "Center" },
+      { "value": "right", "label": "Right" }
+    ], "default": "center" },
+    { "type": "text", "id": "alt_text", "label": "Image alt text" }
+  ],
+  "presets": [{ "name": "Full width banner" }]
+}
+{% endschema %}
