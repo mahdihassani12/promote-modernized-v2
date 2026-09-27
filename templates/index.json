@@ -121,7 +121,7 @@
         "image_ratio": "square",
         "show_vendor": false,
         "link_label": "View all",
-        "padding": 64
+        "padding": 20
       }
     },
     "modern_product_tabs_tTdFhi": {
