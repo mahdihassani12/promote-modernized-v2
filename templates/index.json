@@ -140,13 +140,6 @@
     "modern_product_tabs_tTdFhi": {
       "type": "modern-product-tabs",
       "blocks": {
-        "tab_9Nq4wD": {
-          "type": "tab",
-          "settings": {
-            "label": "{{ block.settings.collection.title }}",
-            "collection": "iphone"
-          }
-        },
         "tab_pfqj8b": {
           "type": "tab",
           "settings": {
@@ -177,7 +170,6 @@
         }
       },
       "block_order": [
-        "tab_9Nq4wD",
         "tab_pfqj8b",
         "tab_naYTVT",
         "tab_f9g949",
