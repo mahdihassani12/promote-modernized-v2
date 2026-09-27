@@ -553,6 +553,22 @@
         "pd": "50px,,50px,",
         "pd_mb": "50px,,50px,"
       }
+    },
+    "modern_parallax_banner_My6WTn": {
+      "type": "modern-parallax-banner",
+      "name": "Modern parallax banner",
+      "settings": {
+        "image": "shopify://shop_images/iphones.webp",
+        "height": 580,
+        "height_tablet": 460,
+        "height_mobile": 360,
+        "overlay": 35,
+        "color": "#ffffff",
+        "title": "",
+        "text": "",
+        "label": "",
+        "link": ""
+      }
     }
   },
   "order": [
@@ -562,6 +578,7 @@
     "modern_product_tabs_tTdFhi",
     "modern_brand_logos_9NQYme",
     "custom_line_WWiQAz",
-    "shipping_xHJpJ3"
+    "shipping_xHJpJ3",
+    "modern_parallax_banner_My6WTn"
   ]
 }
