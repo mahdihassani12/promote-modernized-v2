@@ -559,6 +559,23 @@
         "pd": "50px,,50px,",
         "pd_mb": "50px,,50px,"
       }
+    },
+    "modern_product_showcase_n8Wxm3": {
+      "type": "modern-product-showcase",
+      "name": "Modern products",
+      "settings": {
+        "title": "Accessories",
+        "text": "<p>Explore our featured iPhones and find the perfect upgrade for you.</p>",
+        "collection": "accessories",
+        "layout": "grid",
+        "limit": 8,
+        "columns": 4,
+        "gap": 16,
+        "image_ratio": "square",
+        "show_vendor": false,
+        "link_label": "View all",
+        "padding": 32
+      }
     }
   },
   "order": [
@@ -569,6 +586,7 @@
     "modern_product_tabs_tTdFhi",
     "modern_brand_logos_9NQYme",
     "custom_line_WWiQAz",
-    "shipping_xHJpJ3"
+    "shipping_xHJpJ3",
+    "modern_product_showcase_n8Wxm3"
   ]
 }
