@@ -12,9 +12,45 @@
   else
     assign image = section.settings.image 
   endif
+  assign brand_gradient_enabled = false
+  if request.page_type == 'page' and section.settings.use_brand_gradient
+    assign brand_gradient_enabled = true
+  endif
 -%}
 {% style %}
   {% render 'spacing-vars', box: section %}
+  {% if brand_gradient_enabled %}
+    #shopify-section-{{ section.id }} .hdt-section-spacing {
+      background: linear-gradient({{ section.settings.gradient_angle }}deg, {{ section.settings.gradient_start }} 0%, {{ section.settings.gradient_middle }} 55%, {{ section.settings.gradient_end }} 100%);
+      color: {{ section.settings.gradient_text }};
+    }
+    #shopify-section-{{ section.id }} .hdt-heading-liquid,
+    #shopify-section-{{ section.id }} .hdt-heading-liquid a { color: {{ section.settings.gradient_text }}; }
+  {% endif %}
+  #shopify-section-{{ section.id }} .hdt-brand-heading-content {
+    text-align: {{ section.settings.heading_alignment }};
+    direction: {% if request.locale.iso_code == 'ar' %}rtl{% else %}ltr{% endif %};
+  }
+  #shopify-section-{{ section.id }} .hdt-brand-heading-title {
+    margin: 0;
+    color: {{ section.settings.gradient_text }};
+    font-family: {% if section.settings.heading_title_font == 'body' %}var(--font-body-family){% else %}var(--font-heading-family){% endif %};
+    font-size: {{ section.settings.heading_title_size }}px;
+    line-height: {{ section.settings.heading_title_line | divided_by: 100.0 }};
+    font-weight: {{ section.settings.heading_title_weight }};
+  }
+  #shopify-section-{{ section.id }} .hdt-brand-heading-description {
+    margin: {{ section.settings.space_item }}px 0 0;
+    color: {{ section.settings.gradient_text }};
+    font-family: {% if section.settings.heading_description_font == 'heading' %}var(--font-heading-family){% else %}var(--font-body-family){% endif %};
+    font-size: {{ section.settings.heading_description_size }}px;
+    line-height: {{ section.settings.heading_description_line | divided_by: 100.0 }};
+  }
+  @media (max-width: 767px) {
+    #shopify-section-{{ section.id }} .hdt-brand-heading-content { text-align: {{ section.settings.heading_alignment_mobile }}; }
+    #shopify-section-{{ section.id }} .hdt-brand-heading-title { font-size: {{ section.settings.heading_title_size_mobile }}px; }
+    #shopify-section-{{ section.id }} .hdt-brand-heading-description { font-size: {{ section.settings.heading_description_size_mobile }}px; }
+  }
   #shopify-section-{{ section.id }} .hdt-heading-image{
     position: absolute;
     left: 0;
@@ -47,15 +83,22 @@
   }
 {% endstyle %}
 <div class="hdt-section-spacing hdt-section-spacing-{{ section.id }} hdt-relative hdt-oh" color-scheme="{{ section.settings.color_scheme }}">
-  <h1 class="sr-only hdt-pe-none">{{ page_title }}</h1>
+  {% unless section.settings.use_translatable_content %}<h1 class="sr-only hdt-pe-none">{{ page_title }}</h1>{% endunless %}
   <div class="hdt-heading-image hdt-h-overlay hdt-pe-none" style="--bg-overlay:{{ section.settings.bg_overlay | divided_by: 100.00 }};">
-    {%- if image != blank -%}
+    {%- if image != blank and brand_gradient_enabled == false -%}
       {{ image | image_url: width: image.width | image_tag: loading: 'lazy', width: image.width, height: image.height, sizes: "100vw", widths: '375,550,750,1100,1500,1780,1920,2000,3000,3840', alt: image.alt, class:'hdt-w-full hdt-h-full hdt-object-cover' }}
     {%- endif -%}
   </div>
   <div class="hdt-container">
     <div class="hdt-row-grid hdt-grid-cols-1 hdt-text-center">
-      {% content_for 'blocks' %}
+      {% if section.settings.use_translatable_content %}
+        <div class="hdt-brand-heading-content">
+          <h1 class="hdt-brand-heading-title">{{ section.settings.heading_title | default: page.title | escape }}</h1>
+          {% if section.settings.heading_description != blank %}<p class="hdt-brand-heading-description">{{ section.settings.heading_description | escape | newline_to_br }}</p>{% endif %}
+        </div>
+      {% else %}
+        {% content_for 'blocks' %}
+      {% endif %}
     </div>
   </div>
 </div>
@@ -88,6 +131,39 @@
       "label": "t:sections.heading-page.settings.background_heading",
       "id": "image"
     },
+    {
+      "type": "header",
+      "content": "Brand gradient"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_brand_gradient",
+      "label": "Use logo palette gradient",
+      "default": true
+    },
+    { "type": "color", "id": "gradient_start", "label": "Gradient start", "default": "#3c2d21" },
+    { "type": "color", "id": "gradient_middle", "label": "Gradient middle", "default": "#5d432a" },
+    { "type": "color", "id": "gradient_end", "label": "Gradient end", "default": "#a73532" },
+    { "type": "color", "id": "gradient_text", "label": "Heading text", "default": "#ffffff" },
+    { "type": "range", "id": "gradient_angle", "label": "Gradient angle", "min": 0, "max": 360, "step": 5, "unit": "deg", "default": 120 },
+    {
+      "type": "header",
+      "content": "Translatable title and description"
+    },
+    { "type": "checkbox", "id": "use_translatable_content", "label": "Use translatable text fields", "default": false },
+    { "type": "text", "id": "heading_title", "label": "Title (blank uses page title)" },
+    { "type": "textarea", "id": "heading_description", "label": "Description" },
+    { "type": "select", "id": "heading_alignment", "label": "Desktop text alignment", "options": [{"value":"start","label":"Start"},{"value":"center","label":"Center"},{"value":"end","label":"End"}], "default": "center" },
+    { "type": "select", "id": "heading_alignment_mobile", "label": "Mobile text alignment", "options": [{"value":"start","label":"Start"},{"value":"center","label":"Center"},{"value":"end","label":"End"}], "default": "center" },
+    { "type": "select", "id": "heading_title_font", "label": "Title font", "options": [{"value":"body","label":"Theme body font"},{"value":"heading","label":"Theme heading font"}], "default": "heading" },
+    { "type": "select", "id": "heading_description_font", "label": "Description font", "options": [{"value":"body","label":"Theme body font"},{"value":"heading","label":"Theme heading font"}], "default": "body" },
+    { "type": "range", "id": "heading_title_size", "label": "Title desktop size", "min": 16, "max": 80, "step": 1, "unit": "px", "default": 28 },
+    { "type": "range", "id": "heading_title_size_mobile", "label": "Title mobile size", "min": 14, "max": 50, "step": 1, "unit": "px", "default": 24 },
+    { "type": "range", "id": "heading_title_line", "label": "Title line height", "min": 100, "max": 200, "step": 5, "unit": "%", "default": 120 },
+    { "type": "select", "id": "heading_title_weight", "label": "Title weight", "options": [{"value":"400","label":"400"},{"value":"500","label":"500"},{"value":"600","label":"600"},{"value":"700","label":"700"}], "default": "600" },
+    { "type": "range", "id": "heading_description_size", "label": "Description desktop size", "min": 12, "max": 36, "step": 1, "unit": "px", "default": 18 },
+    { "type": "range", "id": "heading_description_size_mobile", "label": "Description mobile size", "min": 12, "max": 30, "step": 1, "unit": "px", "default": 15 },
+    { "type": "range", "id": "heading_description_line", "label": "Description line height", "min": 100, "max": 220, "step": 5, "unit": "%", "default": 150 },
     {
       "type": "color_scheme",
       "id": "color_scheme",

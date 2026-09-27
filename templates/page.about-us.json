@@ -11,44 +11,8 @@
   "sections": {
     "main_heading_fgVmaw": {
       "type": "main-heading",
-      "blocks": {
-        "heading_liquid_p4fPaC": {
-          "type": "_heading_liquid",
-          "settings": {
-            "text": "{{ page.title }}",
-            "line_height": "hdt-lh-1",
-            "font_family": "hdt-font-1",
-            "text_size": "2xl",
-            "text_color": "hdt-s-text",
-            "italic": false,
-            "uppercase": false,
-            "font_size_text_lg": 16,
-            "font_size_text": 14,
-            "letter_spacing_text": 0
-          },
-          "blocks": {}
-        },
-        "heading_liquid_q9LNqL": {
-          "type": "_heading_liquid",
-          "settings": {
-            "text": "Follow your passion, and success will follow you",
-            "line_height": "",
-            "font_family": "hdt-font-1",
-            "text_size": "base",
-            "text_color": "hdt-s-text",
-            "italic": false,
-            "uppercase": false,
-            "font_size_text_lg": 16,
-            "font_size_text": 14,
-            "letter_spacing_text": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "heading_liquid_p4fPaC",
-        "heading_liquid_q9LNqL"
-      ],
+      "blocks": {},
+      "block_order": [],
       "settings": {
         "use_dynamic_source": true,
         "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
@@ -57,7 +21,13 @@
         "mg": "",
         "mg_mb": "",
         "pd": "54px,,54px,",
-        "pd_mb": "54px,,54px,"
+        "pd_mb": "54px,,54px,",
+        "use_brand_gradient": true,
+        "use_translatable_content": true,
+        "heading_title": "",
+        "heading_description": "Follow your passion, and success will follow you",
+        "heading_alignment": "center",
+        "heading_alignment_mobile": "center"
       }
     },
     "custom_section_qTGJeH": {
