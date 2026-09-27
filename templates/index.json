@@ -15,25 +15,29 @@
         "slide_item_GJUjrM": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/luxury-foldable-phones-hero-02-1920x700.webp",
-            "mobile_image": "shopify://shop_images/luxury-foldable-phones-mobile-02-480x600.webp",
-            "eyebrow": "BarBerry General Trading Company",
-            "title": "Everyday Technology Essentials",
+            "title": "BarBerry General Trading Company",
+            "eyebrow": "Everyday Technology Essentials",
             "description": "Designed for modern lifestyles and daily convenience",
-            "primary_text": "DISCOVER MODE",
-            "primary_link": "shopify://collections"
+            "primary_text": "Discover More",
+            "primary_link": "shopify://collections",
+            "secondary_text": "Contact Us",
+            "secondary_link": "shopify://pages/contact-us",
+            "image": "shopify://shop_images/luxury-foldable-phones-hero-02-1920x700.webp",
+            "mobile_image": "shopify://shop_images/luxury-foldable-phones-mobile-02-480x600.webp"
           }
         },
         "slide_item_Aeee3A": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/luxury-smartphones-hero-01-1920x700.webp",
-            "mobile_image": "shopify://shop_images/luxury-smartphones-mobile-01-480x600.webp",
-            "eyebrow": "BarBerry General Trading Company",
-            "title": "Power Your Devices",
+            "title": "BarBerry General Trading Company",
+            "eyebrow": "Power Your Devices",
             "description": "Reliable performance across audio lighting and charging",
-            "primary_text": "DISCOVER MORE",
-            "primary_link": "shopify://collections"
+            "primary_text": "Discover More",
+            "primary_link": "shopify://collections",
+            "secondary_text": "Contact Us",
+            "secondary_link": "shopify://pages/contact-us",
+            "image": "shopify://shop_images/luxury-smartphones-hero-01-1920x700.webp",
+            "mobile_image": "shopify://shop_images/luxury-smartphones-mobile-01-480x600.webp"
           }
         }
       },
@@ -46,19 +50,24 @@
         "mobile_height": 560,
         "position": "center",
         "alignment": "center",
+        "title_tag": "h2",
+        "overlay_opacity": 50,
+        "title_font": "heading",
+        "title_size": 35,
+        "mobile_title_size": 22,
+        "body_font": "body",
+        "eyebrow_size": 22,
+        "mobile_eyebrow_size": 18,
+        "description_size": 18,
+        "mobile_description_size": 16,
+        "button_size": 15,
+        "mobile_button_size": 14,
+        "button_background": "#5d432a",
+        "button_hover": "#a73532",
         "autoplay": true,
         "delay": 7,
         "arrows": true,
-        "dots": true,
-        "overlay_opacity": 50,
-        "button_background": "#5d432a",
-        "title_tag": "h2",
-        "title_size": 80,
-        "mobile_title_size": 30,
-        "eyebrow_size": 35,
-        "mobile_eyebrow_size": 18,
-        "description_size": 38,
-        "mobile_description_size": 20
+        "dots": true
       }
     },
     "modern_collections_ky4EFq": {
