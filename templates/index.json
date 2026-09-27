@@ -558,7 +558,7 @@
       "type": "modern-parallax-banner",
       "name": "Modern parallax banner",
       "settings": {
-        "image": "shopify://shop_images/BarBerry-iPhone-ad-banner.webp",
+        "image": "shopify://shop_images/BarBerry-iPhone-ad-banner-updated.webp",
         "height": 580,
         "height_tablet": 460,
         "height_mobile": 360,
