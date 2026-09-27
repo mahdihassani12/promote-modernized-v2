@@ -12,3 +12,17 @@
 @media(max-width:989px){.modern-brands-glass__card{width:calc((100vw - 3rem - (var(--mbl-cols-tablet,3) - 1)*var(--mbl-gap,24px))/var(--mbl-cols-tablet,3));min-width:170px}}
 @media(max-width:749px){.modern-brands-glass__inner{padding-inline:1.4rem}.modern-brands-glass__header{margin-bottom:30px}.modern-brands-glass__header h2{font-size:var(--mbl-heading-size-mobile,32px)}.modern-brands-glass__subtitle{font-size:var(--mbl-subtitle-size-mobile,15px)}.modern-brands-glass__viewport{padding-inline:0}.modern-brands-glass__card{width:calc((100vw - 28px - (var(--mbl-cols-mobile,2) - 1)*var(--mbl-gap,24px))/var(--mbl-cols-mobile,2));min-width:145px;height:156px;padding:22px}}
 @media(prefers-reduced-motion:reduce){.modern-brands-glass__header h2{animation:none}.modern-brands-glass__track{animation-play-state:paused}.modern-brands-glass__card,.modern-brands-glass__card img{transition:none}}
+
+/* Keep light backgrounds in uploaded logos light, while rendering the marks black. */
+.modern-brands-glass__card img {
+  filter: grayscale(1) brightness(.75) contrast(20);
+  opacity: 1;
+}
+@media (hover: hover) {
+  .modern-brands-glass__card:hover img {
+    filter: none;
+  }
+}
+.modern-brands-glass__card:focus-visible img {
+  filter: none;
+}
