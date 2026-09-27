@@ -114,7 +114,7 @@
         "title": "Featured products",
         "text": "<p>Discover our featured smartphones, accessories, and latest mobile technology.</p>",
         "collection": "all-products",
-        "layout": "carousel",
+        "layout": "grid",
         "limit": 12,
         "columns": 4,
         "gap": 24,
