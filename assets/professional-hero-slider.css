@@ -19,11 +19,11 @@
 .shop-phs__button:hover,.shop-phs__button:focus-visible{transform:translateY(-2px);background:var(--phs-button-hover,#a73532);color:var(--phs-button-hover-text,#fff)}
 .shop-phs__button--secondary{background:var(--phs-secondary-bg,transparent);color:var(--phs-secondary-text,#fff);border-color:var(--phs-secondary-border,#fff)}
 .shop-phs__button--secondary:hover,.shop-phs__button--secondary:focus-visible{background:var(--phs-secondary-hover,#fff);color:var(--phs-secondary-hover-text,#14243a)}
-.shop-phs__arrow{position:absolute;z-index:3;top:50%;display:flex;align-items:center;justify-content:center;width:var(--phs-arrow-size);height:var(--phs-arrow-size);padding:0;transform:translateY(-50%);border:1px solid var(--phs-arrow-border,rgba(255,255,255,.45));border-radius:var(--phs-arrow-radius,50%);background:var(--phs-arrow-bg,rgba(255,255,255,.14));color:var(--phs-arrow-color,#fff);cursor:pointer}
+.shop-phs__arrow{position:absolute;z-index:3;top:50%;display:flex;align-items:center;justify-content:center;width:var(--phs-arrow-size);height:var(--phs-arrow-size);padding:0;transform:translateY(-50%);appearance:none;border:1px solid var(--phs-arrow-border,rgba(255,255,255,.45));border-radius:var(--phs-arrow-radius,50%);background:var(--phs-arrow-bg,rgba(255,255,255,.14));box-shadow:none;color:var(--phs-arrow-color,#fff);opacity:1;visibility:visible;cursor:pointer}
 .shop-phs__arrow:hover,.shop-phs__arrow:focus-visible{background:var(--phs-arrow-hover,#2365ad)}
 .shop-phs__arrow--prev{inset-inline-start:var(--phs-inset)}
 .shop-phs__arrow--next{inset-inline-end:var(--phs-inset)}
-.shop-phs__arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.shop-phs__arrow svg{display:block;width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .shop-phs__arrow--prev svg{transform:scaleX(-1)}
 .shop-phs[dir=rtl] .shop-phs__arrow--prev svg{transform:none}
 .shop-phs[dir=rtl] .shop-phs__arrow--next svg{transform:scaleX(-1)}

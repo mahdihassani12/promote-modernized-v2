@@ -57,7 +57,7 @@
         "autoplay": true,
         "delay": 7,
         "pause_hover": true,
-        "arrows": false,
+        "arrows": true,
         "dots": true,
         "overlay_opacity": 50,
         "button_background": "#5d432a",

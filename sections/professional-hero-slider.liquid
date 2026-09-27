@@ -72,8 +72,8 @@
   </div>
   {%- if slide_count > 1 -%}
     {%- if section.settings.arrows -%}
-      <button type="button" class="shop-phs__arrow shop-phs__arrow--prev" data-action="prev" aria-label="{% if rtl %}الشريحة السابقة{% else %}Previous slide{% endif %}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8"/></svg></button>
-      <button type="button" class="shop-phs__arrow shop-phs__arrow--next" data-action="next" aria-label="{% if rtl %}الشريحة التالية{% else %}Next slide{% endif %}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8"/></svg></button>
+      <button type="button" class="shop-phs__arrow shop-phs__arrow--prev" data-action="prev" aria-controls="ProfessionalHero-{{ section.id }}" aria-label="{% if rtl %}الشريحة السابقة{% else %}Previous slide{% endif %}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8"/></svg></button>
+      <button type="button" class="shop-phs__arrow shop-phs__arrow--next" data-action="next" aria-controls="ProfessionalHero-{{ section.id }}" aria-label="{% if rtl %}الشريحة التالية{% else %}Next slide{% endif %}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4l8 8-8 8"/></svg></button>
     {%- endif -%}
     {%- if section.settings.dots -%}<div class="shop-phs__dots" role="group" aria-label="{% if rtl %}اختر شريحة{% else %}Choose a slide{% endif %}">
       {%- for block in section.blocks -%}<button type="button" class="shop-phs__dot" data-slide="{{ forloop.index0 }}" aria-label="{% if rtl %}انتقل إلى الشريحة{% else %}Go to slide{% endif %} {{ forloop.index }}" aria-current="{% if forloop.first %}true{% else %}false{% endif %}"></button>{%- endfor -%}
@@ -997,7 +997,7 @@
       "type": "checkbox",
       "id": "arrows",
       "label": "Show navigation arrows",
-      "default": false
+      "default": true
     },
     {
       "type": "checkbox",
