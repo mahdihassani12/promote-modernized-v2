@@ -21,9 +21,7 @@
             "title": "Everyday Technology Essentials",
             "description": "Designed for modern lifestyles and daily convenience",
             "primary_text": "DISCOVER MODE",
-            "primary_link": "shopify://collections",
-            "overlay_color": "#000000",
-            "overlay_opacity": 50
+            "primary_link": "shopify://collections"
           }
         },
         "slide_item_Aeee3A": {
@@ -35,9 +33,7 @@
             "title": "Power Your Devices",
             "description": "Reliable performance across audio lighting and charging",
             "primary_text": "DISCOVER MORE",
-            "primary_link": "shopify://collections",
-            "overlay_color": "#000000",
-            "overlay_opacity": 50
+            "primary_link": "shopify://collections"
           }
         }
       },
@@ -48,15 +44,10 @@
       "settings": {
         "height": 700,
         "mobile_height": 560,
-        "bottom_spacing": 80,
-        "mobile_bottom_spacing": 50,
         "position": "center",
-        "mobile_position": "center",
         "alignment": "center",
-        "mobile_alignment": "center",
         "autoplay": true,
         "delay": 7,
-        "pause_hover": true,
         "arrows": true,
         "dots": true,
         "overlay_opacity": 50,
@@ -67,8 +58,7 @@
         "eyebrow_size": 35,
         "mobile_eyebrow_size": 18,
         "description_size": 38,
-        "mobile_description_size": 20,
-        "mobile_buttons_full": true
+        "mobile_description_size": 20
       }
     },
     "modern_collections_ky4EFq": {

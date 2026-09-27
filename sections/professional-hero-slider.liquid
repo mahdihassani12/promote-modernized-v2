@@ -1,8 +1,8 @@
 {{ 'professional-hero-slider.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'professional-hero-slider.js' | asset_url }}" defer></script>
 {% style %}
-  #shopify-section-{{ section.id }} { margin-block-end: {{ section.settings.bottom_spacing }}px; }
-  @media (max-width: 767px) { #shopify-section-{{ section.id }} { margin-block-end: {{ section.settings.mobile_bottom_spacing }}px; } }
+  #shopify-section-{{ section.id }} { margin-block-end: 80px; }
+  @media (max-width: 767px) { #shopify-section-{{ section.id }} { margin-block-end: 50px; } }
 {% endstyle %}
 {%- liquid
   assign slide_count = section.blocks.size
@@ -12,37 +12,29 @@
     assign rtl = true
   endif
 -%}
-<div id="ProfessionalHero-{{ section.id }}" class="shop-phs{% if section.settings.zoom %} shop-phs--zoom{% endif %}{% if section.settings.mobile_buttons_full %} shop-phs--mobile-buttons-full{% endif %}" dir="{% if rtl %}rtl{% else %}ltr{% endif %}" role="region" aria-roledescription="carousel" aria-label="{% if rtl %}المحتوى المميز{% else %}Featured content{% endif %}" data-autoplay="{{ section.settings.autoplay }}" data-pause-hover="{{ section.settings.pause_hover }}" data-delay="{{ section.settings.delay | times: 1000 }}" style="
---phs-height:{{ section.settings.height }}px;--phs-mobile-height:{{ section.settings.mobile_height }}px;--phs-transition:{{ section.settings.fade_duration }}ms;
---phs-fallback:{{ section.settings.background }};--phs-overlay:{{ section.settings.overlay_color }};--phs-overlay-opacity:{{ section.settings.overlay_opacity | divided_by: 100.0 }};
---phs-content-width:{{ section.settings.content_width }}px;--phs-pad-inline:{{ section.settings.padding_side }}px;--phs-pad-block:{{ section.settings.padding_vertical }}px;
---phs-mobile-pad-inline:{{ section.settings.mobile_padding_side }}px;--phs-mobile-pad-block:{{ section.settings.mobile_padding_vertical }}px;
---phs-align:{{ section.settings.alignment }};--phs-mobile-align:{{ section.settings.mobile_alignment }};
+<div id="ProfessionalHero-{{ section.id }}" class="shop-phs shop-phs--mobile-buttons-full" dir="{% if rtl %}rtl{% else %}ltr{% endif %}" role="region" aria-roledescription="carousel" aria-label="{% if rtl %}المحتوى المميز{% else %}Featured content{% endif %}" data-autoplay="{{ section.settings.autoplay }}" data-pause-hover="true" data-delay="{{ section.settings.delay | times: 1000 }}" style="
+--phs-height:{{ section.settings.height }}px;--phs-mobile-height:{{ section.settings.mobile_height }}px;
 --phs-position:{% if section.settings.position == 'center' %}center{% elsif section.settings.position == 'end' %}flex-end{% else %}flex-start{% endif %};
---phs-mobile-position:{% if section.settings.mobile_position == 'center' %}center{% elsif section.settings.mobile_position == 'end' %}flex-end{% else %}flex-start{% endif %};
---phs-gap:{{ section.settings.text_gap }}px;
---phs-eyebrow-color:{{ section.settings.eyebrow_color }};--phs-title-color:{{ section.settings.title_color }};--phs-desc-color:{{ section.settings.description_color }};
---phs-eyebrow-size:{{ section.settings.eyebrow_size }}px;--phs-title-size:{{ section.settings.title_size }}px;--phs-desc-size:{{ section.settings.description_size }}px;
---phs-mobile-eyebrow-size:{{ section.settings.mobile_eyebrow_size }}px;--phs-mobile-title-size:{{ section.settings.mobile_title_size }}px;--phs-mobile-desc-size:{{ section.settings.mobile_description_size }}px;
---phs-eyebrow-weight:{{ section.settings.eyebrow_weight }};--phs-title-weight:{{ section.settings.title_weight }};--phs-desc-weight:{{ section.settings.description_weight }};
---phs-eyebrow-line:{{ section.settings.eyebrow_line | divided_by: 100.0 }};--phs-title-line:{{ section.settings.title_line | divided_by: 100.0 }};--phs-desc-line:{{ section.settings.description_line | divided_by: 100.0 }};
---phs-eyebrow-spacing:{{ section.settings.eyebrow_spacing }}px;--phs-title-spacing:{{ section.settings.title_spacing }}px;--phs-desc-spacing:{{ section.settings.description_spacing }}px;
---phs-eyebrow-align:{{ section.settings.eyebrow_alignment }};--phs-title-align:{{ section.settings.title_alignment }};--phs-desc-align:{{ section.settings.description_alignment }};
---phs-mobile-eyebrow-align:{{ section.settings.mobile_eyebrow_alignment }};--phs-mobile-title-align:{{ section.settings.mobile_title_alignment }};--phs-mobile-desc-align:{{ section.settings.mobile_description_alignment }};
---phs-button-align:{% if section.settings.button_alignment == 'center' %}center{% elsif section.settings.button_alignment == 'end' %}flex-end{% else %}flex-start{% endif %};
---phs-mobile-button-align:{% if section.settings.mobile_button_alignment == 'center' %}center{% elsif section.settings.mobile_button_alignment == 'end' %}flex-end{% else %}flex-start{% endif %};
---phs-eyebrow-font:{% if section.settings.eyebrow_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};
---phs-title-font:{% if section.settings.title_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};
---phs-desc-font:{% if section.settings.description_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};
---phs-button-bg:{{ section.settings.button_background }};--phs-button-text:{{ section.settings.button_text }};--phs-button-hover:{{ section.settings.button_hover }};--phs-button-hover-text:{{ section.settings.button_hover_text }};
---phs-secondary-bg:{{ section.settings.secondary_background }};--phs-secondary-text:{{ section.settings.secondary_text }};--phs-secondary-border:{{ section.settings.secondary_border }};--phs-secondary-hover:{{ section.settings.secondary_hover }};--phs-secondary-hover-text:{{ section.settings.secondary_hover_text }};
---phs-button-size:{{ section.settings.button_size }}px;--phs-mobile-button-size:{{ section.settings.mobile_button_size }}px;--phs-button-weight:{{ section.settings.button_weight }};--phs-button-font:{% if section.settings.button_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};--phs-button-line:{{ section.settings.button_line | divided_by: 100.0 }};--phs-button-spacing:{{ section.settings.button_spacing }}px;--phs-button-height:{{ section.settings.button_height }}px;--phs-button-radius:{{ section.settings.button_radius }}px;--phs-button-gap:{{ section.settings.button_gap }}px;--phs-button-margin:{{ section.settings.button_margin }}px;
---phs-arrow-color:{{ section.settings.arrow_color }};--phs-arrow-bg:{{ section.settings.arrow_background }};--phs-arrow-border:{{ section.settings.arrow_border }};--phs-arrow-hover:{{ section.settings.arrow_hover }};--phs-arrow-size:{{ section.settings.arrow_size }}px;--phs-arrow-radius:{{ section.settings.arrow_radius }}px;--phs-inset:{{ section.settings.arrow_inset }}px;
---phs-dot-color:{{ section.settings.dot_color }};--phs-dot-active:{{ section.settings.dot_active }};--phs-dot-size:{{ section.settings.dot_size }}px;--phs-dots-gap:{{ section.settings.dot_gap }}px;--phs-dots-bottom:{{ section.settings.dot_bottom }}px;">
+--phs-mobile-position:{% if section.settings.position == 'center' %}center{% elsif section.settings.position == 'end' %}flex-end{% else %}flex-start{% endif %};
+--phs-align:{{ section.settings.alignment }};--phs-mobile-align:{{ section.settings.alignment }};
+--phs-title-align:{{ section.settings.alignment }};--phs-eyebrow-align:{{ section.settings.alignment }};--phs-desc-align:{{ section.settings.alignment }};
+--phs-mobile-title-align:{{ section.settings.alignment }};--phs-mobile-eyebrow-align:{{ section.settings.alignment }};--phs-mobile-desc-align:{{ section.settings.alignment }};
+--phs-button-align:{% if section.settings.alignment == 'center' %}center{% elsif section.settings.alignment == 'end' %}flex-end{% else %}flex-start{% endif %};
+--phs-mobile-button-align:{% if section.settings.alignment == 'center' %}center{% elsif section.settings.alignment == 'end' %}flex-end{% else %}flex-start{% endif %};
+--phs-title-size:{{ section.settings.title_size }}px;--phs-mobile-title-size:{{ section.settings.mobile_title_size }}px;
+--phs-eyebrow-size:{{ section.settings.eyebrow_size }}px;--phs-mobile-eyebrow-size:{{ section.settings.mobile_eyebrow_size }}px;
+--phs-desc-size:{{ section.settings.description_size }}px;--phs-mobile-desc-size:{{ section.settings.mobile_description_size }}px;
+--phs-button-size:{{ section.settings.button_size }}px;--phs-mobile-button-size:{{ section.settings.mobile_button_size }}px;
+--phs-title-font:{% if section.settings.title_font == 'body' %}var(--font-body-family,inherit){% else %}var(--font-heading-family,inherit){% endif %};
+--phs-eyebrow-font:{% if section.settings.body_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};
+--phs-desc-font:{% if section.settings.body_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};
+--phs-overlay:#000;--phs-overlay-opacity:{{ section.settings.overlay_opacity | divided_by: 100.0 }};
+--phs-button-bg:{{ section.settings.button_background }};--phs-button-text:#fff;--phs-button-hover:{{ section.settings.button_hover }};--phs-button-hover-text:#fff;
+--phs-arrow-hover:{{ section.settings.button_background }};--phs-dot-active:{{ section.settings.button_background }};">
   <div class="shop-phs__slides">
     {%- for block in section.blocks -%}
       {%- assign slide = block.settings -%}
-      <article class="shop-phs__slide{% if forloop.first %} is-active{% endif %}" data-block-id="{{ block.id }}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} / {{ slide_count }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" {% unless forloop.first %}inert{% endunless %} {{ block.shopify_attributes }} style="{% if slide.custom_overlay %}--phs-overlay:{{ slide.overlay_color }};--phs-overlay-opacity:{{ slide.overlay_opacity | divided_by: 100.0 }};{% endif %}--phs-fit:{{ slide.image_fit }};--phs-image-position:{{ slide.image_position }};--phs-mobile-image-position:{{ slide.mobile_image_position }};">
+      <article class="shop-phs__slide{% if forloop.first %} is-active{% endif %}" data-block-id="{{ block.id }}" role="group" aria-roledescription="slide" aria-label="{{ forloop.index }} / {{ slide_count }}" aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}" {% unless forloop.first %}inert{% endunless %} {{ block.shopify_attributes }} >
         {%- assign main_image = slide.image -%}
         {%- if main_image == blank -%}{%- assign main_image = slide.mobile_image -%}{%- endif -%}
         {%- if main_image != blank -%}
@@ -57,8 +49,8 @@
         {%- endif -%}
         <span class="shop-phs__overlay" aria-hidden="true"></span>
         <div class="shop-phs__inner"><div class="shop-phs__content">
-          {%- if slide.eyebrow != blank -%}<div class="shop-phs__eyebrow">{{ slide.eyebrow | escape }}</div>{%- endif -%}
           {%- if slide.title != blank -%}<{{ section.settings.title_tag }} class="shop-phs__title">{{ slide.title | escape }}</{{ section.settings.title_tag }}>{%- endif -%}
+          {%- if slide.eyebrow != blank -%}<div class="shop-phs__eyebrow">{{ slide.eyebrow | escape }}</div>{%- endif -%}
           {%- if slide.description != blank -%}<div class="shop-phs__description">{{ slide.description | escape | newline_to_br }}</div>{%- endif -%}
           {%- if slide.primary_text != blank and slide.primary_link != blank or slide.secondary_text != blank and slide.secondary_link != blank -%}
             <div class="shop-phs__buttons">
@@ -89,7 +81,7 @@
   "settings": [
     {
       "type": "header",
-      "content": "Layout and timing"
+      "content": "Layout"
     },
     {
       "type": "range",
@@ -104,107 +96,17 @@
     {
       "type": "range",
       "id": "mobile_height",
-      "label": "Mobile height",
+      "label": "Mobile minimum height",
       "default": 560,
-      "min": 250,
+      "min": 300,
       "max": 900,
       "step": 10,
       "unit": "px"
     },
     {
-      "type": "range",
-      "id": "bottom_spacing",
-      "label": "Desktop space below slider",
-      "min": 0,
-      "max": 160,
-      "step": 2,
-      "unit": "px",
-      "default": 80
-    },
-    {
-      "type": "range",
-      "id": "mobile_bottom_spacing",
-      "label": "Mobile space below slider",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "default": 50
-    },
-    {
-      "type": "range",
-      "id": "content_width",
-      "label": "Content maximum width",
-      "default": 780,
-      "min": 300,
-      "max": 1200,
-      "step": 10,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "padding_side",
-      "label": "Desktop side padding",
-      "default": 72,
-      "min": 0,
-      "max": 160,
-      "step": 4,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "padding_vertical",
-      "label": "Desktop vertical padding",
-      "default": 70,
-      "min": 0,
-      "max": 180,
-      "step": 5,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_padding_side",
-      "label": "Mobile side padding",
-      "default": 24,
-      "min": 0,
-      "max": 80,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_padding_vertical",
-      "label": "Mobile vertical padding",
-      "default": 42,
-      "min": 0,
-      "max": 120,
-      "step": 2,
-      "unit": "px"
-    },
-    {
       "type": "select",
       "id": "position",
-      "label": "Desktop content position",
-      "default": "center",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "mobile_position",
-      "label": "Mobile content position",
+      "label": "Content position",
       "default": "center",
       "options": [
         {
@@ -224,27 +126,7 @@
     {
       "type": "select",
       "id": "alignment",
-      "label": "Desktop text alignment",
-      "default": "center",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "mobile_alignment",
-      "label": "Mobile text alignment",
+      "label": "Text and button alignment",
       "default": "center",
       "options": [
         {
@@ -264,7 +146,7 @@
     {
       "type": "select",
       "id": "title_tag",
-      "label": "Title HTML tag",
+      "label": "Title heading tag",
       "default": "h2",
       "options": [
         {
@@ -278,210 +160,22 @@
         {
           "value": "h3",
           "label": "H3"
-        },
-        {
-          "value": "div",
-          "label": "Div"
         }
       ]
     },
     {
-      "type": "checkbox",
-      "id": "autoplay",
-      "label": "Autoplay",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "pause_hover",
-      "label": "Pause on hover",
-      "default": true
-    },
-    {
-      "type": "range",
-      "id": "delay",
-      "label": "Autoplay interval",
-      "default": 7,
-      "min": 3,
-      "max": 20,
-      "step": 1,
-      "unit": "s"
-    },
-    {
-      "type": "range",
-      "id": "fade_duration",
-      "label": "Fade duration",
-      "default": 700,
-      "min": 0,
-      "max": 2000,
-      "step": 50,
-      "unit": "ms"
-    },
-    {
-      "type": "checkbox",
-      "id": "zoom",
-      "label": "Slow background zoom",
-      "default": false
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Fallback background",
-      "default": "#16243a"
-    },
-    {
-      "type": "color",
-      "id": "overlay_color",
-      "label": "Default overlay color",
-      "default": "#000000"
-    },
-    {
       "type": "range",
       "id": "overlay_opacity",
-      "label": "Default overlay opacity",
+      "label": "Image overlay strength",
       "default": 50,
       "min": 0,
-      "max": 100,
+      "max": 90,
       "step": 5,
       "unit": "%"
     },
     {
       "type": "header",
-      "content": "Text typography"
-    },
-    {
-      "type": "range",
-      "id": "text_gap",
-      "label": "Spacing between text",
-      "default": 16,
-      "min": 0,
-      "max": 60,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "select",
-      "id": "eyebrow_font",
-      "label": "Eyebrow font",
-      "default": "body",
-      "options": [
-        {
-          "value": "body",
-          "label": "Theme body font"
-        },
-        {
-          "value": "heading",
-          "label": "Theme heading font"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "eyebrow_alignment",
-      "label": "Subtitle desktop alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "mobile_eyebrow_alignment",
-      "label": "Subtitle mobile alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "color",
-      "id": "eyebrow_color",
-      "label": "Eyebrow color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "range",
-      "id": "eyebrow_size",
-      "label": "Eyebrow desktop size",
-      "default": 18,
-      "min": 10,
-      "max": 100,
-      "step": 1,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_eyebrow_size",
-      "label": "Eyebrow mobile size",
-      "default": 16,
-      "min": 10,
-      "max": 60,
-      "step": 1,
-      "unit": "px"
-    },
-    {
-      "type": "select",
-      "id": "eyebrow_weight",
-      "label": "Eyebrow weight",
-      "default": "700",
-      "options": [
-        {
-          "value": "400",
-          "label": "400"
-        },
-        {
-          "value": "500",
-          "label": "500"
-        },
-        {
-          "value": "600",
-          "label": "600"
-        },
-        {
-          "value": "700",
-          "label": "700"
-        },
-        {
-          "value": "800",
-          "label": "800"
-        },
-        {
-          "value": "900",
-          "label": "900"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "eyebrow_line",
-      "label": "Eyebrow line height",
-      "default": 150,
-      "min": 90,
-      "max": 220,
-      "step": 5,
-      "unit": "%"
+      "content": "Text sizes"
     },
     {
       "type": "select",
@@ -490,67 +184,21 @@
       "default": "heading",
       "options": [
         {
-          "value": "body",
-          "label": "Theme body font"
-        },
-        {
           "value": "heading",
           "label": "Theme heading font"
+        },
+        {
+          "value": "body",
+          "label": "Theme body font"
         }
       ]
-    },
-    {
-      "type": "select",
-      "id": "title_alignment",
-      "label": "Title desktop alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "mobile_title_alignment",
-      "label": "Title mobile alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "color",
-      "id": "title_color",
-      "label": "Title color",
-      "default": "#ffffff"
     },
     {
       "type": "range",
       "id": "title_size",
       "label": "Title desktop size",
       "default": 72,
-      "min": 10,
+      "min": 20,
       "max": 100,
       "step": 1,
       "unit": "px"
@@ -560,122 +208,54 @@
       "id": "mobile_title_size",
       "label": "Title mobile size",
       "default": 34,
-      "min": 10,
+      "min": 18,
       "max": 60,
       "step": 1,
       "unit": "px"
     },
     {
       "type": "select",
-      "id": "title_weight",
-      "label": "Title weight",
-      "default": "700",
+      "id": "body_font",
+      "label": "Subtitle and description font",
+      "default": "body",
       "options": [
         {
-          "value": "400",
-          "label": "400"
+          "value": "heading",
+          "label": "Theme heading font"
         },
         {
-          "value": "500",
-          "label": "500"
-        },
-        {
-          "value": "600",
-          "label": "600"
-        },
-        {
-          "value": "700",
-          "label": "700"
-        },
-        {
-          "value": "800",
-          "label": "800"
-        },
-        {
-          "value": "900",
-          "label": "900"
+          "value": "body",
+          "label": "Theme body font"
         }
       ]
     },
     {
       "type": "range",
-      "id": "title_line",
-      "label": "Title line height",
-      "default": 110,
-      "min": 90,
-      "max": 220,
-      "step": 5,
-      "unit": "%"
+      "id": "eyebrow_size",
+      "label": "Subtitle desktop size",
+      "default": 18,
+      "min": 12,
+      "max": 50,
+      "step": 1,
+      "unit": "px"
     },
     {
-      "type": "select",
-      "id": "description_font",
-      "label": "Description font",
-      "default": "body",
-      "options": [
-        {
-          "value": "body",
-          "label": "Theme body font"
-        },
-        {
-          "value": "heading",
-          "label": "Theme heading font"
-        }
-      ]
-    },
-    {
-      "type": "select",
-      "id": "description_alignment",
-      "label": "Description desktop alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "mobile_description_alignment",
-      "label": "Description mobile alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "color",
-      "id": "description_color",
-      "label": "Description color",
-      "default": "#ffffff"
+      "type": "range",
+      "id": "mobile_eyebrow_size",
+      "label": "Subtitle mobile size",
+      "default": 16,
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px"
     },
     {
       "type": "range",
       "id": "description_size",
       "label": "Description desktop size",
       "default": 20,
-      "min": 10,
-      "max": 100,
+      "min": 12,
+      "max": 50,
       "step": 1,
       "unit": "px"
     },
@@ -684,155 +264,29 @@
       "id": "mobile_description_size",
       "label": "Description mobile size",
       "default": 16,
-      "min": 10,
-      "max": 60,
+      "min": 12,
+      "max": 32,
       "step": 1,
       "unit": "px"
-    },
-    {
-      "type": "select",
-      "id": "description_weight",
-      "label": "Description weight",
-      "default": "400",
-      "options": [
-        {
-          "value": "400",
-          "label": "400"
-        },
-        {
-          "value": "500",
-          "label": "500"
-        },
-        {
-          "value": "600",
-          "label": "600"
-        },
-        {
-          "value": "700",
-          "label": "700"
-        },
-        {
-          "value": "800",
-          "label": "800"
-        },
-        {
-          "value": "900",
-          "label": "900"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "description_line",
-      "label": "Description line height",
-      "default": 150,
-      "min": 90,
-      "max": 220,
-      "step": 5,
-      "unit": "%"
-    },
-    {
-      "type": "range",
-      "id": "title_spacing",
-      "label": "Title letter spacing",
-      "default": 0,
-      "min": -5,
-      "max": 10,
-      "step": 1,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "eyebrow_spacing",
-      "label": "Subtitle letter spacing",
-      "min": -5,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "description_spacing",
-      "label": "Description letter spacing",
-      "min": -5,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "default": 0
     },
     {
       "type": "header",
       "content": "Buttons"
     },
     {
-      "type": "color",
-      "id": "button_background",
-      "label": "Primary background",
-      "default": "#5d432a"
-    },
-    {
-      "type": "color",
-      "id": "button_text",
-      "label": "Primary text",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "button_hover",
-      "label": "Primary hover background",
-      "default": "#a73532"
-    },
-    {
-      "type": "color",
-      "id": "button_hover_text",
-      "label": "Primary hover text",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "secondary_background",
-      "label": "Secondary background",
-      "default": "#16243a"
-    },
-    {
-      "type": "color",
-      "id": "secondary_text",
-      "label": "Secondary text",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "secondary_border",
-      "label": "Secondary border",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "secondary_hover",
-      "label": "Secondary hover background",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "secondary_hover_text",
-      "label": "Secondary hover text",
-      "default": "#16243a"
-    },
-    {
       "type": "range",
       "id": "button_size",
-      "label": "Desktop font size",
+      "label": "Button desktop text size",
       "default": 15,
       "min": 10,
-      "max": 30,
+      "max": 28,
       "step": 1,
       "unit": "px"
     },
     {
       "type": "range",
       "id": "mobile_button_size",
-      "label": "Mobile font size",
+      "label": "Button mobile text size",
       "default": 14,
       "min": 10,
       "max": 24,
@@ -840,158 +294,36 @@
       "unit": "px"
     },
     {
-      "type": "select",
-      "id": "button_font",
-      "label": "Button font",
-      "options": [
-        {
-          "value": "body",
-          "label": "Theme body font"
-        },
-        {
-          "value": "heading",
-          "label": "Theme heading font"
-        }
-      ],
-      "default": "body"
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#5d432a"
     },
     {
-      "type": "select",
-      "id": "button_alignment",
-      "label": "Buttons desktop alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "mobile_button_alignment",
-      "label": "Buttons mobile alignment",
-      "options": [
-        {
-          "value": "start",
-          "label": "Start"
-        },
-        {
-          "value": "center",
-          "label": "Center"
-        },
-        {
-          "value": "end",
-          "label": "End"
-        }
-      ],
-      "default": "center"
-    },
-    {
-      "type": "select",
-      "id": "button_weight",
-      "label": "Button font weight",
-      "default": "600",
-      "options": [
-        {
-          "value": "400",
-          "label": "400"
-        },
-        {
-          "value": "500",
-          "label": "500"
-        },
-        {
-          "value": "600",
-          "label": "600"
-        },
-        {
-          "value": "700",
-          "label": "700"
-        },
-        {
-          "value": "800",
-          "label": "800"
-        }
-      ]
-    },
-    {
-      "type": "range",
-      "id": "button_line",
-      "label": "Button line height",
-      "min": 100,
-      "max": 200,
-      "step": 5,
-      "unit": "%",
-      "default": 120
-    },
-    {
-      "type": "range",
-      "id": "button_spacing",
-      "label": "Button letter spacing",
-      "min": -5,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "button_height",
-      "label": "Minimum button height",
-      "default": 48,
-      "min": 36,
-      "max": 80,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "button_radius",
-      "label": "Button corner radius",
-      "default": 4,
-      "min": 0,
-      "max": 40,
-      "step": 1,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "button_gap",
-      "label": "Button gap",
-      "default": 12,
-      "min": 0,
-      "max": 40,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "button_margin",
-      "label": "Space above buttons",
-      "default": 30,
-      "min": 0,
-      "max": 80,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "checkbox",
-      "id": "mobile_buttons_full",
-      "label": "Full width buttons on mobile",
-      "default": true
+      "type": "color",
+      "id": "button_hover",
+      "label": "Button hover background",
+      "default": "#a73532"
     },
     {
       "type": "header",
-      "content": "Arrows and pagination"
+      "content": "Slide controls"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "delay",
+      "label": "Autoplay delay",
+      "default": 7,
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "unit": "s"
     },
     {
       "type": "checkbox",
@@ -1004,102 +336,6 @@
       "id": "dots",
       "label": "Show pagination",
       "default": true
-    },
-    {
-      "type": "color",
-      "id": "arrow_color",
-      "label": "Arrow color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "arrow_background",
-      "label": "Arrow background",
-      "default": "#263950"
-    },
-    {
-      "type": "color",
-      "id": "arrow_border",
-      "label": "Arrow border",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "arrow_hover",
-      "label": "Arrow hover background",
-      "default": "#a73532"
-    },
-    {
-      "type": "color",
-      "id": "dot_color",
-      "label": "Pagination color",
-      "default": "#bbbbbb"
-    },
-    {
-      "type": "color",
-      "id": "dot_active",
-      "label": "Active pagination color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "range",
-      "id": "arrow_size",
-      "label": "Arrow size",
-      "default": 48,
-      "min": 32,
-      "max": 72,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "arrow_radius",
-      "label": "Arrow corner radius",
-      "default": 24,
-      "min": 0,
-      "max": 40,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "arrow_inset",
-      "label": "Arrow side inset",
-      "default": 24,
-      "min": 0,
-      "max": 80,
-      "step": 2,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "dot_size",
-      "label": "Pagination size",
-      "default": 11,
-      "min": 6,
-      "max": 24,
-      "step": 1,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "dot_gap",
-      "label": "Pagination gap",
-      "default": 10,
-      "min": 2,
-      "max": 30,
-      "step": 1,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "dot_bottom",
-      "label": "Pagination bottom inset",
-      "default": 28,
-      "min": 8,
-      "max": 80,
-      "step": 2,
-      "unit": "px"
     }
   ],
   "blocks": [
@@ -1108,108 +344,9 @@
       "name": "Slide",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Desktop background image"
-        },
-        {
-          "type": "image_picker",
-          "id": "mobile_image",
-          "label": "Mobile background image"
-        },
-        {
-          "type": "select",
-          "id": "image_fit",
-          "label": "Image fit",
-          "options": [
-            {
-              "value": "cover",
-              "label": "Cover"
-            },
-            {
-              "value": "contain",
-              "label": "Contain"
-            }
-          ],
-          "default": "cover"
-        },
-        {
-          "type": "select",
-          "id": "image_position",
-          "label": "Desktop image position",
-          "options": [
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            },
-            {
-              "value": "top",
-              "label": "Top"
-            },
-            {
-              "value": "bottom",
-              "label": "Bottom"
-            }
-          ],
-          "default": "center"
-        },
-        {
-          "type": "select",
-          "id": "mobile_image_position",
-          "label": "Mobile image position",
-          "options": [
-            {
-              "value": "center",
-              "label": "Center"
-            },
-            {
-              "value": "left",
-              "label": "Left"
-            },
-            {
-              "value": "right",
-              "label": "Right"
-            },
-            {
-              "value": "top",
-              "label": "Top"
-            },
-            {
-              "value": "bottom",
-              "label": "Bottom"
-            }
-          ],
-          "default": "center"
-        },
-        {
-          "type": "checkbox",
-          "id": "custom_overlay",
-          "label": "Use custom overlay on this slide",
-          "default": false
-        },
-        {
-          "type": "color",
-          "id": "overlay_color",
-          "label": "Overlay color",
-          "default": "#000000"
-        },
-        {
-          "type": "range",
-          "id": "overlay_opacity",
-          "label": "Overlay opacity",
-          "min": 0,
-          "max": 100,
-          "step": 5,
-          "unit": "%",
-          "default": 50
+          "type": "text",
+          "id": "title",
+          "label": "Title"
         },
         {
           "type": "text",
@@ -1217,14 +354,13 @@
           "label": "Subtitle"
         },
         {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
-        {
           "type": "textarea",
           "id": "description",
           "label": "Description"
+        },
+        {
+          "type": "header",
+          "content": "Buttons"
         },
         {
           "type": "text",
@@ -1245,6 +381,20 @@
           "type": "url",
           "id": "secondary_link",
           "label": "Secondary button link"
+        },
+        {
+          "type": "header",
+          "content": "Images"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image (optional)"
         }
       ]
     }
