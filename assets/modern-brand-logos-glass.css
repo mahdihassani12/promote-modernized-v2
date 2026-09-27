@@ -29,19 +29,19 @@
 
 /* The brand logos now use a navigable, responsive carousel. */
 .modern-brands-glass__carousel{--mbl-visible-cols:min(var(--mbl-cols,5),max(1,calc(var(--mbl-item-count) - 1)))}
-.modern-brands-glass__viewport{direction:inherit;overflow:hidden}
-.modern-brands-glass__track{direction:inherit;box-sizing:border-box;width:100%;overflow-x:auto;overflow-y:hidden;padding:4px 8px 16px;scrollbar-width:none;animation:none!important;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;will-change:auto}
+.modern-brands-glass__viewport{direction:inherit;overflow:hidden;padding:0 8px}
+.modern-brands-glass__track{direction:inherit;box-sizing:border-box;width:100%;overflow-x:auto;overflow-y:hidden;padding:4px 8px 12px;scrollbar-width:none;animation:none!important;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;will-change:auto}
 .modern-brands-glass__track::-webkit-scrollbar{display:none}
 .modern-brands-glass__card{flex:0 0 calc((100% - (var(--mbl-visible-cols) - 1)*var(--mbl-gap,24px))/var(--mbl-visible-cols));width:auto;min-width:0;scroll-snap-align:start}
-.modern-brands-glass__nav{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:24px}
-.modern-brands-glass__button{display:grid;place-items:center;flex:none;width:56px;height:56px;padding:0;border:1px solid #d8d8d8;border-radius:50%;background:#fff;color:#111;font:inherit;font-size:24px;line-height:1;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.modern-brands-glass__nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:24px}
+.modern-brands-glass__button{display:grid;place-items:center;flex:none;width:42px;height:42px;padding:0;border:1px solid #d8d8d8;border-radius:50%;background:#fff;color:#111;font:inherit;font-size:inherit;line-height:1;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 .modern-brands-glass__button:hover{background:#111;border-color:#111;color:#fff}
 .modern-brands-glass__button span{display:block;line-height:1}
 .modern-brands-glass__button:focus-visible,.modern-brands-glass__dot:focus-visible{outline:2px solid currentColor;outline-offset:3px}
-.modern-brands-glass__dots{display:flex;align-items:center;justify-content:center;gap:10px;min-height:20px}
-.modern-brands-glass__dot{display:block;flex:none;width:11px;height:11px;padding:0;border:0;border-radius:99px;background:#c8c8c8;cursor:pointer;transition:width .2s,background .2s}
-.modern-brands-glass__dot.is-active{width:42px;background:#111}
+.modern-brands-glass__dots{display:flex;align-items:center;justify-content:center;gap:8px;min-height:16px}
+.modern-brands-glass__dot{display:block;flex:none;width:8px;height:8px;padding:0;border:0;border-radius:99px;background:#c8c8c8;cursor:pointer;transition:width .2s,background .2s}
+.modern-brands-glass__dot.is-active{width:24px;background:#111}
 [dir=rtl] .modern-brands-glass__button span{transform:scaleX(-1)}
 @media(max-width:989px){.modern-brands-glass__carousel{--mbl-visible-cols:min(var(--mbl-cols-tablet,3),max(1,calc(var(--mbl-item-count) - 1)))}}
-@media(max-width:749px){.modern-brands-glass__carousel{--mbl-visible-cols:min(var(--mbl-cols-mobile,2),max(1,calc(var(--mbl-item-count) - 1)))}.modern-brands-glass__nav{gap:16px;margin-top:18px}.modern-brands-glass__button{width:46px;height:46px;font-size:21px}.modern-brands-glass__dot.is-active{width:32px}}
+@media(max-width:749px){.modern-brands-glass__carousel{--mbl-visible-cols:min(var(--mbl-cols-mobile,2),max(1,calc(var(--mbl-item-count) - 1)))}.modern-brands-glass__nav{gap:14px;margin-top:20px}}
 @media(prefers-reduced-motion:reduce){.modern-brands-glass__track{scroll-behavior:auto}.modern-brands-glass__button,.modern-brands-glass__dot{transition:none}}
