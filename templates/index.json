@@ -576,6 +576,19 @@
         "pd": "50px,,50px,",
         "pd_mb": "50px,,50px,"
       }
+    },
+    "full_width_banner_bQRbbt": {
+      "type": "full-width-banner",
+      "name": "Full width banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-updated.webp",
+        "mobile_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-mobile.webp",
+        "desktop_height": 580,
+        "mobile_height": 420,
+        "desktop_position": "center",
+        "mobile_position": "center",
+        "alt_text": "Our featured products"
+      }
     }
   },
   "order": [
@@ -584,6 +597,7 @@
     "full_width_banner_yCce3J",
     "modern_product_showcase_xgBMfY",
     "modern_product_tabs_tTdFhi",
+    "full_width_banner_bQRbbt",
     "modern_product_showcase_n8Wxm3",
     "modern_brand_logos_9NQYme",
     "custom_line_WWiQAz",
