@@ -206,8 +206,8 @@
       "type": "modern-product-showcase",
       "name": "Modern products",
       "settings": {
-        "title": "Accessories",
-        "text": "<p>Explore our featured iPhones and find the perfect upgrade for you.</p>",
+        "title": "Essential Mobile Accessories",
+        "text": "<p>Discover earbuds, chargers, cases, smartwatches, and more for everyday life.</p>",
         "collection": "accessories",
         "layout": "grid",
         "limit": 8,
