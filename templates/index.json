@@ -12,6 +12,20 @@
     "slideshow_EVrUzi": {
       "type": "professional-hero-slider",
       "blocks": {
+        "slide_6bpRyc": {
+          "type": "slide",
+          "settings": {
+            "title": "BarBerry General Trading Company",
+            "eyebrow": "Discover Your Next Phone",
+            "description": "Explore powerful Xiaomi and realme smartphones designed for everyday life",
+            "primary_text": "Discover More",
+            "primary_link": "shopify://collections",
+            "secondary_text": "Contact Us",
+            "secondary_link": "shopify://pages/contact-us",
+            "image": "shopify://shop_images/BarBerry-hero-desktop.webp",
+            "mobile_image": "shopify://shop_images/BarBerry-hero-mobile.webp"
+          }
+        },
         "slide_item_GJUjrM": {
           "type": "slide",
           "settings": {
@@ -42,6 +56,7 @@
         }
       },
       "block_order": [
+        "slide_6bpRyc",
         "slide_item_GJUjrM",
         "slide_item_Aeee3A"
       ],
