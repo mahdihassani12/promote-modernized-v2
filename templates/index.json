@@ -112,6 +112,7 @@
       "name": "Full width banner",
       "settings": {
         "desktop_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-updated.webp",
+        "mobile_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-mobile.webp",
         "desktop_height": 580,
         "mobile_height": 420,
         "desktop_position": "center",
