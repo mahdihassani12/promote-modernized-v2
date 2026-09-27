@@ -97,7 +97,8 @@
           "iphone",
           "realme",
           "samsung",
-          "xiaomi"
+          "xiaomi",
+          "accessories"
         ],
         "layout": "carousel",
         "columns": 4,
