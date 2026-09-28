@@ -33,14 +33,11 @@
         "heading_liquid_gEADwf"
       ],
       "settings": {
-        "use_dynamic_source": true,
-        "color_scheme": "scheme-77e4ef58-56a9-4631-876a-12098ba7d57d",
-        "bg_overlay": 54,
-        "space_item": 0,
-        "mg": "",
-        "mg_mb": "",
-        "pd": "50px,,50px,",
-        "pd_mb": "50px,,50px,"
+        "gradient_start": "#3c2d21",
+        "gradient_middle": "#5d432a",
+        "gradient_end": "#a73532",
+        "gradient_text": "#ffffff",
+        "gradient_angle": 120
       }
     },
     "custom_liquid_aDGx97": {
@@ -78,20 +75,18 @@
             "text_MXnny3": {
               "type": "_liquid",
               "settings": {
+                "option_type": "liquid",
+                "page": "",
                 "text": "<h2>{{ 'barberry.contact.form_heading' | t }}</h2>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "4xl",
-                "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-s-text",
-                "countdown": "2025-12-30 15:00:00",
-                "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
-                "letter_spacing_text": 0,
-                "option_type": "liquid"
+                "letter_spacing_text": 0
               },
               "blocks": {}
             },
@@ -137,11 +132,30 @@
             "text_QJ8PKt": {
               "type": "_liquid",
               "settings": {
+                "option_type": "liquid",
+                "page": "",
                 "text": "<h2>{{ 'barberry.contact.info_heading' | t }}</h2>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "4xl",
+                "font_weight": "normal",
+                "text_color": "hdt-s-text",
+                "font_size_text_lg": 16,
+                "font_size_text": 14,
+                "letter_spacing_text": 0
+              },
+              "blocks": {}
+            },
+            "text_w87QFR": {
+              "type": "text",
+              "name": "t:blocks.text.name",
+              "settings": {
+                "text": "<p>Thank you for taking the time to visit our website. We appreciate your interest in our productsand would be happy to assist you with any questions or concerns you may have.</p><p>Please feel free to use this contact form to reach out to us. Our team will get back to you as soon as possible to provide you with the information you need.</p>",
+                "hidden_br_mobile": false,
+                "hidden_on_mobile": false,
+                "ffamily": "",
+                "text_size": "base",
                 "line_height": "",
                 "font_weight": "normal",
                 "text_color": "hdt-s-text",
@@ -149,8 +163,7 @@
                 "txt_day": "days",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
-                "letter_spacing_text": 0,
-                "option_type": "liquid"
+                "letter_spacing_text": 0
               },
               "blocks": {}
             },
@@ -164,18 +177,19 @@
               },
               "blocks": {}
             },
-            "liquid_XznGcy": {
+            "liquid_aBY6iP": {
               "type": "_liquid",
+              "name": "t:blocks.liquid.name",
               "settings": {
                 "option_type": "liquid",
                 "page": "",
-                "text": "<p>{{ 'barberry.contact.intro_1' | t }}</p>\n<p>{{ 'barberry.contact.intro_2' | t }}</p>\n<p>{{ 'barberry.contact.address' | t }}</p>\n<p><a href=\"tel:07734343439\" dir=\"ltr\">07734343439</a></p>\n<p><a href=\"mailto:info@yourdomain.com\" dir=\"ltr\">info@yourdomain.com</a></p>",
+                "text": "{% if request.locale.iso_code == 'ar' %}\n<ul class=\"hdt-footer-contact\" lang=\"ar\" dir=\"rtl\" style=\"margin: 0; padding: 0; list-style: none; line-height: 24px;\">\n  <li style=\"display: block;\">البريد الإلكتروني: <b dir=\"ltr\">info@yourdomain.com</b></li>\n  <li style=\"display: block;\">الهاتف: <b dir=\"ltr\">07734343439</b></li>\n  <li style=\"display: block;\">العنوان: <b>العراق، بغداد، زيونة، مول زيونة، الطابق الأول</b></li>\n</ul>\n{% else %}\n<ul class=\"hdt-footer-contact\" style=\"margin: 0; padding: 0; list-style: none; line-height: 24px;\">\n  <li style=\"display: block; white-space: nowrap;\">Email: <b>info@yourdomain.com</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Phone: <b>07734343439</b></li>\n  <li style=\"display: block; white-space: nowrap;\">Address: <b>Iraq, Baghdad, Zayoona, Zayoona Mall, F1</b></li>\n</ul>\n{% endif %}",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
                 "text_size": "base",
                 "font_weight": "normal",
-                "text_color": "hdt-text-secondary",
+                "text_color": "hdt-s-text",
                 "font_size_text_lg": 16,
                 "font_size_text": 14,
                 "letter_spacing_text": 0
@@ -186,8 +200,9 @@
           "block_order": [
             "spacer_jDxYgm",
             "text_QJ8PKt",
+            "text_w87QFR",
             "spacer_zDgFxQ",
-            "liquid_XznGcy"
+            "liquid_aBY6iP"
           ]
         }
       },
