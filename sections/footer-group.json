@@ -285,7 +285,7 @@
               "settings": {
                 "option_type": "liquid",
                 "page": "",
-                "text": "<span class=\"hdt-footer-copyright hdt-text-secondary\">\n  {% if request.locale.iso_code == 'ar' %}\n    © [year] بربري للتجارة العامة. جميع الحقوق محفوظة. تصميم وتطوير\n    <a href=\"https://iraq-soft.com/\" target=\"_blank\" rel=\"noopener noreferrer\">عراق سوفت</a>\n  {% else %}\n    © [year] BarBerry General Trading Company. All rights reserved. Designed and developed by\n    <a href=\"https://iraq-soft.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Iraq Soft</a>\n  {% endif %}\n</span>",
+                "text": "<span class=\"hdt-footer-copyright hdt-text-secondary\">\n  {% if request.locale.iso_code == 'ar' %}\n    © [year] بربري. جميع الحقوق محفوظة. تطوير <a href=\"https://iraq-soft.com/\">عراق سوفت</a>\n  {% else %}\n    © [year] BarBerry. All rights reserved. Developed by <a href=\"https://iraq-soft.com/\">Iraq Soft</a>\n  {% endif %}\n</span>",
                 "hidden_br_mobile": false,
                 "hidden_on_mobile": false,
                 "ffamily": "",
