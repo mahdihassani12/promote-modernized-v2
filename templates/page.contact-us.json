@@ -147,6 +147,16 @@
               },
               "blocks": {}
             },
+            "spacer_LpjazB": {
+              "type": "spacer",
+              "settings": {
+                "direction": false,
+                "space_lg": 20,
+                "space_md": 20,
+                "space": 20
+              },
+              "blocks": {}
+            },
             "text_w87QFR": {
               "type": "text",
               "name": "t:blocks.text.name",
@@ -200,6 +210,7 @@
           "block_order": [
             "spacer_jDxYgm",
             "text_QJ8PKt",
+            "spacer_LpjazB",
             "text_w87QFR",
             "spacer_zDgFxQ",
             "liquid_aBY6iP"
