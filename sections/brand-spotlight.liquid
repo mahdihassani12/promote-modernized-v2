@@ -1,0 +1,87 @@
+{%- liquid
+  if request.locale.iso_code == 'ar'
+    assign default_title = 'بروميت العراق'
+    assign default_text = 'بربري هي الوكيل الحصري لبروميت في العراق. اكتشف الإكسسوارات والمنتجات التقنية المبتكرة عبر بروميت العراق.'
+    assign default_button = 'اكتشف بروميت'
+  else
+    assign default_title = 'Promate Iraq'
+    assign default_text = 'BarBerry is the exclusive agent for Promate in Iraq. Explore innovative accessories and technology at Promate Iraq.'
+    assign default_button = 'Explore Promate'
+  endif
+  assign feature_title = section.settings.title | default: default_title
+  assign feature_text = section.settings.text | default: default_text
+  assign feature_button = section.settings.button_label | default: default_button
+-%}
+
+<section class="bb-promate" aria-labelledby="bb-promate-title-{{ section.id }}">
+  <div class="bb-promate__inner">
+    <h2 id="bb-promate-title-{{ section.id }}">{{ feature_title | escape }}</h2>
+    <p>{{ feature_text | escape }}</p>
+    <a class="bb-promate__button" href="{{ section.settings.link | default: 'https://promate.iq/' }}" target="_blank" rel="noopener noreferrer">
+      {{ feature_button | escape }}
+      <span aria-hidden="true">{% if request.locale.iso_code == 'ar' %}←{% else %}→{% endif %}</span>
+    </a>
+  </div>
+</section>
+
+{% style %}
+  #shopify-section-{{ section.id }} .bb-promate {
+    padding: 64px 20px;
+    background: linear-gradient(120deg, #f8f5f1 0%, #f3ebe7 100%);
+    color: #3c2d21;
+    text-align: center;
+    direction: {% if request.locale.iso_code == 'ar' %}rtl{% else %}ltr{% endif %};
+  }
+  #shopify-section-{{ section.id }} .bb-promate__inner {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  #shopify-section-{{ section.id }} .bb-promate h2 {
+    margin: 0 0 16px;
+    font-family: var(--font-heading-family);
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.2;
+    color: inherit;
+  }
+  #shopify-section-{{ section.id }} .bb-promate p {
+    margin: 0 auto 26px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: inherit;
+  }
+  #shopify-section-{{ section.id }} .bb-promate__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 46px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    background: #a73532;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color .2s ease;
+  }
+  #shopify-section-{{ section.id }} .bb-promate__button:hover,
+  #shopify-section-{{ section.id }} .bb-promate__button:focus-visible { background: #752824; color: #fff; }
+  #shopify-section-{{ section.id }} .bb-promate__button:focus-visible { outline: 2px solid #3c2d21; outline-offset: 3px; }
+  @media (max-width: 767px) {
+    #shopify-section-{{ section.id }} .bb-promate { padding: 48px 18px; }
+    #shopify-section-{{ section.id }} .bb-promate p { font-size: 15px; }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Brand spotlight",
+  "settings": [
+    { "type": "paragraph", "content": "Leave text fields blank for the built-in English and Arabic Promate content. Custom text can be translated in Shopify." },
+    { "type": "text", "id": "title", "label": "Heading" },
+    { "type": "textarea", "id": "text", "label": "Short text" },
+    { "type": "text", "id": "button_label", "label": "Button label" },
+    { "type": "url", "id": "link", "label": "Button link", "default": "https://promate.iq/" }
+  ],
+  "presets": [{ "name": "Brand spotlight" }]
+}
+{% endschema %}
