@@ -238,17 +238,21 @@
         "padding": 64
       }
     },
-    "promate_iraq_feature": {
-      "type": "promate-feature",
+    "brand_spotlight_ETcRJB": {
+      "type": "brand-spotlight",
+      "name": "Brand spotlight",
       "settings": {
-        "link": "https://promate.iq/"
+        "title": "Promate Iraq",
+        "text": "As Promate’s exclusive agent in Iraq, BarBerry brings you innovative accessories designed to make everyday technology more convenient. Explore the collection at Promate Iraq.",
+        "button_label": "Explore Promate",
+        "link": "http://promate.iq/"
       }
     }
   },
   "order": [
     "main_heading_fgVmaw",
     "custom_section_qTGJeH",
-    "promate_iraq_feature",
+    "brand_spotlight_ETcRJB",
     "modern_image_boxes_wREnFd"
   ]
 }
