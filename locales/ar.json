@@ -2877,9 +2877,103 @@
       "follow": {
         "follow_fb": "تابعنا على فيسبوك",
         "follow_tw": "تابع على تويتر",
-        "follow_it": "تابعنا على انستغرام"
+        "follow_it": "تابعنا على انستغرام",
+        "follow_dr": "تابعنا على Dribbble",
+        "follow_ld": "تابعنا على لينكد إن",
+        "follow_pr": "تابعنا على Pinterest",
+        "follow_tu": "تابعنا على تمبلر",
+        "follow_yt": "تابعنا على يوتيوب",
+        "follow_vm": "تابعنا على فيميو",
+        "follow_bh": "تابعنا على Behance",
+        "follow_sc": "تابعنا على ساوند كلاود",
+        "follow_tt": "تابعنا على تيك توك",
+        "follow_sp": "تابعنا على سناب شات",
+        "follow_sptify": "تابعنا على Spotify",
+        "follow_threads": "تابعنا على Threads"
       }
-    }
+    },
+    "continue_shopping": "مواصلة التسوق",
+    "pagination": {
+      "label": "ترقيم الصفحات",
+      "page": "اذهب إلى صفحة {{ number }}",
+      "view_all": "عرض الكل",
+      "next": "التالي",
+      "previous": "السابق",
+      "load_more_articles": "تحميل المزيد من المنشورات",
+      "load_more_items": "عرض المزيد من العناصر",
+      "load_more_products": "تحميل المزيد من المنتجات",
+      "load_more_collections": "تحميل المزيد من المجموعات"
+    },
+    "search": {
+      "search": "بحث",
+      "search_text": "بحث",
+      "search_our_site": "ابحث في موقعنا",
+      "search_categories": "جميع الفئات",
+      "search_content_site": "هل تحتاج إلى بعض الإلهام؟",
+      "search_results": "نتائج البحث",
+      "no_product_results": "لم يتم العثور على أي منتجات تطابق اختيارك.",
+      "placeholder_products": "البحث عن منتجات",
+      "reset": "مسح مصطلح البحث",
+      "quicklink_title": "بحث سريع",
+      "pages_type": "صفحة",
+      "results_with_term": {
+        "zero": "0 نتائج بحث لـ: \"{{ terms }}\"",
+        "one": "1 نتيجة بحث عن: \"{{ terms }}\"",
+        "other": "{{ count }} نتائج البحث عن: \"{{ terms }}\""
+      },
+      "all_categories": "جميع الفئات",
+      "quick_search": "بحث سريع",
+      "suggestions": "اقتراحات",
+      "article": "مقالات",
+      "search_for": "ابحث عن"
+    },
+    "cart": {
+      "view": "عرض سلة التسوق ({{ count }})",
+      "view_empty_cart": "عرض السلة",
+      "item_added": "تمت إضافة العنصر إلى عربة التسوق الخاصة بك",
+      "error_message": "حدث خطأ أثناء إضافة المنتج إلى عربة التسوق",
+      "toast_title": "خطأ في إضافة المنتج إلى السلة"
+    },
+    "slider": {
+      "of": "من",
+      "next_slide": "اسحب لليمين",
+      "previous_slide": "اسحب لليسار",
+      "name": "شريط التمرير"
+    },
+    "wishlist": {
+      "wishlist_page": "قائمة أمنياتك",
+      "wishlist_text": "قائمة الأمنيات",
+      "login_to_use_wishlist": "سجل الدخول لاستخدام قائمة الأمنيات",
+      "add_to_wishlist": "أضف إلى قائمة الأمنيات",
+      "adding_to_wishlist": "إضافة إلى قائمة الأمنيات",
+      "browse_wishlist": "تصفح قائمة الأمنيات",
+      "remove_wishlist": "إزالة من قائمة الأمنيات",
+      "empty_wishlist": "قائمة الأمنيات فارغة.",
+      "empty_info_wishlist": "لا توجد أي منتجات في قائمة الأمنيات بعد. ستجد الكثير من المنتجات المثيرة للاهتمام في \"صفحة المتجر\" الخاصة بنا."
+    },
+    "compare": {
+      "view": "عرض سلة التسوق ({{ count }})",
+      "view_empty_cart": "عرض السلة",
+      "item_added": "تمت إضافة العنصر إلى عربة التسوق الخاصة بك",
+      "compare_text": "قارِن",
+      "login_to_use_compare": "سجّل الدخول لاستخدام ميزة المقارنة",
+      "add_to_compare": "أضف إلى المقارنة",
+      "browse_compare": "تصفح وقارن"
+    },
+    "header": {
+      "menu": "القائمة",
+      "menu_categories": "الفئات"
+    },
+    "breadcrumb": {
+      "home": "الرئيسية"
+    },
+    "theme_settings": {
+      "badge_new": "جديد، جديد",
+      "badge_hot": "ساخن، ساخن",
+      "badge_sale": "تخفيضات"
+    },
+    "read_more": "اقرأ المزيد",
+    "read_less": "اقرأ أقل"
   },
   "customer_accounts": {
     "subscriptions": {
@@ -4303,7 +4397,49 @@
       "product": "المنتج",
       "sku": "رمز التخزين التعريفي",
       "price": "السعر",
-      "quantity": "الكمية"
+      "quantity": "الكمية",
+      "total": "الإجمالي",
+      "total_refunded": "تم استرداد المبلغ",
+      "fulfilled_at_html": "مُنجز {{ date }}",
+      "track_shipment": "تتبع الشحنة",
+      "tracking_url": "رابط التتبع",
+      "tracking_company": "ناقل",
+      "tracking_number": "رقم التتبع",
+      "subtotal": "المجموع الفرعي",
+      "total_duties": "الواجبات"
+    },
+    "orders": {
+      "title": "سجل الطلبات",
+      "order_number": "طلب",
+      "order_number_link": "رقم الطلب {{ number }}",
+      "date": "التاريخ",
+      "payment_status": "حالة الدفع",
+      "fulfillment_status": "حالة التنفيذ",
+      "total": "الإجمالي",
+      "none": "لم تقم بوضع أي طلبات بعد."
+    },
+    "recover_password": {
+      "title": "إعادة تعيين كلمة المرور",
+      "subtext": "هل فقدت كلمة المرور الخاصة بك؟ يرجى إدخال عنوان بريدك الإلكتروني. ستصلك رسالة عبر البريد الإلكتروني تحتوي على رابط لإنشاء كلمة مرور جديدة.",
+      "success": "لقد أرسلنا إليك بريداً إلكترونياً يحتوي على رابط لتحديث كلمة مرورك.",
+      "submit": "إعادة تعيين كلمة المرور",
+      "content_success": "تم إرسال رسالة بريد إلكتروني لإعادة تعيين كلمة المرور إلى عنوان البريد الإلكتروني المسجل في حسابك، وقد يستغرق ظهورها في صندوق الوارد بضع دقائق. يرجى الانتظار لمدة 10 دقائق على الأقل قبل محاولة إعادة التعيين مرة أخرى."
+    },
+    "register": {
+      "login_here": "هل لديك حساب بالفعل؟ سجل دخولك من هنا",
+      "title": "إنشاء حساب",
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة",
+      "email": "بريد إلكتروني",
+      "password": "كلمة المرور",
+      "submit": "تسجيل"
+    },
+    "reset_password": {
+      "title": "إعادة تعيين كلمة مرور الحساب",
+      "subtext": "أدخل كلمة مرور جديدة",
+      "password": "كلمة المرور",
+      "password_confirm": "تأكيد كلمة المرور",
+      "submit": "إعادة تعيين كلمة المرور"
     }
   },
   "blogs": {
@@ -4324,7 +4460,13 @@
       "read_more": "واصل القراءة",
       "back_to": "العودة إلى {{ title }}",
       "view_all": "عرض المزيد",
-      "by_author": "بواسطة {{ author }}"
+      "by_author": "بواسطة {{ author }}",
+      "blog": "مدونة",
+      "read_more_title": "اقرأ المزيد: {{ title }}",
+      "comments_html": {
+        "one": "{{ count }} <span class=\"hdt-s-text2\">تعليق</span>",
+        "other": "{{ count }} <span class=\"hdt-s-text2\">تعليقات</span>"
+      }
     },
     "comments": {
       "title": "اترك تعليقًا",
@@ -4577,5 +4719,120 @@
       "description": "بربري هي الوكيل الحصري لبروميت في العراق. اكتشف الإكسسوارات والمنتجات التقنية المبتكرة عبر بروميت العراق.",
       "button": "اكتشف بروميت"
     }
+  },
+  "compare_popup": {
+    "title": "مقارنة المنتجات",
+    "clear": "مسح الكل",
+    "viewpage": "قارِن"
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "استخدم رمز بطاقة الهدايا عبر الإنترنت أو رمز الاستجابة السريعة (QR) في المتجر",
+      "title": "هذا هو رصيد بطاقة الهدايا الخاصة بك {{ value }} لـ {{ shop }}!",
+      "subtext": "بطاقة الهدايا الخاصة بك",
+      "gift_card_code": "رمز بطاقة الهدايا",
+      "shop_link": "قم بزيارة المتجر الإلكتروني",
+      "add_to_apple_wallet": "إضافة إلى Apple Wallet",
+      "qr_image_alt": "رمز QR — امسحه ضوئياً لاستبدال بطاقة الهدايا",
+      "copy_code": "نسخ الرمز",
+      "expiration_date": "تاريخ الانتهاء {{ expires_on }}",
+      "copy_code_success": "تم نسخ الرمز بنجاح",
+      "expired": "منتهي الصلاحية",
+      "print": "اطبع بطاقة الهدايا هذه",
+      "redeem_html": "استخدم هذا الرمز عند الدفع لاسترداد قيمة بطاقة الهدايا الخاصة بك بقيمة {{ value }}"
+    }
+  },
+  "compare_page": {
+    "title": "قارِن",
+    "empty": "قائمة المقارنة فارغة",
+    "empty_html": "لم تتم إضافة أي منتجات إلى قائمة المقارنة. يجب عليك إضافة بعض المنتجات لمقارنتها.<br> ستجد الكثير من المنتجات المثيرة للاهتمام في صفحة \"المتجر\" الخاصة بنا.",
+    "remove": "إزالة",
+    "in_stock": "متوفر في المخزون",
+    "outofstock": "غير متوفر"
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "أريد إرسال هذا كهدية",
+      "expanded": "نموذج مستلم بطاقة الهدايا الموسع",
+      "collapsed": "نموذج مستلم بطاقة الهدايا مطوي",
+      "email_label": "البريد الإلكتروني للمستلم",
+      "email_label_optional_for_no_js_behavior": "البريد الإلكتروني للمستلم (اختياري)",
+      "name_label": "اسم المستلم (اختياري)",
+      "message_label": "رسالة (اختياري)",
+      "max_characters": "{{ max_chars }} حرف كحد أقصى",
+      "send_on_label": "إرسال (اختياري)"
+    }
+  },
+  "light_box_image": {
+    "close": "إغلاق",
+    "zoom": "زوم",
+    "prev": "السابق",
+    "next": "التالي",
+    "errorMsg": "تعذر تحميل الصورة"
+  },
+  "age_verification": {
+    "month": {
+      "label": "شهر",
+      "options": {
+        "1": "يناير",
+        "2": "فبراير",
+        "3": "مارس",
+        "4": "أبريل",
+        "5": "قد",
+        "6": "يونيو",
+        "7": "يوليو",
+        "8": "أغسطس",
+        "9": "سبتمبر",
+        "10": "أكتوبر",
+        "11": "نوفمبر",
+        "12": "ديسمبر"
+      }
+    },
+    "day": {
+      "label": "يوم"
+    },
+    "year": {
+      "label": "عام"
+    },
+    "january": "يناير",
+    "february": "فبراير",
+    "march": "مارس",
+    "april": "أبريل",
+    "may": "قد",
+    "june": "يونيو",
+    "july": "يوليو",
+    "august": "أغسطس",
+    "september": "سبتمبر",
+    "october": "أكتوبر",
+    "november": "نوفمبر",
+    "december": "ديسمبر"
+  },
+  "newsletter": {
+    "label": "بريد إلكتروني",
+    "success": "شكراً لاشتراكك",
+    "button_label": "اشترك"
+  },
+  "accessibility": {
+    "skip_to_text": "تخطَّ إلى المحتوى",
+    "skip_to_product_info": "انتقل إلى معلومات المنتج",
+    "close": "إغلاق",
+    "unit_price_separator": "لكل",
+    "vendor": "المورد:",
+    "type": "النوع:",
+    "error": "خطأ",
+    "refresh_page": "يؤدي اختيار أحد العناصر إلى تحديث الصفحة بالكامل.",
+    "link_messages": {
+      "new_window": "يفتح في نافذة جديدة.",
+      "external": "يفتح موقعاً إلكترونياً خارجياً.",
+      "new_window_and_external": "يفتح موقعاً إلكترونياً خارجياً في نافذة جديدة."
+    },
+    "loading": "جاري التحميل...",
+    "star_reviews_info": "{{ rating_value }} من أصل {{ rating_max }} نجمة",
+    "collapsible_content_title": "محتوى قابل للطي",
+    "complementary_products": "منتجات مكملة",
+    "before_after": "نسبة الصورة اللاحقة المعروضة",
+    "go_to_slide": "انتقل إلى الشريحة {{ number }}",
+    "go_to_page": "اذهب إلى صفحة {{ number }}",
+    "go_to_item": "اذهب إلى العنصر {{ number }}"
   }
 }
