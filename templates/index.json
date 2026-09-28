@@ -151,6 +151,19 @@
         "speed": 28
       }
     },
+    "full_width_banner_yCce3J": {
+      "type": "full-width-banner",
+      "name": "Full width banner",
+      "settings": {
+        "desktop_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-updated.webp",
+        "mobile_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-mobile.webp",
+        "desktop_height": 580,
+        "mobile_height": 420,
+        "desktop_position": "center",
+        "mobile_position": "center",
+        "alt_text": "Our featured products"
+      }
+    },
     "moving_text_eMMDTP": {
       "type": "moving-text",
       "blocks": {
@@ -192,19 +205,6 @@
         "font_size": 16,
         "mobile_font_size": 14,
         "speed": 28
-      }
-    },
-    "full_width_banner_yCce3J": {
-      "type": "full-width-banner",
-      "name": "Full width banner",
-      "settings": {
-        "desktop_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-updated.webp",
-        "mobile_image": "shopify://shop_images/BarBerry-iPhone-ad-banner-mobile.webp",
-        "desktop_height": 580,
-        "mobile_height": 420,
-        "desktop_position": "center",
-        "mobile_position": "center",
-        "alt_text": "Our featured products"
       }
     },
     "modern_product_showcase_xgBMfY": {
@@ -273,6 +273,92 @@
         "image_ratio": "square",
         "show_vendor": false,
         "padding": 64
+      }
+    },
+    "moving_text_wAUWrh": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_bpRfFr": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_FrNQhP": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_6KjGiA": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_rfPgnz": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_bpRfFr",
+        "phrase_FrNQhP",
+        "phrase_6KjGiA",
+        "phrase_rfPgnz"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 28
+      }
+    },
+    "moving_text_3ipPMF": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_kK8t7C": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_nbCgVT": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_Y34Hkj": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_qtGEkt": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_kK8t7C",
+        "phrase_nbCgVT",
+        "phrase_Y34Hkj",
+        "phrase_qtGEkt"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 28
       }
     },
     "full_width_banner_bQRbbt": {
@@ -695,7 +781,9 @@
     "moving_text_eMMDTP",
     "modern_product_showcase_xgBMfY",
     "modern_product_tabs_tTdFhi",
+    "moving_text_wAUWrh",
     "full_width_banner_bQRbbt",
+    "moving_text_3ipPMF",
     "modern_product_showcase_n8Wxm3",
     "brand_spotlight_kCaWaa",
     "modern_brand_logos_9NQYme",
