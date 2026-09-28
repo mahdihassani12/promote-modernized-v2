@@ -17,7 +17,7 @@
     const controller = new AbortController();
     const { signal } = controller;
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const interval = carousel.dataset.autoplay === 'true' && !reducedMotion ? 400 : 0;
+    const interval = carousel.dataset.autoplay === 'true' && !reducedMotion ? 5000 : 0;
     let position = count;
     let timer;
     let settleTimer;
@@ -85,7 +85,7 @@
       if (forward && position >= count * 2) scrollToPosition(count + logicalIndex(position), 'instant');
       const target = Math.max(0, Math.min(cards.length - 1, position + (forward ? 1 : -1)));
       scrollToPosition(target);
-      settleTimer = setTimeout(settle, reducedMotion ? 0 : 320);
+      settleTimer = setTimeout(settle, reducedMotion ? 0 : 500);
     }
     function stop() { clearInterval(timer); timer = undefined; }
     function start() {
@@ -101,7 +101,7 @@
       dot.addEventListener('click', () => {
         clearTimeout(settleTimer);
         scrollToPosition(count + index);
-        settleTimer = setTimeout(settle, reducedMotion ? 0 : 320);
+        settleTimer = setTimeout(settle, reducedMotion ? 0 : 500);
       }, { signal });
       return dot;
     }));
