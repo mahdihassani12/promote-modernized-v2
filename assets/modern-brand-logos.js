@@ -13,18 +13,16 @@
     if (!track || !previous || !next || !dots || originals.length < 2) return;
 
     const count = originals.length;
-    const rtl = document.documentElement.dir.toLowerCase() === 'rtl';
+    const rtl = document.documentElement.dir.toLowerCase() === 'rtl' || /^ar\b/i.test(document.documentElement.lang);
     const controller = new AbortController();
     const { signal } = controller;
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const seconds = Math.max(3, Math.min(8, (Number(carousel.dataset.speed) || 30) / 6));
-    const interval = carousel.dataset.autoplay === 'true' && !reducedMotion ? seconds * 1000 : 0;
+    const interval = carousel.dataset.autoplay === 'true' && !reducedMotion ? 500 : 0;
     let position = count;
     let timer;
     let settleTimer;
     let observer;
     let visible = true;
-    let paused = false;
 
     carousel.dir = rtl ? 'rtl' : 'ltr';
     track.dir = rtl ? 'rtl' : 'ltr';
@@ -86,12 +84,12 @@
       clearTimeout(settleTimer);
       const target = Math.max(0, Math.min(cards.length - 1, position + (forward ? 1 : -1)));
       scrollToPosition(target);
-      settleTimer = setTimeout(settle, reducedMotion ? 0 : 500);
+      settleTimer = setTimeout(settle, reducedMotion ? 0 : 420);
     }
     function stop() { clearInterval(timer); timer = undefined; }
     function start() {
       stop();
-      if (interval && !paused && visible && !document.hidden) timer = setInterval(() => move(true), interval);
+      if (interval && visible && !document.hidden) timer = setInterval(() => move(true), interval);
     }
 
     dots.replaceChildren(...originals.map((_, index) => {
@@ -102,7 +100,7 @@
       dot.addEventListener('click', () => {
         clearTimeout(settleTimer);
         scrollToPosition(count + index);
-        settleTimer = setTimeout(settle, reducedMotion ? 0 : 500);
+        settleTimer = setTimeout(settle, reducedMotion ? 0 : 420);
       }, { signal });
       return dot;
     }));
@@ -119,10 +117,6 @@
       clearTimeout(settleTimer);
       settleTimer = setTimeout(settle, 180);
     }, { passive: true, signal });
-    carousel.addEventListener('pointerenter', () => { paused = true; stop(); }, { signal });
-    carousel.addEventListener('pointerleave', () => { paused = false; start(); }, { signal });
-    carousel.addEventListener('focusin', () => { paused = true; stop(); }, { signal });
-    carousel.addEventListener('focusout', (event) => { if (!carousel.contains(event.relatedTarget)) { paused = false; start(); } }, { signal });
     document.addEventListener('visibilitychange', start, { signal });
     const resize = new ResizeObserver(() => {
       clearTimeout(settleTimer);
