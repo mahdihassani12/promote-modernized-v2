@@ -23,6 +23,8 @@
     let settleTimer;
     let observer;
     let visible = true;
+    let animationFrame;
+    let animating = false;
 
     carousel.dir = rtl ? 'rtl' : 'ltr';
     track.dir = rtl ? 'rtl' : 'ltr';
@@ -62,13 +64,46 @@
         else dot.removeAttribute('aria-current');
       });
     }
+    function cancelAnimation() {
+      if (animationFrame) cancelAnimationFrame(animationFrame);
+      animationFrame = undefined;
+      animating = false;
+      track.style.scrollBehavior = '';
+      track.style.scrollSnapType = '';
+    }
     function scrollToPosition(index, behavior = 'smooth') {
+      cancelAnimation();
       position = index;
       const rect = cards[index].getBoundingClientRect();
       const viewport = track.getBoundingClientRect();
       const delta = rtl ? rect.right - viewport.right : rect.left - viewport.left;
-      track.scrollBy({ left: delta, behavior: reducedMotion ? 'instant' : behavior });
-      if (behavior === 'instant' || reducedMotion) render();
+      if (behavior === 'instant' || reducedMotion) {
+        track.scrollBy({ left: delta, behavior: 'instant' });
+        render();
+        return;
+      }
+      // Animate the actual scroll for one second. Native smooth scrolling is
+      // much quicker and does not offer a reliable duration across browsers.
+      const start = track.scrollLeft;
+      const startedAt = performance.now();
+      track.style.scrollBehavior = 'auto';
+      track.style.scrollSnapType = 'none';
+      animating = true;
+      function frame(now) {
+        const progress = Math.min((now - startedAt) / 1000, 1);
+        const eased = progress * progress * (3 - 2 * progress);
+        track.scrollLeft = start + delta * eased;
+        render();
+        if (progress < 1) animationFrame = requestAnimationFrame(frame);
+        else {
+          animationFrame = undefined;
+          animating = false;
+          track.style.scrollBehavior = '';
+          track.style.scrollSnapType = '';
+          settle();
+        }
+      }
+      animationFrame = requestAnimationFrame(frame);
     }
     function settle() {
       clearTimeout(settleTimer);
@@ -85,7 +120,7 @@
       if (forward && position >= count * 2) scrollToPosition(count + logicalIndex(position), 'instant');
       const target = Math.max(0, Math.min(cards.length - 1, position + (forward ? 1 : -1)));
       scrollToPosition(target);
-      settleTimer = setTimeout(settle, reducedMotion ? 0 : 500);
+      if (reducedMotion) settle();
     }
     function stop() { clearInterval(timer); timer = undefined; }
     function start() {
@@ -101,7 +136,7 @@
       dot.addEventListener('click', () => {
         clearTimeout(settleTimer);
         scrollToPosition(count + index);
-        settleTimer = setTimeout(settle, reducedMotion ? 0 : 500);
+        if (reducedMotion) settle();
       }, { signal });
       return dot;
     }));
@@ -115,11 +150,15 @@
     }, { signal });
     track.addEventListener('scroll', () => {
       render();
+      if (animating) return;
       clearTimeout(settleTimer);
       settleTimer = setTimeout(settle, 180);
     }, { passive: true, signal });
     document.addEventListener('visibilitychange', start, { signal });
+    let lastWidth = track.clientWidth;
     const resize = new ResizeObserver(() => {
+      if (track.clientWidth === lastWidth) return;
+      lastWidth = track.clientWidth;
       clearTimeout(settleTimer);
       scrollToPosition(count + logicalIndex(position), 'instant');
       start();
@@ -138,6 +177,7 @@
     instances.set(carousel, {
       destroy() {
         stop();
+        cancelAnimation();
         clearTimeout(settleTimer);
         resize.disconnect();
         observer?.disconnect();
