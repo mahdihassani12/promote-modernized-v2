@@ -12,6 +12,12 @@
     "moving_text_3ipPMF": {
       "type": "moving-text",
       "blocks": {
+        "phrase_8jxERQ": {
+          "type": "phrase",
+          "settings": {
+            "text": "The latest smartphones, headphones, and smart devices."
+          }
+        },
         "phrase_kK8t7C": {
           "type": "phrase",
           "settings": {
@@ -32,6 +38,7 @@
         }
       },
       "block_order": [
+        "phrase_8jxERQ",
         "phrase_kK8t7C",
         "phrase_nbCgVT",
         "phrase_Y34Hkj"
@@ -42,7 +49,7 @@
         "text_color": "#ffffff",
         "font_size": 16,
         "mobile_font_size": 14,
-        "speed": 28
+        "speed": 16
       }
     },
     "slideshow_EVrUzi": {
