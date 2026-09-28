@@ -9,6 +9,49 @@
  */
 {
   "sections": {
+    "moving_text_3ipPMF": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_8jxERQ": {
+          "type": "phrase",
+          "settings": {
+            "text": "The latest smartphones, headphones, and smart devices."
+          }
+        },
+        "phrase_kK8t7C": {
+          "type": "phrase",
+          "settings": {
+            "text": "Your smart world starts here"
+          }
+        },
+        "phrase_nbCgVT": {
+          "type": "phrase",
+          "settings": {
+            "text": "All the tech you need, in one place"
+          }
+        },
+        "phrase_Y34Hkj": {
+          "type": "phrase",
+          "settings": {
+            "text": "Technology that fits your lifestyle"
+          }
+        }
+      },
+      "block_order": [
+        "phrase_8jxERQ",
+        "phrase_kK8t7C",
+        "phrase_nbCgVT",
+        "phrase_Y34Hkj"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 16
+      }
+    },
     "slideshow_EVrUzi": {
       "type": "professional-hero-slider",
       "blocks": {
@@ -108,6 +151,49 @@
         "padding": 20
       }
     },
+    "moving_text_ixVUMH": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_RVHcMb": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_4cGMbV": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_rncJpq": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_7RNx79": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_RVHcMb",
+        "phrase_4cGMbV",
+        "phrase_rncJpq",
+        "phrase_7RNx79"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 16
+      }
+    },
     "full_width_banner_yCce3J": {
       "type": "full-width-banner",
       "name": "Full width banner",
@@ -119,6 +205,49 @@
         "desktop_position": "center",
         "mobile_position": "center",
         "alt_text": "Our featured products"
+      }
+    },
+    "moving_text_eMMDTP": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_RqHgWj": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_KjcU6a": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_TiwFNV": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_rLyNdA": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_RqHgWj",
+        "phrase_KjcU6a",
+        "phrase_TiwFNV",
+        "phrase_rLyNdA"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 16
       }
     },
     "modern_product_showcase_xgBMfY": {
@@ -189,6 +318,49 @@
         "padding": 64
       }
     },
+    "moving_text_wAUWrh": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_bpRfFr": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_FrNQhP": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_6KjGiA": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_rfPgnz": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_bpRfFr",
+        "phrase_FrNQhP",
+        "phrase_6KjGiA",
+        "phrase_rfPgnz"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 16
+      }
+    },
     "full_width_banner_bQRbbt": {
       "type": "full-width-banner",
       "name": "Full width banner",
@@ -200,6 +372,76 @@
         "desktop_position": "center",
         "mobile_position": "center",
         "alt_text": "Our featured products"
+      }
+    },
+    "moving_text_NnBNbr": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_dHkgAb": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_XPLwVU": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_Nxxf6k": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_nBwV7Q": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_dHkgAb",
+        "phrase_XPLwVU",
+        "phrase_Nxxf6k",
+        "phrase_nBwV7Q"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 16
+      }
+    },
+    "modern_product_showcase_n8Wxm3": {
+      "type": "modern-product-showcase",
+      "name": "Modern products",
+      "settings": {
+        "title": "Essential Mobile Accessories",
+        "text": "<p>Discover earbuds, chargers, cases, smartwatches, and more for everyday life.</p>",
+        "collection": "accessories",
+        "layout": "grid",
+        "limit": 8,
+        "columns": 4,
+        "gap": 16,
+        "image_ratio": "square",
+        "show_vendor": false,
+        "link_label": "View all",
+        "padding": 32
+      }
+    },
+    "brand_spotlight_kCaWaa": {
+      "type": "brand-spotlight",
+      "name": "Brand spotlight",
+      "settings": {
+        "title": "Promate Iraq",
+        "text": "As Promate’s exclusive agent in Iraq, BarBerry brings you innovative accessories designed to make everyday technology more convenient. Explore the collection at Promate Iraq.",
+        "button_label": "Explore Promate",
+        "link": "http://promate.iq/"
       }
     },
     "modern_brand_logos_9NQYme": {
@@ -267,33 +509,6 @@
         "gap": 24,
         "radius": 28,
         "padding": 64
-      }
-    },
-    "modern_product_showcase_n8Wxm3": {
-      "type": "modern-product-showcase",
-      "name": "Modern products",
-      "settings": {
-        "title": "Essential Mobile Accessories",
-        "text": "<p>Discover earbuds, chargers, cases, smartwatches, and more for everyday life.</p>",
-        "collection": "accessories",
-        "layout": "grid",
-        "limit": 8,
-        "columns": 4,
-        "gap": 16,
-        "image_ratio": "square",
-        "show_vendor": false,
-        "link_label": "View all",
-        "padding": 32
-      }
-    },
-    "brand_spotlight_kCaWaa": {
-      "type": "brand-spotlight",
-      "name": "Brand spotlight",
-      "settings": {
-        "title": "Promate Iraq",
-        "text": "As Promate’s exclusive agent in Iraq, BarBerry brings you innovative accessories designed to make everyday technology more convenient. Explore the collection at Promate Iraq.",
-        "button_label": "Explore Promate",
-        "link": "http://promate.iq/"
       }
     },
     "custom_line_WWiQAz": {
@@ -602,12 +817,17 @@
     }
   },
   "order": [
+    "moving_text_3ipPMF",
     "slideshow_EVrUzi",
     "modern_collections_ky4EFq",
+    "moving_text_ixVUMH",
     "full_width_banner_yCce3J",
+    "moving_text_eMMDTP",
     "modern_product_showcase_xgBMfY",
     "modern_product_tabs_tTdFhi",
+    "moving_text_wAUWrh",
     "full_width_banner_bQRbbt",
+    "moving_text_NnBNbr",
     "modern_product_showcase_n8Wxm3",
     "brand_spotlight_kCaWaa",
     "modern_brand_logos_9NQYme",
