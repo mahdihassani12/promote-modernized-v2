@@ -1,0 +1,124 @@
+{%- liquid
+  assign is_arabic = false
+  if request.locale.iso_code == 'ar'
+    assign is_arabic = true
+  endif
+-%}
+
+{%- if section.blocks.size > 0 -%}
+  <div class="bb-moving-text" {% if is_arabic %}dir="rtl"{% else %}dir="ltr"{% endif %}>
+    <div class="bb-moving-text__track">
+      {%- for copy in (1..2) -%}
+        <div class="bb-moving-text__group" {% if copy == 2 %}aria-hidden="true"{% else %}role="list"{% endif %}>
+          {%- for block in section.blocks -%}
+            {%- liquid
+              assign label = block.settings.text
+              if label == blank
+                if is_arabic
+                  case forloop.index
+                    when 1
+                      assign label = 'أحدث الهواتف الذكية'
+                    when 2
+                      assign label = 'إكسسوارات موثوقة'
+                    when 3
+                      assign label = 'أسعار مميزة'
+                    else
+                      assign label = 'جودة عالية'
+                  endcase
+                else
+                  case forloop.index
+                    when 1
+                      assign label = 'Latest smartphones'
+                    when 2
+                      assign label = 'Trusted accessories'
+                    when 3
+                      assign label = 'Great prices'
+                    else
+                      assign label = 'Quality products'
+                  endcase
+                endif
+              endif
+            -%}
+            <span class="bb-moving-text__item" {% if copy == 1 %}role="listitem" {{ block.shopify_attributes }}{% endif %}>{{ label | escape }}</span>
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% style %}
+  #shopify-section-{{ section.id }} .bb-moving-text {
+    overflow: hidden;
+    width: 100%;
+    background: {{ section.settings.background_color }};
+    color: {{ section.settings.text_color }};
+  }
+  #shopify-section-{{ section.id }} .bb-moving-text__track {
+    display: flex;
+    width: max-content;
+    direction: ltr;
+    animation: bb-moving-text-{{ section.id }} {{ section.settings.speed }}s linear infinite;
+    {% if is_arabic %}animation-direction: reverse;{% endif %}
+  }
+  #shopify-section-{{ section.id }} .bb-moving-text__group {
+    display: flex;
+    flex: 0 0 auto;
+    min-width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    padding: 9px 20px;
+    box-sizing: border-box;
+    direction: {% if is_arabic %}rtl{% else %}ltr{% endif %};
+  }
+  #shopify-section-{{ section.id }} .bb-moving-text__item {
+    flex: 0 0 auto;
+    font-family: var(--font-heading-family);
+    font-size: {{ section.settings.font_size }}px;
+    font-weight: 600;
+    line-height: 1.3;
+    white-space: nowrap;
+    color: inherit;
+  }
+  #shopify-section-{{ section.id }} .bb-moving-text:hover .bb-moving-text__track,
+  #shopify-section-{{ section.id }} .bb-moving-text:focus-within .bb-moving-text__track {
+    animation-play-state: paused;
+  }
+  @keyframes bb-moving-text-{{ section.id }} {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (max-width: 767px) {
+    #shopify-section-{{ section.id }} .bb-moving-text__group { gap: 28px; padding: 8px 16px; }
+    #shopify-section-{{ section.id }} .bb-moving-text__item { font-size: {{ section.settings.mobile_font_size }}px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #shopify-section-{{ section.id }} .bb-moving-text__track { animation: none; }
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Moving text",
+  "settings": [
+    { "type": "paragraph", "content": "Add phrases as blocks. Blank phrases use built-in English and Arabic text. Translate custom phrases with Shopify Translate & Adapt." },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#151515" },
+    { "type": "color", "id": "text_color", "label": "Text color", "default": "#ffffff" },
+    { "type": "range", "id": "font_size", "label": "Text size", "min": 14, "max": 32, "step": 1, "unit": "px", "default": 21 },
+    { "type": "range", "id": "mobile_font_size", "label": "Mobile text size", "min": 12, "max": 24, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "speed", "label": "Scroll duration", "min": 12, "max": 60, "step": 2, "unit": "s", "default": 28 }
+  ],
+  "blocks": [
+    { "type": "phrase", "name": "Phrase", "settings": [
+      { "type": "text", "id": "text", "label": "Text", "info": "Leave blank for a built-in English and Arabic phrase." }
+    ] }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    { "name": "Moving text", "blocks": [
+      { "type": "phrase" }, { "type": "phrase" }, { "type": "phrase" }, { "type": "phrase" }
+    ] }
+  ]
+}
+{% endschema %}
