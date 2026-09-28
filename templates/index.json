@@ -589,6 +589,12 @@
         "pd": "50px,,50px,",
         "pd_mb": "50px,,50px,"
       }
+    },
+    "promate_iraq_feature": {
+      "type": "promate-feature",
+      "settings": {
+        "link": "https://promate.iq/"
+      }
     }
   },
   "order": [
@@ -600,6 +606,7 @@
     "full_width_banner_bQRbbt",
     "modern_product_showcase_n8Wxm3",
     "modern_brand_logos_9NQYme",
+    "promate_iraq_feature",
     "custom_line_WWiQAz",
     "shipping_xHJpJ3"
   ]

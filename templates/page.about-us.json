@@ -237,11 +237,18 @@
         "gap": 24,
         "padding": 64
       }
+    },
+    "promate_iraq_feature": {
+      "type": "promate-feature",
+      "settings": {
+        "link": "https://promate.iq/"
+      }
     }
   },
   "order": [
     "main_heading_fgVmaw",
     "custom_section_qTGJeH",
+    "promate_iraq_feature",
     "modern_image_boxes_wREnFd"
   ]
 }
