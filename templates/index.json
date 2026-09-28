@@ -9,6 +9,42 @@
  */
 {
   "sections": {
+    "moving_text_3ipPMF": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_kK8t7C": {
+          "type": "phrase",
+          "settings": {
+            "text": "Your smart world starts here"
+          }
+        },
+        "phrase_nbCgVT": {
+          "type": "phrase",
+          "settings": {
+            "text": "All the tech you need, in one place"
+          }
+        },
+        "phrase_Y34Hkj": {
+          "type": "phrase",
+          "settings": {
+            "text": "Technology that fits your lifestyle"
+          }
+        }
+      },
+      "block_order": [
+        "phrase_kK8t7C",
+        "phrase_nbCgVT",
+        "phrase_Y34Hkj"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 28
+      }
+    },
     "slideshow_EVrUzi": {
       "type": "professional-hero-slider",
       "blocks": {
@@ -318,49 +354,6 @@
         "speed": 28
       }
     },
-    "moving_text_3ipPMF": {
-      "type": "moving-text",
-      "blocks": {
-        "phrase_kK8t7C": {
-          "type": "phrase",
-          "settings": {
-            "text": ""
-          }
-        },
-        "phrase_nbCgVT": {
-          "type": "phrase",
-          "settings": {
-            "text": ""
-          }
-        },
-        "phrase_Y34Hkj": {
-          "type": "phrase",
-          "settings": {
-            "text": ""
-          }
-        },
-        "phrase_qtGEkt": {
-          "type": "phrase",
-          "settings": {
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "phrase_kK8t7C",
-        "phrase_nbCgVT",
-        "phrase_Y34Hkj",
-        "phrase_qtGEkt"
-      ],
-      "name": "Moving text",
-      "settings": {
-        "background_color": "#151515",
-        "text_color": "#ffffff",
-        "font_size": 16,
-        "mobile_font_size": 14,
-        "speed": 28
-      }
-    },
     "full_width_banner_bQRbbt": {
       "type": "full-width-banner",
       "name": "Full width banner",
@@ -372,6 +365,49 @@
         "desktop_position": "center",
         "mobile_position": "center",
         "alt_text": "Our featured products"
+      }
+    },
+    "moving_text_NnBNbr": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_dHkgAb": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_XPLwVU": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_Nxxf6k": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_nBwV7Q": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_dHkgAb",
+        "phrase_XPLwVU",
+        "phrase_Nxxf6k",
+        "phrase_nBwV7Q"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 28
       }
     },
     "modern_product_showcase_n8Wxm3": {
@@ -774,6 +810,7 @@
     }
   },
   "order": [
+    "moving_text_3ipPMF",
     "slideshow_EVrUzi",
     "modern_collections_ky4EFq",
     "moving_text_ixVUMH",
@@ -783,7 +820,7 @@
     "modern_product_tabs_tTdFhi",
     "moving_text_wAUWrh",
     "full_width_banner_bQRbbt",
-    "moving_text_3ipPMF",
+    "moving_text_NnBNbr",
     "modern_product_showcase_n8Wxm3",
     "brand_spotlight_kCaWaa",
     "modern_brand_logos_9NQYme",
