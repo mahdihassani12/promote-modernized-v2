@@ -17,7 +17,7 @@
     const controller = new AbortController();
     const { signal } = controller;
     const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const interval = carousel.dataset.autoplay === 'true' && !reducedMotion ? 500 : 0;
+    const interval = carousel.dataset.autoplay === 'true' && !reducedMotion ? 400 : 0;
     let position = count;
     let timer;
     let settleTimer;
@@ -82,14 +82,15 @@
     }
     function move(forward) {
       clearTimeout(settleTimer);
+      if (forward && position >= count * 2) scrollToPosition(count + logicalIndex(position), 'instant');
       const target = Math.max(0, Math.min(cards.length - 1, position + (forward ? 1 : -1)));
       scrollToPosition(target);
-      settleTimer = setTimeout(settle, reducedMotion ? 0 : 420);
+      settleTimer = setTimeout(settle, reducedMotion ? 0 : 320);
     }
     function stop() { clearInterval(timer); timer = undefined; }
     function start() {
-      stop();
-      if (interval && visible && !document.hidden) timer = setInterval(() => move(true), interval);
+      if (!interval || !visible || document.hidden) { stop(); return; }
+      if (!timer) timer = setInterval(() => move(true), interval);
     }
 
     dots.replaceChildren(...originals.map((_, index) => {
@@ -100,7 +101,7 @@
       dot.addEventListener('click', () => {
         clearTimeout(settleTimer);
         scrollToPosition(count + index);
-        settleTimer = setTimeout(settle, reducedMotion ? 0 : 420);
+        settleTimer = setTimeout(settle, reducedMotion ? 0 : 320);
       }, { signal });
       return dot;
     }));
@@ -128,7 +129,12 @@
       observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; start(); });
       observer.observe(carousel);
     }
-    requestAnimationFrame(() => { scrollToPosition(count, 'instant'); render(); start(); });
+    requestAnimationFrame(() => {
+      scrollToPosition(count, 'instant');
+      render();
+      start();
+      if (interval && visible && !document.hidden) requestAnimationFrame(() => move(true));
+    });
     instances.set(carousel, {
       destroy() {
         stop();
