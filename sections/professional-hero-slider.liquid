@@ -29,8 +29,8 @@
 --phs-eyebrow-font:{% if section.settings.body_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};
 --phs-desc-font:{% if section.settings.body_font == 'heading' %}var(--font-heading-family,inherit){% else %}var(--font-body-family,inherit){% endif %};
 --phs-overlay:#000;--phs-overlay-opacity:{{ section.settings.overlay_opacity | divided_by: 100.0 }};
---phs-button-bg:{{ section.settings.button_background }};--phs-button-text:#fff;--phs-button-hover:{{ section.settings.button_hover }};--phs-button-hover-text:#fff;
---phs-arrow-hover:{{ section.settings.button_background }};--phs-dot-active:{{ section.settings.button_background }};">
+--phs-button-bg:{{ section.settings.accent_color }};--phs-button-text:#fff;--phs-button-hover:{{ section.settings.accent_hover }};--phs-button-hover-text:#fff;
+--phs-arrow-hover:{{ section.settings.accent_color }};--phs-dot-active:{{ section.settings.accent_color }};">
   <div class="shop-phs__slides">
     {%- for block in section.blocks -%}
       {%- assign slide = block.settings -%}
@@ -295,15 +295,15 @@
     },
     {
       "type": "color",
-      "id": "button_background",
-      "label": "Button background",
-      "default": "#5d432a"
+      "id": "accent_color",
+      "label": "Button and active pagination color",
+      "default": "#e51f2a"
     },
     {
       "type": "color",
-      "id": "button_hover",
-      "label": "Button hover background",
-      "default": "#a73532"
+      "id": "accent_hover",
+      "label": "Button hover color",
+      "default": "#bd1923"
     },
     {
       "type": "header",
