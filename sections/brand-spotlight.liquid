@@ -17,7 +17,7 @@
   <div class="bb-promate__inner">
     <h2 id="bb-promate-title-{{ section.id }}">{{ feature_title | escape }}</h2>
     <p>{{ feature_text | escape }}</p>
-    <a class="bb-promate__button" href="{{ section.settings.link | default: 'https://promate.iq/' }}" target="_blank" rel="noopener noreferrer">
+    <a class="bb-promate__button" href="{{ section.settings.link | default: 'https://promate.iq/' | escape }}" target="_blank" rel="noopener noreferrer">
       {{ feature_button | escape }}
       <span aria-hidden="true">{% if request.locale.iso_code == 'ar' %}←{% else %}→{% endif %}</span>
     </a>
@@ -80,7 +80,7 @@
     { "type": "text", "id": "title", "label": "Heading" },
     { "type": "textarea", "id": "text", "label": "Short text" },
     { "type": "text", "id": "button_label", "label": "Button label" },
-    { "type": "url", "id": "link", "label": "Button link", "default": "https://promate.iq/" }
+    { "type": "url", "id": "link", "label": "Button link" }
   ],
   "presets": [{ "name": "Brand spotlight" }]
 }
