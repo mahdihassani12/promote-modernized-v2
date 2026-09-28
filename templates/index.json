@@ -108,6 +108,92 @@
         "padding": 20
       }
     },
+    "moving_text_ixVUMH": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_RVHcMb": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_4cGMbV": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_rncJpq": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_7RNx79": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_RVHcMb",
+        "phrase_4cGMbV",
+        "phrase_rncJpq",
+        "phrase_7RNx79"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 28
+      }
+    },
+    "moving_text_eMMDTP": {
+      "type": "moving-text",
+      "blocks": {
+        "phrase_RqHgWj": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_KjcU6a": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_TiwFNV": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        },
+        "phrase_rLyNdA": {
+          "type": "phrase",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "phrase_RqHgWj",
+        "phrase_KjcU6a",
+        "phrase_TiwFNV",
+        "phrase_rLyNdA"
+      ],
+      "name": "Moving text",
+      "settings": {
+        "background_color": "#151515",
+        "text_color": "#ffffff",
+        "font_size": 16,
+        "mobile_font_size": 14,
+        "speed": 28
+      }
+    },
     "full_width_banner_yCce3J": {
       "type": "full-width-banner",
       "name": "Full width banner",
@@ -202,6 +288,33 @@
         "alt_text": "Our featured products"
       }
     },
+    "modern_product_showcase_n8Wxm3": {
+      "type": "modern-product-showcase",
+      "name": "Modern products",
+      "settings": {
+        "title": "Essential Mobile Accessories",
+        "text": "<p>Discover earbuds, chargers, cases, smartwatches, and more for everyday life.</p>",
+        "collection": "accessories",
+        "layout": "grid",
+        "limit": 8,
+        "columns": 4,
+        "gap": 16,
+        "image_ratio": "square",
+        "show_vendor": false,
+        "link_label": "View all",
+        "padding": 32
+      }
+    },
+    "brand_spotlight_kCaWaa": {
+      "type": "brand-spotlight",
+      "name": "Brand spotlight",
+      "settings": {
+        "title": "Promate Iraq",
+        "text": "As Promate’s exclusive agent in Iraq, BarBerry brings you innovative accessories designed to make everyday technology more convenient. Explore the collection at Promate Iraq.",
+        "button_label": "Explore Promate",
+        "link": "http://promate.iq/"
+      }
+    },
     "modern_brand_logos_9NQYme": {
       "type": "modern-brand-logos",
       "blocks": {
@@ -267,33 +380,6 @@
         "gap": 24,
         "radius": 28,
         "padding": 64
-      }
-    },
-    "modern_product_showcase_n8Wxm3": {
-      "type": "modern-product-showcase",
-      "name": "Modern products",
-      "settings": {
-        "title": "Essential Mobile Accessories",
-        "text": "<p>Discover earbuds, chargers, cases, smartwatches, and more for everyday life.</p>",
-        "collection": "accessories",
-        "layout": "grid",
-        "limit": 8,
-        "columns": 4,
-        "gap": 16,
-        "image_ratio": "square",
-        "show_vendor": false,
-        "link_label": "View all",
-        "padding": 32
-      }
-    },
-    "brand_spotlight_kCaWaa": {
-      "type": "brand-spotlight",
-      "name": "Brand spotlight",
-      "settings": {
-        "title": "Promate Iraq",
-        "text": "As Promate’s exclusive agent in Iraq, BarBerry brings you innovative accessories designed to make everyday technology more convenient. Explore the collection at Promate Iraq.",
-        "button_label": "Explore Promate",
-        "link": "http://promate.iq/"
       }
     },
     "custom_line_WWiQAz": {
@@ -604,7 +690,9 @@
   "order": [
     "slideshow_EVrUzi",
     "modern_collections_ky4EFq",
+    "moving_text_ixVUMH",
     "full_width_banner_yCce3J",
+    "moving_text_eMMDTP",
     "modern_product_showcase_xgBMfY",
     "modern_product_tabs_tTdFhi",
     "full_width_banner_bQRbbt",
