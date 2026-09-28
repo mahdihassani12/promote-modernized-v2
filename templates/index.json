@@ -202,23 +202,6 @@
         "alt_text": "Our featured products"
       }
     },
-    "modern_product_showcase_n8Wxm3": {
-      "type": "modern-product-showcase",
-      "name": "Modern products",
-      "settings": {
-        "title": "Essential Mobile Accessories",
-        "text": "<p>Discover earbuds, chargers, cases, smartwatches, and more for everyday life.</p>",
-        "collection": "accessories",
-        "layout": "grid",
-        "limit": 8,
-        "columns": 4,
-        "gap": 16,
-        "image_ratio": "square",
-        "show_vendor": false,
-        "link_label": "View all",
-        "padding": 32
-      }
-    },
     "modern_brand_logos_9NQYme": {
       "type": "modern-brand-logos",
       "blocks": {
@@ -284,6 +267,23 @@
         "gap": 24,
         "radius": 28,
         "padding": 64
+      }
+    },
+    "modern_product_showcase_n8Wxm3": {
+      "type": "modern-product-showcase",
+      "name": "Modern products",
+      "settings": {
+        "title": "Essential Mobile Accessories",
+        "text": "<p>Discover earbuds, chargers, cases, smartwatches, and more for everyday life.</p>",
+        "collection": "accessories",
+        "layout": "grid",
+        "limit": 8,
+        "columns": 4,
+        "gap": 16,
+        "image_ratio": "square",
+        "show_vendor": false,
+        "link_label": "View all",
+        "padding": 32
       }
     },
     "brand_spotlight_kCaWaa": {
@@ -609,8 +609,8 @@
     "modern_product_tabs_tTdFhi",
     "full_width_banner_bQRbbt",
     "modern_product_showcase_n8Wxm3",
-    "modern_brand_logos_9NQYme",
     "brand_spotlight_kCaWaa",
+    "modern_brand_logos_9NQYme",
     "custom_line_WWiQAz",
     "shipping_xHJpJ3"
   ]
