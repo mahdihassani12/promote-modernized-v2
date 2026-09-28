@@ -11,26 +11,32 @@
   "sections": {
     "main_heading_fgVmaw": {
       "type": "main-heading",
-      "settings": {}
+      "settings": {
+        "gradient_start": "#3c2d21",
+        "gradient_middle": "#5d432a",
+        "gradient_end": "#a73532",
+        "gradient_text": "#ffffff",
+        "gradient_angle": 120
+      }
     },
     "custom_section_qTGJeH": {
       "type": "custom-section",
       "blocks": {
-        "multi_column_Uci3Ma": {
+        "multi_column_G3ReQL": {
           "type": "_multi_column",
           "settings": {
             "column_dk": "6",
             "column_tb": "6",
             "column_mb": "12",
-            "column_dk_10": "10",
-            "column_tb_10": "10",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
             "column_mb_10": "10",
-            "spacing_h_dk": 0,
-            "spacing_v_dk": 0,
-            "spacing_h_tb": 0,
-            "spacing_v_tb": 0,
-            "spacing_h_mb": 0,
-            "spacing_v_mb": 0,
+            "spacing_h_dk": 15,
+            "spacing_v_dk": 15,
+            "spacing_h_tb": 15,
+            "spacing_v_tb": 15,
+            "spacing_h_mb": 15,
+            "spacing_v_mb": 15,
             "content_position": "auto",
             "align_content": false,
             "content_position_mb": "auto",
@@ -40,7 +46,7 @@
             "rounded": "none"
           },
           "blocks": {
-            "heading_xadRtp": {
+            "heading_KHfjRG": {
               "type": "heading",
               "settings": {
                 "heading": "<h2>Barberry for general trading</h2>",
@@ -56,7 +62,7 @@
               },
               "blocks": {}
             },
-            "spacer_hXU6MQ": {
+            "spacer_tdiVYd": {
               "type": "spacer",
               "settings": {
                 "direction": false,
@@ -66,7 +72,7 @@
               },
               "blocks": {}
             },
-            "text_mmc8WW": {
+            "text_ygHFNe": {
               "type": "text",
               "settings": {
                 "text": "<p><strong>BarBerry General Trading Company</strong> specializes in supplying the latest smartphones and electronic devices. We provide modern, high-quality products with reliable performance. We keep pace with the latest technological developments by offering a diverse selection of products for individuals and businesses, with competitive prices and options to suit different needs.</p><p>At <strong>BarBerry</strong>, we believe technology is more than just devices. It enables a more connected and advanced lifestyle. We are committed to delivering modern products, dependable service, and an exceptional customer experience.</p>",
@@ -85,7 +91,7 @@
               },
               "blocks": {}
             },
-            "spacer_4x34r9": {
+            "spacer_NGkzMt": {
               "type": "spacer",
               "settings": {
                 "direction": false,
@@ -97,15 +103,59 @@
             }
           },
           "block_order": [
-            "heading_xadRtp",
-            "spacer_hXU6MQ",
-            "text_mmc8WW",
-            "spacer_4x34r9"
+            "heading_KHfjRG",
+            "spacer_tdiVYd",
+            "text_ygHFNe",
+            "spacer_NGkzMt"
+          ]
+        },
+        "multi_column_pxjLmr": {
+          "type": "_multi_column",
+          "settings": {
+            "column_dk": "6",
+            "column_tb": "6",
+            "column_mb": "12",
+            "column_dk_10": "5",
+            "column_tb_10": "5",
+            "column_mb_10": "10",
+            "spacing_h_dk": 15,
+            "spacing_v_dk": 15,
+            "spacing_h_tb": 15,
+            "spacing_v_tb": 15,
+            "spacing_h_mb": 15,
+            "spacing_v_mb": 15,
+            "content_position": "auto",
+            "align_content": false,
+            "content_position_mb": "auto",
+            "alignment": "left",
+            "alignment_mb": "left",
+            "background_color": "#ffffff",
+            "rounded": "none"
+          },
+          "blocks": {
+            "image_4DMRXp": {
+              "type": "image",
+              "name": "t:blocks.image.name",
+              "settings": {
+                "img": "shopify://shop_images/BarBerry-About-Us-Mobile-Store-1200x1200.webp",
+                "image_ratio": "adapt_image",
+                "img_effect": "none",
+                "b_effect": "none",
+                "custom_width": "full",
+                "image_w": 50,
+                "image_w_mb": 50
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "image_4DMRXp"
           ]
         }
       },
       "block_order": [
-        "multi_column_Uci3Ma"
+        "multi_column_G3ReQL",
+        "multi_column_pxjLmr"
       ],
       "custom_css": [
         "p {text-align: justify;}"
