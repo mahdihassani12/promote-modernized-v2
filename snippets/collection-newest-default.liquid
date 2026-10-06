@@ -1,0 +1,17 @@
+{%- comment -%}
+  Request Shopify's newest-first order before the collection grid loads.
+  Shopify applies the order before pagination; explicit customer sorting wins.
+{%- endcomment -%}
+{%- if request.page_type == 'collection' and request.design_mode == false -%}
+  {%- unless collection.default_sort_by == 'created-descending' -%}
+    <script>
+      (function () {
+        var url = new URL(window.location.href);
+        if (!url.searchParams.get('sort_by')) {
+          url.searchParams.set('sort_by', 'created-descending');
+          window.location.replace(url.href);
+        }
+      }());
+    </script>
+  {%- endunless -%}
+{%- endif -%}
