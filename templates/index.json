@@ -120,8 +120,8 @@
         "mobile_description_size": 16,
         "button_size": 15,
         "mobile_button_size": 14,
-        "button_background": "#5d432a",
-        "button_hover": "#a73532",
+        "accent_color": "#e51f2a",
+        "accent_hover": "#bd1923",
         "autoplay": true,
         "delay": 7,
         "arrows": true,
@@ -136,12 +136,12 @@
         "text": "<p>Explore our latest smartphones, mobile devices, and accessories.</p>",
         "collections": [
           "all-products",
+          "accessories",
           "honor",
           "iphone",
           "realme",
           "samsung",
-          "xiaomi",
-          "accessories"
+          "xiaomi"
         ],
         "layout": "carousel",
         "columns": 4,
@@ -270,6 +270,13 @@
     "modern_product_tabs_tTdFhi": {
       "type": "modern-product-tabs",
       "blocks": {
+        "tab_FYhkki": {
+          "type": "tab",
+          "settings": {
+            "label": "",
+            "collection": "accessories"
+          }
+        },
         "tab_pfqj8b": {
           "type": "tab",
           "settings": {
@@ -300,6 +307,7 @@
         }
       },
       "block_order": [
+        "tab_FYhkki",
         "tab_pfqj8b",
         "tab_naYTVT",
         "tab_f9g949",
