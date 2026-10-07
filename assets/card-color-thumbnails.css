@@ -1,0 +1,94 @@
+/* Card-only photo swatches. Product-page selectors retain their own styling. */
+.hdt-card-product .hdt-variant-option--color .hdt-variants-list {
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
+}
+.hdt-card-product .hdt-card-align-start .hdt-variants-list,
+.hdt-card-product .hdt-card-align-left .hdt-variants-list { justify-content: flex-start; }
+.hdt-card-product .hdt-card-align-end .hdt-variants-list,
+.hdt-card-product .hdt-card-align-right .hdt-variants-list { justify-content: flex-end; }
+.hdt-card-product .hdt-variant-option--color .hdt-swatch-item { flex: 0 0 auto; }
+.hdt-card-product .hdt-variant-option--color hdt-swatch-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+  inline-size: 60px;
+  width: 60px;
+  min-width: 0;
+  padding: 0;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  color: inherit;
+}
+.hdt-card-product .hdt-card-color-photo {
+  display: grid;
+  place-items: center;
+  inline-size: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 2px solid #dedede;
+  border-radius: 12px;
+  background: var(--hdt-bg-color, #fff);
+  transition: border-color .18s ease;
+}
+.hdt-card-product .hdt-card-color-photo img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: contain;
+  padding: 4px;
+  background: #fff;
+}
+.hdt-card-product .hdt-card-color-label {
+  display: block;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.35;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.hdt-card-product .hdt-swatch-item.active .hdt-card-color-photo,
+.hdt-card-product hdt-swatch-card:hover .hdt-card-color-photo { border-color: #4c86ff; }
+.hdt-card-product hdt-swatch-card:focus-visible {
+  outline: 2px solid #4c86ff;
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+.hdt-card-product .hdt-swatch-item[data-available="false"] hdt-swatch-card::after {
+  top: 30px;
+  background: #8a8a8a;
+}
+[dir="rtl"] .hdt-card-color-label { direction: rtl; }
+@media (max-width: 749px) {
+  .hdt-card-product .hdt-variant-option--color .hdt-variants-list { gap: 6px; }
+  .hdt-card-product .hdt-variant-option--color hdt-swatch-card { inline-size: 44px; width: 44px; }
+  .hdt-card-product .hdt-card-color-label { font-size: 11px; }
+  .hdt-card-product .hdt-swatch-item[data-available="false"] hdt-swatch-card::after { top: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hdt-card-product .hdt-card-color-photo { transition: none; }
+}
+
+/* Product colour photos keep the native radio/variant/gallery behaviour. */
+.hdt-product-form_value.hdt-product-color-choice { display:flex; flex-direction:column; align-items:center; gap:6px; width:76px; height:auto; padding:4px; border:0; background:transparent; border-radius:0; }
+.hdt-product-color-photo { display:block; width:64px; height:64px; overflow:hidden; border:2px solid #ddd; border-radius:12px; background-color:var(--hdt-bg-color,#fff); background-image:var(--hdt-bg-image,none); background-size:contain; background-position:center; background-repeat:no-repeat; }
+.hdt-product-color-photo img { display:block; width:100%; height:100%; object-fit:contain; background:#fff; }
+.hdt-product-color-label { display:block; font-size:12px; line-height:1.35; text-align:center; white-space:normal; overflow-wrap:anywhere; }
+input:checked + .hdt-product-color-choice .hdt-product-color-photo,.hdt-product-color-choice:hover .hdt-product-color-photo { border-color:#4c86ff; }
+input:focus-visible + .hdt-product-color-choice .hdt-product-color-photo { outline:2px solid currentColor; outline-offset:3px; }
+input.is-disabled + .hdt-product-color-choice .hdt-product-color-photo { opacity:.5; }
+hdt-product-media hdt-slider-thumb .hdt-thumbnail__media .hdt-ratio { border:2px solid #ddd; border-radius:12px; overflow:hidden; background:#fff; }
+hdt-product-media hdt-slider-thumb .hdt-thumbnail__media img { object-fit:contain; }
+hdt-product-media hdt-slider-thumb .is-thumb-selected .hdt-ratio,hdt-product-media hdt-slider-thumb .hdt-thumbnail__media:hover .hdt-ratio { border-color:#4c86ff; }
+hdt-product-media hdt-slider-thumb .hdt-thumbnail__media:focus-visible { outline:2px solid #4c86ff; outline-offset:2px; }
+[dir="rtl"] .hdt-product-color-label { direction:rtl; }
+@media(max-width:749px) { .hdt-product-form_value.hdt-product-color-choice { width:62px; } .hdt-product-color-photo { width:52px; height:52px; } }

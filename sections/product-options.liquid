@@ -45,7 +45,9 @@
                 continue
               endif
               assign index = index | plus: 1
-              assign variant_key = product.variants | where: "option1", value | first
+              assign color_option_key = 'option' | append: option.position
+              assign color_value_name = value.name | default: value
+              assign variant_key = product.variants | where: color_option_key, color_value_name | first
               assign featured_image = value.variant.featured_image | default: variant_key.featured_image
               assign color_handle = value | handle
               assign color_obj = colors[color_handle] | default: colors_2[color_handle]
@@ -53,14 +55,21 @@
                 assign featured_image = images[color_obj.imageName]
               endif
             -%}
+            {%- assign color_thumbnail = featured_image | default: value.swatch.image -%}
+            {%- capture card_color_label -%}{%- render 'card-color-label', value: value -%}{%- endcapture -%}
             {%- capture color_style -%}
               {%- if value.swatch.color -%}--hdt-bg-color: {{ value.swatch.color }};{%- endif -%}
               {%- if featured_image != null and settings.image_source == 'variant_img' -%}--hdt-bg-image: url('{{ featured_image | image_url: width: 80 }}'){%- elsif value.swatch.image != blank -%}--hdt-bg-image: url('{{ value.swatch.image | image_url: width: 80 }}'){%- elsif color_obj.colorsCSS != blank -%}{{ color_obj.colorsCSS }}{%- endif -%}
             {%- endcapture -%}
             {%- comment -%} {%- if value == option.selected_value %} active{% endif %} {%- endcomment -%}
             <hdt-tooltip class="hdt-swatch-item {%- if value == option.selected_value %} active{% endif %} {%- if settings.enable_color_limit and index > color_maximum and first %}{% assign first = false %} is--swatch-limit{% endif %}" data-available="{{ value.variant.available | json }}" {%- if section.id contains 'search' or section.id contains 'exit' %} inner{% endif %} placement="top" {% if settings.color_type == 'only' and value.variant.available == false %} hidden{% endif %}>
-              <hdt-swatch-card class="hdt-swatch-card {%- if is_color and settings.color_shape == 'cricle' %} hdt-radius-full{% endif %} {%- if color_white == color_downcase %} hdt-bg-color-white{% endif %}" data-opt="{{ option.position }}" data-vrid="{{ value.variant.id }}" data-product-url="{{ value.product_url }}" data-value-id="{{ value.id }}" {% if featured_image != null %} data-vimg="{{ featured_image | image_url: width: 80 }}"{% endif %} title="{{ value }}" {%- if color_list contains option_downcase %} style="{{ color_style }}"{% endif %}>
-                <span class="hdt-swatch-title {%- if color_list contains option_downcase %} sr-only{% endif %}">{{ value }}</span>
+              <hdt-swatch-card class="hdt-swatch-card" data-card-color role="button" tabindex="0" aria-label="{{ card_color_label }}" aria-pressed="{% if value == option.selected_value %}true{% else %}false{% endif %}" data-opt="{{ option.position }}" data-vrid="{{ value.variant.id }}" data-product-url="{{ value.product_url }}" data-value-id="{{ value.id }}" {% if featured_image != blank %}data-vimg="{{ featured_image | image_url: width: 80 }}"{% endif %} title="{{ card_color_label }}" style="{{ color_style }}">
+                <span class="hdt-card-color-photo" aria-hidden="true">
+                  {%- if color_thumbnail != blank -%}
+                    {{- color_thumbnail | image_url: width: 160 | image_tag: loading: 'lazy', width: 80, height: 80, alt: '', widths: '80,160', sizes: '60px' -}}
+                  {%- endif -%}
+                </span>
+                <span class="hdt-swatch-title hdt-card-color-label">{{ card_color_label }}</span>
               </hdt-swatch-card>
             </hdt-tooltip>
           {%- endfor -%}

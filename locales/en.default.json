@@ -258,7 +258,7 @@
   },
   "products": {
     "theme_settings": {
-      "color": "color,colors,couleur,colour",
+      "color": "color,colors,colour,couleur,لون,ألوان,اللون,الألوان",
       "size": "size,sizes,Größe",
       "and": "and",
       "color_white": "white"

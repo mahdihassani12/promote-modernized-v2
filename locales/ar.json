@@ -4513,8 +4513,8 @@
   },
   "products": {
     "theme_settings": {
-      "color": "لون، ألوان",
-      "size": "الحجم، أحجام، المقاس",
+      "color": "color,colors,colour,couleur,لون,ألوان,اللون,الألوان",
+      "size": "size,sizes,الحجم,أحجام,المقاس",
       "and": "و",
       "color_white": "أبيض"
     },

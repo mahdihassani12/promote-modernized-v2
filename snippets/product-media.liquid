@@ -11,7 +11,7 @@
 {%- endcomment -%}
 
 {%- liquid
-  #assign selected_variant_featured_media = selected_variant.featured_media
+  assign selected_variant_featured_media = selected_variant.featured_media
   assign group_media_obj = product.metafields.theme.group_media_obj.value
   assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
   assign desktop_media_layout = section.settings.desktop_media_layout
