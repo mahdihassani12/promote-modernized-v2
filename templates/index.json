@@ -65,7 +65,8 @@
             "primary_link": "shopify://collections",
             "secondary_text": "Contact Us",
             "secondary_link": "shopify://pages/contact-us",
-            "image": "shopify://shop_images/WebBanner2000X750_AirClip-Pro_1_910c22eb-c168-43e9-8f71-2498e0c1d422.webp"
+            "image": "shopify://shop_images/WebBanner2000X750_AirClip-Pro_1_910c22eb-c168-43e9-8f71-2498e0c1d422.webp",
+            "mobile_image": "shopify://shop_images/airclip-mobile.webp"
           }
         },
         "slide_item_Aeee3A": {
@@ -78,7 +79,8 @@
             "primary_link": "shopify://collections",
             "secondary_text": "Contact Us",
             "secondary_link": "shopify://pages/contact-us",
-            "image": "shopify://shop_images/Mavrix-3_Banner_2000x750_fd0f631b-c81e-41d3-b780-00fb355ba785.webp"
+            "image": "shopify://shop_images/Mavrix-3_Banner_2000x750_fd0f631b-c81e-41d3-b780-00fb355ba785.webp",
+            "mobile_image": "shopify://shop_images/mavrix-mobile.webp"
           }
         },
         "slide_6bpRyc": {
@@ -91,7 +93,8 @@
             "primary_link": "shopify://collections",
             "secondary_text": "Contact Us",
             "secondary_link": "shopify://pages/contact-us",
-            "image": "shopify://shop_images/Titan-35W_-_Banner_2000x750_7dae4c33-e399-4be5-a31c-1c5f10d85480.webp"
+            "image": "shopify://shop_images/Titan-35W_-_Banner_2000x750_7dae4c33-e399-4be5-a31c-1c5f10d85480.webp",
+            "mobile_image": "shopify://shop_images/titan-mobile.webp"
           }
         }
       },
